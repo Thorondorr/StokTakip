@@ -1,0 +1,11 @@
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.csprojAssemblyReference.cache
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.Login.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.csproj.GenerateResource.cache
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\UserFormUI.exe.config
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\UserFormUI.exe
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\UserFormUI.pdb
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.Properties.Resources.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.csproj.CoreCompileInputs.cache
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.exe
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.pdb
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.ParametreEkranı.resources
