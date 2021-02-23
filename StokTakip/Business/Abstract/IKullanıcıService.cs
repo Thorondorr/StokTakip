@@ -1,0 +1,12 @@
+﻿using Entity.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Business.Abstract
+{
+    public interface IKullanıcıService
+    {
+         List<Kullanıcı> GetAll();
+    }
+}
