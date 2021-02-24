@@ -8,5 +8,6 @@ namespace Business.Abstract
     public interface IKullanıcıService
     {
          List<Kullanıcı> GetAll();
+        void Add(Kullanıcı kullanıcı);
     }
 }

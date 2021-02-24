@@ -14,11 +14,11 @@ namespace DataAcces.Concrete.EntityFramework
                        
         }
 
-        public DbSet<Cari> Cariler { get; set; }
-        public DbSet<CariHareket> CariHareketler { get; set; }
-        public DbSet<Fatura> Faturalar { get; set; }
-        public DbSet<Kullanıcı> Kullanıcılar { get; set; }
-        public DbSet<Stok> Stoklar { get; set; }
-        public DbSet<Tahsilat> Tahsilatlar { get; set; }
+        public DbSet<Cari> Cari { get; set; }
+        public DbSet<CariHareket> CariHareket { get; set; }
+        public DbSet<Fatura> Fatura { get; set; }
+        public DbSet<Kullanıcı> Kullanıcı { get; set; }
+        public DbSet<Stok> Stok { get; set; }
+        public DbSet<Tahsilat> Tahsilat { get; set; }
     }
 }

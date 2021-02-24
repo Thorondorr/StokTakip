@@ -1,12 +1,14 @@
 ﻿using Core.Entity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Entity.Concrete
 {
     public class Cari:IEntity
     {
+        public int CariId { get; set; }
         public string CariNo { get; set; }
         public string CariAdı { get; set; }
         public string CariAdres { get; set; }

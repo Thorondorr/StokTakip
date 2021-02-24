@@ -15,6 +15,12 @@ namespace Business.Concrete
         {
             _kullanıcıDal = kullanıcıDal;
         }
+
+        public void  Add(Kullanıcı kullanıcı)
+        {
+            _kullanıcıDal.Add(kullanıcı);
+        }
+
         public List<Kullanıcı> GetAll()
         {
             return _kullanıcıDal.GetAll();
