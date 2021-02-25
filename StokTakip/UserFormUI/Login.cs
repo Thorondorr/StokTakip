@@ -41,10 +41,13 @@ namespace UserFormUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Authantiacition();
+           var result = Authantiacition();
+            if (result) { AnaMenu anaMenu = new AnaMenu();
+                anaMenu.Show();
+            }
         }
 
-        private void Authantiacition()
+        private bool Authantiacition()
         {
             KullanıcılarManager kullanıcılarManager = new KullanıcılarManager(new EfKullanıcıDal());
             var result = kullanıcılarManager.UserAutenticacion(new Kullanıcı
@@ -58,6 +61,8 @@ namespace UserFormUI
                 MessageBox.Show(result.Message);
             }
             else { MessageBox.Show(result.Message); }
+
+            return result.Succes;
         }
     }
 }

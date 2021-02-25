@@ -96,3 +96,6 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\pt-BR\Mi
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.AnaMenu.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.Cari.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.UrunEkle.resources

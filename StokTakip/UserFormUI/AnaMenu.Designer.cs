@@ -1,5 +1,4 @@
-﻿
-namespace UserFormUI
+﻿namespace UserFormUI
 {
     partial class AnaMenu
     {
@@ -29,118 +28,108 @@ namespace UserFormUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.btn_alış = new System.Windows.Forms.Button();
+            this.btn_satış = new System.Windows.Forms.Button();
+            this.btn_tahsilat = new System.Windows.Forms.Button();
+            this.btn_ürünEkle = new System.Windows.Forms.Button();
+            this.btn_cariEkle = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1030, 68);
-            this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Location = new System.Drawing.Point(621, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 60);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Cari Tanımla";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(415, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 60);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Ürün Tanımla";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 60);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Tahsilat ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(827, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 60);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Alış";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(209, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 60);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Satış";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 68);
+            this.panel1.Controls.Add(this.btn_alış);
+            this.panel1.Controls.Add(this.btn_satış);
+            this.panel1.Controls.Add(this.btn_tahsilat);
+            this.panel1.Controls.Add(this.btn_ürünEkle);
+            this.panel1.Controls.Add(this.btn_cariEkle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1030, 613);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(998, 88);
+            this.panel1.TabIndex = 0;
+            // 
+            // btn_alış
+            // 
+            this.btn_alış.Location = new System.Drawing.Point(796, 22);
+            this.btn_alış.Name = "btn_alış";
+            this.btn_alış.Size = new System.Drawing.Size(190, 46);
+            this.btn_alış.TabIndex = 0;
+            this.btn_alış.Text = "Alış";
+            this.btn_alış.UseVisualStyleBackColor = true;
+            // 
+            // btn_satış
+            // 
+            this.btn_satış.Location = new System.Drawing.Point(600, 22);
+            this.btn_satış.Name = "btn_satış";
+            this.btn_satış.Size = new System.Drawing.Size(190, 46);
+            this.btn_satış.TabIndex = 0;
+            this.btn_satış.Text = "Satış";
+            this.btn_satış.UseVisualStyleBackColor = true;
+            // 
+            // btn_tahsilat
+            // 
+            this.btn_tahsilat.Location = new System.Drawing.Point(404, 22);
+            this.btn_tahsilat.Name = "btn_tahsilat";
+            this.btn_tahsilat.Size = new System.Drawing.Size(190, 46);
+            this.btn_tahsilat.TabIndex = 0;
+            this.btn_tahsilat.Text = "Tahsilat";
+            this.btn_tahsilat.UseVisualStyleBackColor = true;
+            // 
+            // btn_ürünEkle
+            // 
+            this.btn_ürünEkle.Location = new System.Drawing.Point(208, 22);
+            this.btn_ürünEkle.Name = "btn_ürünEkle";
+            this.btn_ürünEkle.Size = new System.Drawing.Size(190, 46);
+            this.btn_ürünEkle.TabIndex = 0;
+            this.btn_ürünEkle.Text = "Ürün Ekle";
+            this.btn_ürünEkle.UseVisualStyleBackColor = true;
+            this.btn_ürünEkle.Click += new System.EventHandler(this.btn_ürünEkle_Click);
+            // 
+            // btn_cariEkle
+            // 
+            this.btn_cariEkle.Location = new System.Drawing.Point(12, 22);
+            this.btn_cariEkle.Name = "btn_cariEkle";
+            this.btn_cariEkle.Size = new System.Drawing.Size(190, 46);
+            this.btn_cariEkle.TabIndex = 0;
+            this.btn_cariEkle.Text = "Cari Ekle";
+            this.btn_cariEkle.UseVisualStyleBackColor = true;
+            this.btn_cariEkle.Click += new System.EventHandler(this.btn_cariEkle_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 88);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(998, 527);
+            this.panel2.TabIndex = 2;
             // 
             // AnaMenu
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1030, 681);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(998, 615);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.IsMdiContainer = true;
             this.Name = "AnaMenu";
             this.Text = "AnaMenu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.AnaMenu_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_alış;
+        private System.Windows.Forms.Button btn_satış;
+        private System.Windows.Forms.Button btn_tahsilat;
+        private System.Windows.Forms.Button btn_ürünEkle;
+        private System.Windows.Forms.Button btn_cariEkle;
+        private System.Windows.Forms.Panel panel2;
     }
 }

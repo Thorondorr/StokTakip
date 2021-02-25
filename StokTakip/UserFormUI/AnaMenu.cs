@@ -17,65 +17,29 @@ namespace UserFormUI
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            CariTanımla cariTanımla = new CariTanımla();
-            cariTanımla.MdiParent = this;
-            cariTanımla.Show();
-        }
-
         private void AnaMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpBox_menu_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
         {
             
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void FormGetir(Form form)
         {
-
+            form.MdiParent = this;
+            form.FormBorderStyle = FormBorderStyle.None;
+            panel2.Controls.Add(form);
+            form.Show();
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void btn_cariEkle_Click(object sender, EventArgs e)
         {
-
+            Cari cariEkle = new Cari();
+            FormGetir(cariEkle);
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        private void btn_ürünEkle_Click(object sender, EventArgs e)
         {
-            NewMethod();
-        }
-
-        private void NewMethod()
-        {
-            UrunTanimla urunTanimla = new UrunTanimla();
-            urunTanimla.MdiParent = this;
-            urunTanimla.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(urunTanimla);
-            urunTanimla.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            UrunEkle urunEkle = new UrunEkle();
+            FormGetir(urunEkle);
         }
     }
 }
