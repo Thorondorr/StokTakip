@@ -10,6 +10,8 @@ namespace Business.Constants
         public static string KullanıcıDeleted = "Kullanıcı silindi.";
         public static string KullanıcıUpdated = "Kullanıcı eklendi.";
         public static string KullanıcıAutenticacionIsTrue = "Başarı ile giriş yapıldı.";
+
+        public static string KullanıcıIsNotExist = "Kullanıcı bulunamadı.";
         //public static string KullanıcıAdded = "Kullanıcı eklendi.";
     }
 }

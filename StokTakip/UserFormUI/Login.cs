@@ -12,9 +12,7 @@ namespace UserFormUI
         
         public Login()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();                       
         }
         
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
@@ -47,12 +45,12 @@ namespace UserFormUI
             var result= kullanıcılarManager.UserAutenticacion(new Kullanıcı { 
                 KullanıcıAdı = txtBox_kullanıcıAdı.Text, 
                 Sifre = txtBox_Sifre.Text });
-            
 
             if (result.Succes == true)
             {
-                MessageBox.Show("Giris yapıldı");
+                MessageBox.Show(result.Message);
             }
+            else { MessageBox.Show(result.Message); }
         }
     }
 }

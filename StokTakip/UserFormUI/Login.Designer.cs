@@ -51,6 +51,7 @@ namespace UserFormUI
             this.txtBox_Sifre.Name = "txtBox_Sifre";
             this.txtBox_Sifre.Size = new System.Drawing.Size(189, 22);
             this.txtBox_Sifre.TabIndex = 1;
+            this.txtBox_Sifre.UseSystemPasswordChar = true;
             // 
             // label1
             // 

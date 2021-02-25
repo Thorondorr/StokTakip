@@ -37,9 +37,13 @@ namespace Business.Concrete
 
         public IResult UserAutenticacion(Kullanıcı kullanıcı)
         {
-            _kullanıcıDal.Get(p => p.KullanıcıAdı == kullanıcı.KullanıcıAdı
+           var result = _kullanıcıDal.Get(p => p.KullanıcıAdı == kullanıcı.KullanıcıAdı
             && p.Sifre == kullanıcı.Sifre);
-            return new Result(true, Messages.KullanıcıAutenticacionIsTrue);
+            if (result == null)
+            {
+              return  new ErrorResult(Messages.KullanıcıIsNotExist);
+            }
+            return new SuccesResutl(Messages.KullanıcıAutenticacionIsTrue);
         }
     }
 }
