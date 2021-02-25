@@ -29,36 +29,36 @@ namespace UserFormUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbox_serverAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtbox_serverKullanıcıAdi = new System.Windows.Forms.TextBox();
+            this.txtbox_serverSifresi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtbox_sirketAdi = new System.Windows.Forms.TextBox();
+            this.dataGridView_parametreEkranı = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ekle = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtbox_kullanıcıId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtbox_email = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtbox_sifre = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtbox_kullanıcıAdı = new System.Windows.Forms.TextBox();
+            this.btn_güncelle = new System.Windows.Forms.Button();
+            this.btn_sil = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parametreEkranı)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtbox_serverAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtbox_serverAdi.Location = new System.Drawing.Point(145, 47);
+            this.txtbox_serverAdi.Name = "txtbox_serverAdi";
+            this.txtbox_serverAdi.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_serverAdi.TabIndex = 0;
             // 
             // label1
             // 
@@ -78,19 +78,19 @@ namespace UserFormUI
             this.label2.TabIndex = 5;
             this.label2.Text = "Server Kullanıcı Adı";
             // 
-            // textBox2
+            // txtbox_serverKullanıcıAdi
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtbox_serverKullanıcıAdi.Location = new System.Drawing.Point(145, 75);
+            this.txtbox_serverKullanıcıAdi.Name = "txtbox_serverKullanıcıAdi";
+            this.txtbox_serverKullanıcıAdi.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_serverKullanıcıAdi.TabIndex = 4;
             // 
-            // textBox3
+            // txtbox_serverSifresi
             // 
-            this.textBox3.Location = new System.Drawing.Point(145, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 22);
-            this.textBox3.TabIndex = 4;
+            this.txtbox_serverSifresi.Location = new System.Drawing.Point(145, 106);
+            this.txtbox_serverSifresi.Name = "txtbox_serverSifresi";
+            this.txtbox_serverSifresi.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_serverSifresi.TabIndex = 4;
             // 
             // label3
             // 
@@ -110,24 +110,24 @@ namespace UserFormUI
             this.label4.TabIndex = 7;
             this.label4.Text = "Şirket Adı";
             // 
-            // textBox4
+            // txtbox_sirketAdi
             // 
-            this.textBox4.Location = new System.Drawing.Point(145, 19);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(143, 22);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "Akana Mühendislik";
+            this.txtbox_sirketAdi.Location = new System.Drawing.Point(145, 19);
+            this.txtbox_sirketAdi.Name = "txtbox_sirketAdi";
+            this.txtbox_sirketAdi.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_sirketAdi.TabIndex = 6;
+            this.txtbox_sirketAdi.Text = "Akana Mühendislik";
             // 
-            // dataGridView1
+            // dataGridView_parametreEkranı
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 166);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(945, 150);
-            this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView_parametreEkranı.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_parametreEkranı.Location = new System.Drawing.Point(12, 166);
+            this.dataGridView_parametreEkranı.Name = "dataGridView_parametreEkranı";
+            this.dataGridView_parametreEkranı.RowHeadersWidth = 51;
+            this.dataGridView_parametreEkranı.RowTemplate.Height = 24;
+            this.dataGridView_parametreEkranı.Size = new System.Drawing.Size(945, 150);
+            this.dataGridView_parametreEkranı.TabIndex = 8;
+            this.dataGridView_parametreEkranı.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_parametreEkranı_CellClick);
             // 
             // label5
             // 
@@ -138,15 +138,15 @@ namespace UserFormUI
             this.label5.TabIndex = 9;
             this.label5.Text = "Kullanıcı Bilgileri";
             // 
-            // button1
+            // btn_ekle
             // 
-            this.button1.Location = new System.Drawing.Point(808, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 28);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Kullanıcı Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ekle.Location = new System.Drawing.Point(808, 24);
+            this.btn_ekle.Name = "btn_ekle";
+            this.btn_ekle.Size = new System.Drawing.Size(149, 28);
+            this.btn_ekle.TabIndex = 10;
+            this.btn_ekle.Text = "Kullanıcı Ekle";
+            this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -157,12 +157,12 @@ namespace UserFormUI
             this.label6.TabIndex = 20;
             this.label6.Text = "Kullanıcı Id";
             // 
-            // textBox5
+            // txtbox_kullanıcıId
             // 
-            this.textBox5.Location = new System.Drawing.Point(636, 16);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(143, 22);
-            this.textBox5.TabIndex = 19;
+            this.txtbox_kullanıcıId.Location = new System.Drawing.Point(636, 16);
+            this.txtbox_kullanıcıId.Name = "txtbox_kullanıcıId";
+            this.txtbox_kullanıcıId.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_kullanıcıId.TabIndex = 19;
             // 
             // label7
             // 
@@ -173,12 +173,12 @@ namespace UserFormUI
             this.label7.TabIndex = 17;
             this.label7.Text = "E mail";
             // 
-            // textBox6
+            // txtbox_email
             // 
-            this.textBox6.Location = new System.Drawing.Point(636, 103);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(143, 22);
-            this.textBox6.TabIndex = 15;
+            this.txtbox_email.Location = new System.Drawing.Point(636, 103);
+            this.txtbox_email.Name = "txtbox_email";
+            this.txtbox_email.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_email.TabIndex = 15;
             // 
             // label8
             // 
@@ -189,12 +189,12 @@ namespace UserFormUI
             this.label8.TabIndex = 18;
             this.label8.Text = "Şifre";
             // 
-            // textBox7
+            // txtbox_sifre
             // 
-            this.textBox7.Location = new System.Drawing.Point(636, 72);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(143, 22);
-            this.textBox7.TabIndex = 16;
+            this.txtbox_sifre.Location = new System.Drawing.Point(636, 72);
+            this.txtbox_sifre.Name = "txtbox_sifre";
+            this.txtbox_sifre.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_sifre.TabIndex = 16;
             // 
             // label9
             // 
@@ -205,30 +205,32 @@ namespace UserFormUI
             this.label9.TabIndex = 14;
             this.label9.Text = "Kullanıcı Adı";
             // 
-            // textBox8
+            // txtbox_kullanıcıAdı
             // 
-            this.textBox8.Location = new System.Drawing.Point(636, 44);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(143, 22);
-            this.textBox8.TabIndex = 13;
+            this.txtbox_kullanıcıAdı.Location = new System.Drawing.Point(636, 44);
+            this.txtbox_kullanıcıAdı.Name = "txtbox_kullanıcıAdı";
+            this.txtbox_kullanıcıAdı.Size = new System.Drawing.Size(143, 22);
+            this.txtbox_kullanıcıAdı.TabIndex = 13;
             // 
-            // button2
+            // btn_güncelle
             // 
-            this.button2.Location = new System.Drawing.Point(808, 58);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 28);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Kullanıcı Güncelle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_güncelle.Location = new System.Drawing.Point(808, 58);
+            this.btn_güncelle.Name = "btn_güncelle";
+            this.btn_güncelle.Size = new System.Drawing.Size(149, 28);
+            this.btn_güncelle.TabIndex = 10;
+            this.btn_güncelle.Text = "Kullanıcı Güncelle";
+            this.btn_güncelle.UseVisualStyleBackColor = true;
+            this.btn_güncelle.Click += new System.EventHandler(this.btn_güncelle_Click);
             // 
-            // button3
+            // btn_sil
             // 
-            this.button3.Location = new System.Drawing.Point(808, 92);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 28);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Kullanıcı Sil";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_sil.Location = new System.Drawing.Point(808, 92);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(149, 28);
+            this.btn_sil.TabIndex = 10;
+            this.btn_sil.Text = "Kullanıcı Sil";
+            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // ParametreEkranı
             // 
@@ -236,31 +238,31 @@ namespace UserFormUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 343);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtbox_kullanıcıId);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtbox_email);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtbox_sifre);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtbox_kullanıcıAdı);
+            this.Controls.Add(this.btn_sil);
+            this.Controls.Add(this.btn_güncelle);
+            this.Controls.Add(this.btn_ekle);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_parametreEkranı);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtbox_sirketAdi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtbox_serverSifresi);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtbox_serverKullanıcıAdi);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbox_serverAdi);
             this.Name = "ParametreEkranı";
             this.Text = "ParametreEkranı";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ParametreEkranı_FormClosed);
             this.Load += new System.EventHandler(this.ParametreEkranı_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parametreEkranı)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,26 +270,26 @@ namespace UserFormUI
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_serverAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtbox_serverKullanıcıAdi;
+        private System.Windows.Forms.TextBox txtbox_serverSifresi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtbox_sirketAdi;
+        private System.Windows.Forms.DataGridView dataGridView_parametreEkranı;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ekle;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtbox_kullanıcıId;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtbox_email;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtbox_sifre;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtbox_kullanıcıAdı;
+        private System.Windows.Forms.Button btn_güncelle;
+        private System.Windows.Forms.Button btn_sil;
     }
 }

@@ -11,6 +11,7 @@ namespace Business.Abstract
         IDataResult<List<Kullanıcı>> GetAll();
         IResult Add(Kullanıcı kullanıcı);
         IResult Delete(Kullanıcı kullanıcı);
+        IResult Update(Kullanıcı kullanıcı);
         IResult UserAutenticacion(Kullanıcı kullanıcı);
     }
 }

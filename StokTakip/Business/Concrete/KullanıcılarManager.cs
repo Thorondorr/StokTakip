@@ -35,6 +35,12 @@ namespace Business.Concrete
             return new SuccesDataResult<List<Kullanıcı>>(_kullanıcıDal.GetAll());
         }
 
+        public IResult Update(Kullanıcı kullanıcı)
+        {
+            _kullanıcıDal.Update(kullanıcı);
+            return new SuccesResutl(Messages.KullanıcıUpdated);
+        }
+
         public IResult UserAutenticacion(Kullanıcı kullanıcı)
         {
            var result = _kullanıcıDal.Get(p => p.KullanıcıAdı == kullanıcı.KullanıcıAdı
