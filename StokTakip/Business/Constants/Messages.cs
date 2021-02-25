@@ -12,6 +12,9 @@ namespace Business.Constants
         public static string KullanıcıAutenticacionIsTrue = "Başarı ile giriş yapıldı.";
 
         public static string KullanıcıIsNotExist = "Kullanıcı bulunamadı.";
+        internal static string CariAdded;
+        internal static string CariDeleted;
+        internal static string CariUpdated;
         //public static string KullanıcıAdded = "Kullanıcı eklendi.";
     }
 }

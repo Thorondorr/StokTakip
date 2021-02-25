@@ -34,21 +34,21 @@ namespace UserFormUI
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBox_vergiDairesi = new System.Windows.Forms.TextBox();
+            this.txtBox_vergiNumarası = new System.Windows.Forms.TextBox();
+            this.txtBox_tckimlikNo = new System.Windows.Forms.TextBox();
+            this.txtBox_telefon = new System.Windows.Forms.TextBox();
+            this.txtBox_eposta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBox_cariNo = new System.Windows.Forms.TextBox();
+            this.txtBox_cariAd = new System.Windows.Forms.TextBox();
+            this.txtBox_adress = new System.Windows.Forms.TextBox();
+            this.txtBox_cariIl = new System.Windows.Forms.TextBox();
+            this.txtBox_cariİlce = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,9 +62,9 @@ namespace UserFormUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
+            this.label1.Size = new System.Drawing.Size(55, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Cari kod";
+            this.label1.Text = "Cari No";
             // 
             // label2
             // 
@@ -102,40 +102,40 @@ namespace UserFormUI
             this.label5.TabIndex = 1;
             this.label5.Text = "Cari İlçe";
             // 
-            // textBox6
+            // txtBox_vergiDairesi
             // 
-            this.textBox6.Location = new System.Drawing.Point(302, 31);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(192, 22);
-            this.textBox6.TabIndex = 0;
+            this.txtBox_vergiDairesi.Location = new System.Drawing.Point(302, 31);
+            this.txtBox_vergiDairesi.Name = "txtBox_vergiDairesi";
+            this.txtBox_vergiDairesi.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_vergiDairesi.TabIndex = 0;
             // 
-            // textBox7
+            // txtBox_vergiNumarası
             // 
-            this.textBox7.Location = new System.Drawing.Point(302, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(192, 22);
-            this.textBox7.TabIndex = 0;
+            this.txtBox_vergiNumarası.Location = new System.Drawing.Point(302, 81);
+            this.txtBox_vergiNumarası.Name = "txtBox_vergiNumarası";
+            this.txtBox_vergiNumarası.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_vergiNumarası.TabIndex = 0;
             // 
-            // textBox8
+            // txtBox_tckimlikNo
             // 
-            this.textBox8.Location = new System.Drawing.Point(302, 134);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(192, 22);
-            this.textBox8.TabIndex = 0;
+            this.txtBox_tckimlikNo.Location = new System.Drawing.Point(302, 134);
+            this.txtBox_tckimlikNo.Name = "txtBox_tckimlikNo";
+            this.txtBox_tckimlikNo.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_tckimlikNo.TabIndex = 0;
             // 
-            // textBox9
+            // txtBox_telefon
             // 
-            this.textBox9.Location = new System.Drawing.Point(302, 192);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(192, 22);
-            this.textBox9.TabIndex = 0;
+            this.txtBox_telefon.Location = new System.Drawing.Point(302, 192);
+            this.txtBox_telefon.Name = "txtBox_telefon";
+            this.txtBox_telefon.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_telefon.TabIndex = 0;
             // 
-            // textBox10
+            // txtBox_eposta
             // 
-            this.textBox10.Location = new System.Drawing.Point(302, 241);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(192, 22);
-            this.textBox10.TabIndex = 0;
+            this.txtBox_eposta.Location = new System.Drawing.Point(302, 241);
+            this.txtBox_eposta.Name = "txtBox_eposta";
+            this.txtBox_eposta.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_eposta.TabIndex = 0;
             // 
             // label6
             // 
@@ -182,40 +182,40 @@ namespace UserFormUI
             this.label10.TabIndex = 1;
             this.label10.Text = "E-posta";
             // 
-            // textBox1
+            // txtBox_cariNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtBox_cariNo.Location = new System.Drawing.Point(12, 31);
+            this.txtBox_cariNo.Name = "txtBox_cariNo";
+            this.txtBox_cariNo.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_cariNo.TabIndex = 2;
             // 
-            // textBox2
+            // txtBox_cariAd
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 22);
-            this.textBox2.TabIndex = 2;
+            this.txtBox_cariAd.Location = new System.Drawing.Point(12, 81);
+            this.txtBox_cariAd.Name = "txtBox_cariAd";
+            this.txtBox_cariAd.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_cariAd.TabIndex = 2;
             // 
-            // textBox3
+            // txtBox_adress
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 134);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtBox_adress.Location = new System.Drawing.Point(12, 134);
+            this.txtBox_adress.Name = "txtBox_adress";
+            this.txtBox_adress.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_adress.TabIndex = 2;
             // 
-            // textBox4
+            // txtBox_cariIl
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 192);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 22);
-            this.textBox4.TabIndex = 2;
+            this.txtBox_cariIl.Location = new System.Drawing.Point(12, 192);
+            this.txtBox_cariIl.Name = "txtBox_cariIl";
+            this.txtBox_cariIl.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_cariIl.TabIndex = 2;
             // 
-            // textBox5
+            // txtBox_cariİlce
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 241);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 22);
-            this.textBox5.TabIndex = 2;
+            this.txtBox_cariİlce.Location = new System.Drawing.Point(12, 241);
+            this.txtBox_cariİlce.Name = "txtBox_cariİlce";
+            this.txtBox_cariİlce.Size = new System.Drawing.Size(192, 22);
+            this.txtBox_cariİlce.TabIndex = 2;
             // 
             // button1
             // 
@@ -225,6 +225,7 @@ namespace UserFormUI
             this.button1.TabIndex = 3;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -262,6 +263,7 @@ namespace UserFormUI
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(679, 213);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Cari
             // 
@@ -273,11 +275,11 @@ namespace UserFormUI
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox_cariİlce);
+            this.Controls.Add(this.txtBox_cariIl);
+            this.Controls.Add(this.txtBox_adress);
+            this.Controls.Add(this.txtBox_cariAd);
+            this.Controls.Add(this.txtBox_cariNo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
@@ -288,11 +290,11 @@ namespace UserFormUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtBox_eposta);
+            this.Controls.Add(this.txtBox_telefon);
+            this.Controls.Add(this.txtBox_tckimlikNo);
+            this.Controls.Add(this.txtBox_vergiNumarası);
+            this.Controls.Add(this.txtBox_vergiDairesi);
             this.Name = "Cari";
             this.Text = "Cari";
             this.Load += new System.EventHandler(this.Cari_Load);
@@ -308,21 +310,21 @@ namespace UserFormUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBox_vergiDairesi;
+        private System.Windows.Forms.TextBox txtBox_vergiNumarası;
+        private System.Windows.Forms.TextBox txtBox_tckimlikNo;
+        private System.Windows.Forms.TextBox txtBox_telefon;
+        private System.Windows.Forms.TextBox txtBox_eposta;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBox_cariNo;
+        private System.Windows.Forms.TextBox txtBox_cariAd;
+        private System.Windows.Forms.TextBox txtBox_adress;
+        private System.Windows.Forms.TextBox txtBox_cariIl;
+        private System.Windows.Forms.TextBox txtBox_cariİlce;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
