@@ -24,6 +24,7 @@ namespace UserFormUI
 
         private void FormGetir(Form form)
         {
+            panel2.Controls.Clear();
             form.MdiParent = this;
             form.FormBorderStyle = FormBorderStyle.None;
             panel2.Controls.Add(form);
@@ -44,21 +45,6 @@ namespace UserFormUI
             
         }
 
-        private  void CloseForm(string formName)
-        {
-            FormCollection fc = Application.OpenForms;
-
-            foreach (Form frm in fc)
-            {
-                //iterate through
-                if (frm.Name == formName || frm.Name=="Login")
-                {
-                    continue;
-                }
-                
-            };
-        }
-
         private void btn_tahsilat_Click(object sender, EventArgs e)
         {
             Tahsilat tahsilat = new Tahsilat();
@@ -75,6 +61,11 @@ namespace UserFormUI
         {
             Alıs alıs = new Alıs();
             FormGetir(alıs);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
