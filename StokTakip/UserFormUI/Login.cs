@@ -41,10 +41,17 @@ namespace UserFormUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Authantiacition();
+        }
+
+        private void Authantiacition()
+        {
             KullanıcılarManager kullanıcılarManager = new KullanıcılarManager(new EfKullanıcıDal());
-            var result= kullanıcılarManager.UserAutenticacion(new Kullanıcı { 
-                KullanıcıAdı = txtBox_kullanıcıAdı.Text, 
-                Sifre = txtBox_Sifre.Text });
+            var result = kullanıcılarManager.UserAutenticacion(new Kullanıcı
+            {
+                KullanıcıAdı = txtBox_kullanıcıAdı.Text,
+                Sifre = txtBox_Sifre.Text
+            });
 
             if (result.Succes == true)
             {
