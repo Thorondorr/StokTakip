@@ -29,28 +29,28 @@ namespace UserFormUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBox_kullanıcıAdı = new System.Windows.Forms.TextBox();
+            this.txtBox_Sifre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bttn_Giris = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtBox_kullanıcıAdı
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 298);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtBox_kullanıcıAdı.Location = new System.Drawing.Point(118, 298);
+            this.txtBox_kullanıcıAdı.Name = "txtBox_kullanıcıAdı";
+            this.txtBox_kullanıcıAdı.Size = new System.Drawing.Size(189, 22);
+            this.txtBox_kullanıcıAdı.TabIndex = 0;
             // 
-            // textBox2
+            // txtBox_Sifre
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 326);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtBox_Sifre.Location = new System.Drawing.Point(118, 326);
+            this.txtBox_Sifre.Name = "txtBox_Sifre";
+            this.txtBox_Sifre.Size = new System.Drawing.Size(189, 22);
+            this.txtBox_Sifre.TabIndex = 1;
             // 
             // label1
             // 
@@ -70,14 +70,15 @@ namespace UserFormUI
             this.label2.TabIndex = 3;
             this.label2.Text = "Şifre";
             // 
-            // button1
+            // bttn_Giris
             // 
-            this.button1.Location = new System.Drawing.Point(118, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 41);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Giriş";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bttn_Giris.Location = new System.Drawing.Point(118, 365);
+            this.bttn_Giris.Name = "bttn_Giris";
+            this.bttn_Giris.Size = new System.Drawing.Size(189, 41);
+            this.bttn_Giris.TabIndex = 5;
+            this.bttn_Giris.Text = "Giriş";
+            this.bttn_Giris.UseVisualStyleBackColor = true;
+            this.bttn_Giris.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -95,12 +96,12 @@ namespace UserFormUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bttn_Giris);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox_Sifre);
+            this.Controls.Add(this.txtBox_kullanıcıAdı);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
@@ -115,12 +116,12 @@ namespace UserFormUI
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBox_kullanıcıAdı;
+        private System.Windows.Forms.TextBox txtBox_Sifre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bttn_Giris;
     }
 }
 

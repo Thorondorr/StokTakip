@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Business.Concrete;
+using DataAcces.Concrete.EntityFramework;
+using Entity.Concrete;
+using System;
 using System.Windows.Forms;
 
 namespace UserFormUI
@@ -13,20 +9,18 @@ namespace UserFormUI
     public partial class Login : Form
     {
         public bool LoginFormVisiblty { get; set; }
+        
         public Login()
         {
             InitializeComponent();
-           
+            
             
         }
-
-
+        
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             ParametreEkranıAc();
         }
-
-      
 
         private void ParametreEkranıAc()
         {
@@ -45,6 +39,20 @@ namespace UserFormUI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KullanıcılarManager kullanıcılarManager = new KullanıcılarManager(new EfKullanıcıDal());
+            var result= kullanıcılarManager.UserAutenticacion(new Kullanıcı { 
+                KullanıcıAdı = txtBox_kullanıcıAdı.Text, 
+                Sifre = txtBox_Sifre.Text });
+            
+
+            if (result.Succes == true)
+            {
+                MessageBox.Show("Giris yapıldı");
+            }
         }
     }
 }

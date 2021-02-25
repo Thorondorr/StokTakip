@@ -8,19 +8,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            KullanıcılarManager kullanıcıManager = new KullanıcılarManager(new EfKullanıcıDal());
+            //KullanıcılarManager kullanıcıManager = new KullanıcılarManager(new EfKullanıcıDal());
 
-            kullanıcıManager.Add(new Entity.Concrete.Kullanıcı {
-                KullanıcıAdı = "fako",
-                Sifre = "123",
-                Eposta = "fahrican.kcn@gmail.com" });
+            //kullanıcıManager.Add(new Entity.Concrete.Kullanıcı {
+            //    KullanıcıAdı = "fako",
+            //    Sifre = "123",
+            //    Eposta = "fahrican.kcn@gmail.com" });
 
-            var result = kullanıcıManager.GetAll();
+            //var result = kullanıcıManager.GetAll();
 
-            foreach(var kullanıcı in result)
-            {
-                Console.WriteLine($"KullanıcıAdı:{kullanıcı.KullanıcıAdı} Sifre : {kullanıcı.Sifre}  Email : {kullanıcı.Eposta}"  );
-            }
+            //foreach(var kullanıcı in result)
+            //{
+            //    Console.WriteLine($"KullanıcıAdı:{kullanıcı.KullanıcıAdı} Sifre : {kullanıcı.Sifre}  Email : {kullanıcı.Eposta}"  );
+            //}
 
         }
     }

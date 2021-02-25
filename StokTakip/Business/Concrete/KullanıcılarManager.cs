@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAcces.Abstract;
 using Entity.Concrete;
 using System;
@@ -16,14 +18,28 @@ namespace Business.Concrete
             _kullanıcıDal = kullanıcıDal;
         }
 
-        public void  Add(Kullanıcı kullanıcı)
+        public IResult Add(Kullanıcı kullanıcı)
         {
             _kullanıcıDal.Add(kullanıcı);
+            return new Result(true, Messages.KullanıcıAdded);
         }
 
-        public List<Kullanıcı> GetAll()
+        public IResult Delete(Kullanıcı kullanıcı)
         {
-            return _kullanıcıDal.GetAll();
+            _kullanıcıDal.Delete(kullanıcı);
+            return new Result(true, Messages.KullanıcıDeleted);
+        }
+
+        public IDataResult<List<Kullanıcı>> GetAll()
+        {
+            return new SuccesDataResult<List<Kullanıcı>>(_kullanıcıDal.GetAll());
+        }
+
+        public IResult UserAutenticacion(Kullanıcı kullanıcı)
+        {
+            _kullanıcıDal.Get(p => p.KullanıcıAdı == kullanıcı.KullanıcıAdı
+            && p.Sifre == kullanıcı.Sifre);
+            return new Result(true, Messages.KullanıcıAutenticacionIsTrue);
         }
     }
 }
