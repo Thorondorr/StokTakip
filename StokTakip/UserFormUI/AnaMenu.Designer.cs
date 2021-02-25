@@ -59,6 +59,7 @@
             this.btn_alış.TabIndex = 0;
             this.btn_alış.Text = "Alış";
             this.btn_alış.UseVisualStyleBackColor = true;
+            this.btn_alış.Click += new System.EventHandler(this.btn_alış_Click);
             // 
             // btn_satış
             // 
@@ -68,6 +69,7 @@
             this.btn_satış.TabIndex = 0;
             this.btn_satış.Text = "Satış";
             this.btn_satış.UseVisualStyleBackColor = true;
+            this.btn_satış.Click += new System.EventHandler(this.btn_satış_Click);
             // 
             // btn_tahsilat
             // 
@@ -77,6 +79,7 @@
             this.btn_tahsilat.TabIndex = 0;
             this.btn_tahsilat.Text = "Tahsilat";
             this.btn_tahsilat.UseVisualStyleBackColor = true;
+            this.btn_tahsilat.Click += new System.EventHandler(this.btn_tahsilat_Click);
             // 
             // btn_ürünEkle
             // 

@@ -173,6 +173,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alıs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıs.Designer.cs">
+      <DependentUpon>Alıs.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,12 +205,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Satıs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satıs.Designer.cs">
+      <DependentUpon>Satıs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tahsilat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tahsilat.Designer.cs">
+      <DependentUpon>Tahsilat.cs</DependentUpon>
+    </Compile>
     <Compile Include="UrunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UrunEkle.Designer.cs">
       <DependentUpon>UrunEkle.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Alıs.resx">
+      <DependentUpon>Alıs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +248,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Satıs.resx">
+      <DependentUpon>Satıs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tahsilat.resx">
+      <DependentUpon>Tahsilat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UrunEkle.resx">
       <DependentUpon>UrunEkle.cs</DependentUpon>
     </EmbeddedResource>

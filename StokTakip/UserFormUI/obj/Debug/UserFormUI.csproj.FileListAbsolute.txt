@@ -99,3 +99,6 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\bin\Debug\zh-Hant\
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.AnaMenu.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.Cari.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.UrunEkle.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.Alıs.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.Satıs.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\UserFormUI\obj\Debug\UserFormUI.Tahsilat.resources
