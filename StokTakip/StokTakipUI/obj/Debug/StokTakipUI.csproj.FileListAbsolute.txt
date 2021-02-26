@@ -1,0 +1,10 @@
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\StokTakipUI.exe.config
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\StokTakipUI.exe
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\StokTakipUI.pdb
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.csprojAssemblyReference.cache
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.Form1.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.Properties.Resources.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.csproj.GenerateResource.cache
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.csproj.CoreCompileInputs.cache
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.exe
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.pdb

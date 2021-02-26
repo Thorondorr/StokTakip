@@ -46,7 +46,7 @@ namespace UserFormUI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtBox_cariID.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtBox_cariID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtBox_cariNo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtBox_cariAd.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtBox_adress.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
@@ -69,7 +69,7 @@ namespace UserFormUI
         {
             var result = cariManager.Search(new Entity.Concrete.Cari
             {
-                CariId = Convert.ToInt32(txtBox_cariID.Text),
+                CariId = Convert.ToInt32( dataGridView1.CurrentRow.Cells[0].Value),
                 CariAdres = txtBox_adress.Text,
                 CariAdı = txtBox_cariAd.Text,
                 CariIl = txtBox_cariIl.Text,
