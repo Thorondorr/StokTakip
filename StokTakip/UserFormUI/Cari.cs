@@ -46,21 +46,45 @@ namespace UserFormUI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtBox_cariNo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtBox_cariAd.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtBox_adress.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtBox_cariIl.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtBox_cariİlce.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txtBox_vergiDairesi.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txtBox_vergiNumarası.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            txtBox_telefon.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            txtBox_eposta.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            
+            txtBox_cariNo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtBox_cariAd.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtBox_adress.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtBox_cariIl.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtBox_cariİlce.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtBox_vergiDairesi.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtBox_vergiNumarası.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            txtBox_tckimlikNo.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            txtBox_telefon.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            txtBox_eposta.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
         }
 
         private void RefleshDataGridView()
         {
             var result = cariManager.GetAll();
             dataGridView1.DataSource = result.Data;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var result = cariManager.Search(new Entity.Concrete.Cari
+            {
+                CariAdres = txtBox_adress.Text,
+                CariAdı = txtBox_cariAd.Text,
+                CariIl = txtBox_cariIl.Text,
+                CariIlce = txtBox_cariİlce.Text,
+                CariNo = txtBox_cariNo.Text,
+                Eposta = txtBox_eposta.Text,
+                TcKimlikNo = txtBox_tckimlikNo.Text,
+                Telefon = txtBox_telefon.Text,
+                VergiDairesi = txtBox_vergiDairesi.Text,
+                VergiNo = txtBox_vergiNumarası.Text,
+            });
+
+            // var rslt=  cariManager.Search(new Entity.Concrete.Cari { CariNo = "2"});
+            dataGridView1.DataSource = result.Data;
+
+            //RefleshDataGridView();
         }
     }
 }

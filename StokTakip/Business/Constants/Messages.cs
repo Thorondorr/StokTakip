@@ -15,6 +15,7 @@ namespace Business.Constants
         internal static string CariAdded;
         internal static string CariDeleted;
         internal static string CariUpdated;
+        public static string CariIsFound="Cari bulundu.";
         //public static string KullanıcıAdded = "Kullanıcı eklendi.";
     }
 }

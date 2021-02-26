@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Business.Constants;
+using System.Linq;
 
 namespace Business.Concrete
 {
@@ -34,21 +35,27 @@ namespace Business.Concrete
             return new SuccesDataResult<List<Cari>>(_cariDal.GetAll());
         }
 
-        public IResult Search(Cari cari)
+        public IDataResult<List<Cari>> Search(Cari cari)
         {
-            return new SuccesDataResult<List<Cari>>(_cariDal.GetAll(c => c.CariAdres == cari.CariAdres
+            return new SuccesDataResult<List<Cari>>(_cariDal.GetAll(c=>c.CariAdı.Contains(cari.CariAdı)));
+
+
+
+
+           /*     (_cariDal.GetAll(c => c.CariAdres == cari.CariAdres
             | c.CariAdı == cari.CariAdı
-            | c.CariId == cari.CariId | c.CariIl == cari.CariIl 
-            | c.CariIlce == cari.CariIlce | c.CariNo == cari.CariNo 
-            |c.Eposta == cari.Eposta | c.TcKimlikNo == cari.TcKimlikNo 
-            | c.VergiDairesi == cari.VergiDairesi | c.VergiNo == cari.VergiNo));
-            
+            | c.CariId == cari.CariId | c.CariIl == cari.CariIl
+            | c.CariIlce == cari.CariIlce | c.CariNo == cari.CariNo
+            | c.Eposta == cari.Eposta | c.TcKimlikNo == cari.TcKimlikNo
+            | c.VergiDairesi == cari.VergiDairesi | c.VergiNo == cari.VergiNo), Messages.CariIsFound);*/
         }
 
         public IResult Update(Cari cari)
         {
             _cariDal.Update(cari);
             return new Result(true, Messages.CariUpdated);
+
+           
         }
     }
 }
