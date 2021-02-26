@@ -30,6 +30,11 @@ namespace Business.Concrete
             return new Result(true, Messages.CariDeleted);
         }
 
+        public IResult Get(Cari cari)
+        {
+            return new SuccesDataResult<Cari>(_cariDal.Get(c => c.CariNo == cari.CariNo));
+        }
+
         public IDataResult<List<Cari>> GetAll()
         {
             return new SuccesDataResult<List<Cari>>(_cariDal.GetAll());

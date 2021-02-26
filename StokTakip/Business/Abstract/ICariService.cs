@@ -12,6 +12,7 @@ namespace Business.Abstract
         IResult Add(Cari cari);
         IResult Delete(Cari cari);
         IResult Update(Cari cari);
+        IResult Get(Cari cari);
         IDataResult<List<Cari>> Search(Cari cari);
     }
 }

@@ -46,7 +46,7 @@ namespace UserFormUI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            txtBox_cariID.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtBox_cariNo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtBox_cariAd.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtBox_adress.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
@@ -69,6 +69,7 @@ namespace UserFormUI
         {
             var result = cariManager.Search(new Entity.Concrete.Cari
             {
+                CariId = Convert.ToInt32(txtBox_cariID.Text),
                 CariAdres = txtBox_adress.Text,
                 CariAdı = txtBox_cariAd.Text,
                 CariIl = txtBox_cariIl.Text,
@@ -85,6 +86,46 @@ namespace UserFormUI
             dataGridView1.DataSource = result.Data;
 
             //RefleshDataGridView();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var result = cariManager.Update(new Entity.Concrete.Cari
+            {
+                CariId = Convert.ToInt32(txtBox_cariID.Text),
+                CariAdres = txtBox_adress.Text,
+                CariAdı = txtBox_cariAd.Text,
+                CariIl = txtBox_cariIl.Text,
+                CariIlce = txtBox_cariİlce.Text,
+                CariNo = txtBox_cariNo.Text,
+                Eposta = txtBox_eposta.Text,
+                TcKimlikNo = txtBox_tckimlikNo.Text,
+                Telefon = txtBox_telefon.Text,
+                VergiDairesi = txtBox_vergiDairesi.Text,
+                VergiNo = txtBox_vergiNumarası.Text,
+            });
+
+            RefleshDataGridView();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+             cariManager.Delete(new Entity.Concrete.Cari
+            {
+                CariId = Convert.ToInt32(txtBox_cariID.Text),
+                CariAdres = txtBox_adress.Text,
+                CariAdı = txtBox_cariAd.Text,
+                CariIl = txtBox_cariIl.Text,
+                CariIlce = txtBox_cariİlce.Text,
+                CariNo = txtBox_cariNo.Text,
+                Eposta = txtBox_eposta.Text,
+                TcKimlikNo = txtBox_tckimlikNo.Text,
+                Telefon = txtBox_telefon.Text,
+                VergiDairesi = txtBox_vergiDairesi.Text,
+                VergiNo = txtBox_vergiNumarası.Text,
+            });
+
+            RefleshDataGridView();
         }
     }
 }
