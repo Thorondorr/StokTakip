@@ -9,6 +9,7 @@ namespace Entity.Concrete
     {
         public int UrunId { get; set; }
         public string UrunAdı { get; set; }
+        public string UrunKodu { get; set; }
         public string Barkot { get; set; }
         public decimal Fiyat { get; set; }
         public int KDV { get; set; }

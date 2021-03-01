@@ -43,15 +43,16 @@ namespace ConsoleApp1
                 VergiNo = "1234"
 
             };
+        
            // cariManager.Add(fahri);
 
             /********************************SATIŞ İŞLEMİ***********************************************/
             Fatura fatura1 = new Fatura
             {
                 FaturaId=1,
-                Barkot=hıyarlar.Fiyat.ToString(),
+              //  Barkot=hıyarlar.Fiyat.ToString(),
                 UrunAdı=hıyarlar.UrunAdı,
-                BürütTutar = hıyarlar.Fiyat.ToString(),
+                BürütTutar = hıyarlar.Fiyat,
                 KDV = hıyarlar.KDV,
                 CariNo = fahri.CariNo,
                 FaturaNo = "f1",
@@ -80,14 +81,30 @@ namespace ConsoleApp1
             };
 
             hıyarlar.Miktar = -5;
-            urunManager.Update(hıyarlar);
+            //urunManager.Update(hıyarlar);
 
 
-            urunManager.Add(hıyarlar);
-            cariHareketlerManager.Add(cariHareket);
-            faturaManager.Update(fatura1);
-            tahsilatManager.Add(tahsilat);
+            //urunManager.Add(hıyarlar);
+            //cariHareketlerManager.Add(cariHareket);
+            //faturaManager.Update(fatura1);
+            //tahsilatManager.Add(tahsilat);
 
+            var resul1 = cariHareketlerManager.GetAll();
+            var resul2 = faturaManager.GetAll();
+            var resul3 = tahsilatManager.GetAll();
+
+            foreach( var rsl1 in resul1.Data)
+            {
+                Console.WriteLine($"Cari ID {rsl1.CariHareketId}//Cari No {rsl1.CariNo} //FaturaNo {rsl1.FaturaNo} //Açıklama {rsl1.Aciklama} //Tarih {rsl1.Tarih} //Tutar {rsl1.Tutar} ");
+            }
+            foreach (var rsl2 in resul2.Data)
+            {
+                Console.WriteLine($"//Cari no {rsl2.CariNo} //fatura no {rsl2.FaturaNo} //FaturaId {rsl2.FaturaId} //KDV {rsl2.KDV} //Tarih {rsl2.Tarih} //Genel Toplam {rsl2.GenelToplam} ");
+            }
+            foreach (var rsl3 in resul3.Data)
+            {
+                Console.WriteLine($"Belge No {rsl3.BelgeNo}//Cari No {rsl3.CariNo} //TahsilatID {rsl3.TahsilatId} //Tarih {rsl3.Tarih} //Tip {rsl3.Tip} //Tutar {rsl3.Tutar} ");
+            }
 
 
 
