@@ -8,3 +8,4 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTak
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.csproj.CoreCompileInputs.cache
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.exe
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.pdb
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.Form_Dashboard.resources

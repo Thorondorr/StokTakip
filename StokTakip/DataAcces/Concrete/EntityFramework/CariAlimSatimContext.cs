@@ -20,5 +20,6 @@ namespace DataAcces.Concrete.EntityFramework
         public DbSet<Kullanıcı> Kullanıcı { get; set; }
         public DbSet<Stok> Stok { get; set; }
         public DbSet<Tahsilat> Tahsilat { get; set; }
+        public DbSet<Urun> Urun { get; set; }
     }
 }

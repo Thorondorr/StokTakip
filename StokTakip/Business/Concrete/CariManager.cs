@@ -43,13 +43,7 @@ namespace Business.Concrete
         public IDataResult<List<Cari>> Search(Cari cari)
         {
             return new SuccesDataResult<List<Cari>>(_cariDal.GetAll(c=>c.CariAdı.Contains(cari.CariAdı)));
-            /*     (_cariDal.GetAll(c => c.CariAdres == cari.CariAdres
-          | c.CariAdı == cari.CariAdı
-          | c.CariId == cari.CariId | c.CariIl == cari.CariIl
-          | c.CariIlce == cari.CariIlce | c.CariNo == cari.CariNo
-          | c.Eposta == cari.Eposta | c.TcKimlikNo == cari.TcKimlikNo
-          | c.VergiDairesi == cari.VergiDairesi | c.VergiNo == cari.VergiNo), Messages.CariIsFound);*/
-
+          
         }
 
         public IResult Update(Cari cari)

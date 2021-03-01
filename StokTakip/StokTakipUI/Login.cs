@@ -31,5 +31,13 @@ namespace StokTakipUI
         {
             this.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (Form_Dashboard fd = new Form_Dashboard())
+            {
+                fd.ShowDialog();
+            }
+        }
     }
 }
