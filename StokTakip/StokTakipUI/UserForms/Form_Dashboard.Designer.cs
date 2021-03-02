@@ -33,7 +33,6 @@ namespace StokTakipUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.btn_alış = new System.Windows.Forms.Button();
             this.btn_satıs = new System.Windows.Forms.Button();
             this.btn_tahsilat = new System.Windows.Forms.Button();
             this.btn_ürünekle = new System.Windows.Forms.Button();
@@ -53,6 +52,7 @@ namespace StokTakipUI
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.panelControls = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,7 +66,6 @@ namespace StokTakipUI
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(150)))));
             this.panelLeft.Controls.Add(this.panelSide);
-            this.panelLeft.Controls.Add(this.btn_alış);
             this.panelLeft.Controls.Add(this.btn_satıs);
             this.panelLeft.Controls.Add(this.btn_tahsilat);
             this.panelLeft.Controls.Add(this.btn_ürünekle);
@@ -87,23 +86,6 @@ namespace StokTakipUI
             this.panelSide.Size = new System.Drawing.Size(7, 59);
             this.panelSide.TabIndex = 4;
             // 
-            // btn_alış
-            // 
-            this.btn_alış.FlatAppearance.BorderSize = 0;
-            this.btn_alış.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_alış.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_alış.ForeColor = System.Drawing.Color.White;
-            this.btn_alış.Image = ((System.Drawing.Image)(resources.GetObject("btn_alış.Image")));
-            this.btn_alış.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_alış.Location = new System.Drawing.Point(12, 471);
-            this.btn_alış.Name = "btn_alış";
-            this.btn_alış.Size = new System.Drawing.Size(203, 59);
-            this.btn_alış.TabIndex = 1;
-            this.btn_alış.Text = "   Alış";
-            this.btn_alış.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_alış.UseVisualStyleBackColor = true;
-            this.btn_alış.Click += new System.EventHandler(this.btn_alış_Click);
-            // 
             // btn_satıs
             // 
             this.btn_satıs.FlatAppearance.BorderSize = 0;
@@ -116,7 +98,7 @@ namespace StokTakipUI
             this.btn_satıs.Name = "btn_satıs";
             this.btn_satıs.Size = new System.Drawing.Size(203, 59);
             this.btn_satıs.TabIndex = 1;
-            this.btn_satıs.Text = "   Satış";
+            this.btn_satıs.Text = "   Cari Ekle";
             this.btn_satıs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_satıs.UseVisualStyleBackColor = true;
             this.btn_satıs.Click += new System.EventHandler(this.btn_satıs_Click);
@@ -150,7 +132,7 @@ namespace StokTakipUI
             this.btn_ürünekle.Name = "btn_ürünekle";
             this.btn_ürünekle.Size = new System.Drawing.Size(203, 59);
             this.btn_ürünekle.TabIndex = 1;
-            this.btn_ürünekle.Text = "   Ürün Ekle";
+            this.btn_ürünekle.Text = "   Alış";
             this.btn_ürünekle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ürünekle.UseVisualStyleBackColor = true;
             this.btn_ürünekle.Click += new System.EventHandler(this.btn_ürünekle_Click);
@@ -167,7 +149,7 @@ namespace StokTakipUI
             this.btn_cariEkle.Name = "btn_cariEkle";
             this.btn_cariEkle.Size = new System.Drawing.Size(203, 59);
             this.btn_cariEkle.TabIndex = 1;
-            this.btn_cariEkle.Text = "   Cari Ekle";
+            this.btn_cariEkle.Text = "   Satış";
             this.btn_cariEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cariEkle.UseVisualStyleBackColor = true;
             this.btn_cariEkle.Click += new System.EventHandler(this.btn_cariEkle_Click);
@@ -332,11 +314,21 @@ namespace StokTakipUI
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // panelControls
+            // 
+            this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControls.Location = new System.Drawing.Point(215, 150);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(985, 570);
+            this.panelControls.TabIndex = 1;
+            this.panelControls.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControls_Paint);
+            // 
             // Form_Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.Controls.Add(this.panelControls);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelLeft);
@@ -370,7 +362,6 @@ namespace StokTakipUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_cariEkle;
-        private System.Windows.Forms.Button btn_alış;
         private System.Windows.Forms.Button btn_satıs;
         private System.Windows.Forms.Button btn_tahsilat;
         private System.Windows.Forms.Button btn_ürünekle;
@@ -382,5 +373,6 @@ namespace StokTakipUI
         private System.Windows.Forms.Label lbl_timer;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Panel panelControls;
     }
 }

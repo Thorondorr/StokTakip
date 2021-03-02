@@ -9,3 +9,11 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTak
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.exe
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.pdb
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.Form_Dashboard.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Home.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Sales.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Purchase.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_Add_Product.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_AddStock.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Customer_Add.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_Customer_Add.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Tahsilat.resources
