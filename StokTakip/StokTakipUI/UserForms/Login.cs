@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Business.Concrete;
+using DataAcces.Concrete.EntityFramework;
+using Entity.Concrete;
+using StokTakipUI.UserForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,15 +38,44 @@ namespace StokTakipUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (Form_Dashboard fd = new Form_Dashboard())
+            if (Authantiacition())
             {
-                fd.ShowDialog();
+                using (Form_Dashboard fd = new Form_Dashboard())
+                {
+                    fd.ShowDialog();
+                }
             }
+           
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox5_DoubleClick(object sender, EventArgs e)
+        {
+            using (ParametreEkranı parametreEkranı = new ParametreEkranı())
+            {
+                parametreEkranı.ShowDialog();
+            }
+        }
+        private bool Authantiacition()
+        {
+            KullanıcılarManager kullanıcılarManager = new KullanıcılarManager(new EfKullanıcıDal());
+            var result = kullanıcılarManager.UserAutenticacion(new Kullanıcı
+            {
+                KullanıcıAdı = txtbox_kullanıcıAdı.Text,
+                Sifre = txtBox_sifre.Text
+            });
+
+            if (result.Succes == true)
+            {
+                MessageBox.Show(result.Message);
+            }
+            else { MessageBox.Show(result.Message); }
+
+            return result.Succes;
         }
     }
 }

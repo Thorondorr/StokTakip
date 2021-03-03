@@ -18,6 +18,8 @@ namespace Business.Concrete
 
         public IResult Add(Stok stok)
         {
+          
+            stok.UrunKodu = GenerateGUID().Message;
             _stokDal.Add(stok);
             return new SuccesResutl();
         }
@@ -39,6 +41,11 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
+        private IDataResult<string> GenerateGUID()
+        {
+            string NewGUID = System.Guid.NewGuid().ToString().Replace("-", "").ToUpper();
 
+            return new SuccesDataResult<string>(NewGUID);
+        }
     }
 }

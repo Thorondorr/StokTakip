@@ -34,13 +34,13 @@ namespace StokTakipUI.UserForms
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbox_fiyat = new System.Windows.Forms.TextBox();
+            this.txtbox_kdv = new System.Windows.Forms.TextBox();
+            this.txtbox_cariNo = new System.Windows.Forms.TextBox();
+            this.txtBox_ürünkodu = new System.Windows.Forms.TextBox();
+            this.txtbox_ürüntipi = new System.Windows.Forms.TextBox();
+            this.txtbox_cariAdı = new System.Windows.Forms.TextBox();
+            this.txtbox_ürünAdı = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,9 +49,9 @@ namespace StokTakipUI.UserForms
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_satınAl = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtbox_tarih = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -92,54 +92,54 @@ namespace StokTakipUI.UserForms
             this.panel3.Size = new System.Drawing.Size(870, 10);
             this.panel3.TabIndex = 3;
             // 
-            // textBox4
+            // txtbox_fiyat
             // 
-            this.textBox4.Location = new System.Drawing.Point(500, 385);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 32);
-            this.textBox4.TabIndex = 25;
+            this.txtbox_fiyat.Location = new System.Drawing.Point(500, 385);
+            this.txtbox_fiyat.Name = "txtbox_fiyat";
+            this.txtbox_fiyat.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_fiyat.TabIndex = 25;
             // 
-            // textBox5
+            // txtbox_kdv
             // 
-            this.textBox5.Location = new System.Drawing.Point(500, 311);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 32);
-            this.textBox5.TabIndex = 24;
+            this.txtbox_kdv.Location = new System.Drawing.Point(500, 311);
+            this.txtbox_kdv.Name = "txtbox_kdv";
+            this.txtbox_kdv.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_kdv.TabIndex = 24;
             // 
-            // textBox8
+            // txtbox_cariNo
             // 
-            this.textBox8.Location = new System.Drawing.Point(500, 153);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(171, 32);
-            this.textBox8.TabIndex = 23;
+            this.txtbox_cariNo.Location = new System.Drawing.Point(500, 153);
+            this.txtbox_cariNo.Name = "txtbox_cariNo";
+            this.txtbox_cariNo.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_cariNo.TabIndex = 23;
             // 
-            // textBox2
+            // txtBox_ürünkodu
             // 
-            this.textBox2.Location = new System.Drawing.Point(500, 233);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 32);
-            this.textBox2.TabIndex = 22;
+            this.txtBox_ürünkodu.Location = new System.Drawing.Point(500, 233);
+            this.txtBox_ürünkodu.Name = "txtBox_ürünkodu";
+            this.txtBox_ürünkodu.Size = new System.Drawing.Size(171, 32);
+            this.txtBox_ürünkodu.TabIndex = 22;
             // 
-            // textBox9
+            // txtbox_ürüntipi
             // 
-            this.textBox9.Location = new System.Drawing.Point(204, 385);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(171, 32);
-            this.textBox9.TabIndex = 21;
+            this.txtbox_ürüntipi.Location = new System.Drawing.Point(204, 385);
+            this.txtbox_ürüntipi.Name = "txtbox_ürüntipi";
+            this.txtbox_ürüntipi.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_ürüntipi.TabIndex = 21;
             // 
-            // textBox7
+            // txtbox_cariAdı
             // 
-            this.textBox7.Location = new System.Drawing.Point(204, 153);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(171, 32);
-            this.textBox7.TabIndex = 19;
+            this.txtbox_cariAdı.Location = new System.Drawing.Point(204, 153);
+            this.txtbox_cariAdı.Name = "txtbox_cariAdı";
+            this.txtbox_cariAdı.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_cariAdı.TabIndex = 19;
             // 
-            // textBox1
+            // txtbox_ürünAdı
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 233);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 32);
-            this.textBox1.TabIndex = 18;
+            this.txtbox_ürünAdı.Location = new System.Drawing.Point(204, 233);
+            this.txtbox_ürünAdı.Name = "txtbox_ürünAdı";
+            this.txtbox_ürünAdı.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_ürünAdı.TabIndex = 18;
             // 
             // label5
             // 
@@ -214,17 +214,18 @@ namespace StokTakipUI.UserForms
             this.label1.TabIndex = 17;
             this.label1.Text = "Ürün Adı";
             // 
-            // button2
+            // btn_satınAl
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(494, 456);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 46);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Satın Al";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_satınAl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btn_satınAl.FlatAppearance.BorderSize = 0;
+            this.btn_satınAl.ForeColor = System.Drawing.Color.White;
+            this.btn_satınAl.Location = new System.Drawing.Point(494, 456);
+            this.btn_satınAl.Name = "btn_satınAl";
+            this.btn_satınAl.Size = new System.Drawing.Size(177, 46);
+            this.btn_satınAl.TabIndex = 8;
+            this.btn_satınAl.Text = "Satın Al";
+            this.btn_satınAl.UseVisualStyleBackColor = false;
+            this.btn_satınAl.Click += new System.EventHandler(this.btn_satınAl_Click);
             // 
             // label9
             // 
@@ -235,12 +236,12 @@ namespace StokTakipUI.UserForms
             this.label9.TabIndex = 11;
             this.label9.Text = "Tarih ";
             // 
-            // textBox6
+            // txtbox_tarih
             // 
-            this.textBox6.Location = new System.Drawing.Point(204, 311);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(171, 32);
-            this.textBox6.TabIndex = 20;
+            this.txtbox_tarih.Location = new System.Drawing.Point(204, 311);
+            this.txtbox_tarih.Name = "txtbox_tarih";
+            this.txtbox_tarih.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_tarih.TabIndex = 20;
             // 
             // button1
             // 
@@ -261,14 +262,14 @@ namespace StokTakipUI.UserForms
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(870, 552);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbox_fiyat);
+            this.Controls.Add(this.txtbox_kdv);
+            this.Controls.Add(this.txtbox_cariNo);
+            this.Controls.Add(this.txtBox_ürünkodu);
+            this.Controls.Add(this.txtbox_ürüntipi);
+            this.Controls.Add(this.txtbox_tarih);
+            this.Controls.Add(this.txtbox_cariAdı);
+            this.Controls.Add(this.txtbox_ürünAdı);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
@@ -278,7 +279,7 @@ namespace StokTakipUI.UserForms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_satınAl);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -299,13 +300,13 @@ namespace StokTakipUI.UserForms
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_fiyat;
+        private System.Windows.Forms.TextBox txtbox_kdv;
+        private System.Windows.Forms.TextBox txtbox_cariNo;
+        private System.Windows.Forms.TextBox txtBox_ürünkodu;
+        private System.Windows.Forms.TextBox txtbox_ürüntipi;
+        private System.Windows.Forms.TextBox txtbox_cariAdı;
+        private System.Windows.Forms.TextBox txtbox_ürünAdı;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
@@ -314,9 +315,9 @@ namespace StokTakipUI.UserForms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_satınAl;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtbox_tarih;
         private System.Windows.Forms.Button button1;
     }
 }

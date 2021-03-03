@@ -18,6 +18,10 @@ namespace StokTakipUI
         public Form_Dashboard()
         {
             InitializeComponent();
+            moveSidePanel(btn_home);
+            UserControls.UC_Home uC_Home = new UserControls.UC_Home();
+            AddControlsToPanel(uC_Home);
+
             timer2.Start();
             _panelWidht = panelLeft.Width;
             _isCollapsed = false;

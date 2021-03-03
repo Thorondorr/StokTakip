@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concrete;
+using DataAcces.Concrete.EntityFramework;
+using Entity.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +15,73 @@ namespace StokTakipUI.UserForms
 {
     public partial class Form_AddStock : Form
     {
+        StokManager stokManager = new StokManager(new EfStokDal());
+        CariManager cariManager = new CariManager(new EfCariDal());
         public Form_AddStock()
         {
             InitializeComponent();
+            getCariAdd();
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          var result= cariManager.Search(new Cari
+            {
+                CariAdı = comboBox1.Text
+            });
+
+          
+            Stok stok = new Stok
+            {
+                UrunAdı = txtBox_ürünAdı.Text,
+                UrunKodu ="",
+                CariNo="",
+                KDV = Convert.ToInt32(txtBox_kdv.Text),
+                Miktar = Convert.ToInt32(txtBox_miktar.Text),
+                GirisCikis ="giriş",
+                StokNetFiyatı=Convert.ToInt32(txtBox_netfiyat.Text),
+                Tarih=DateTime.Now
+            };
+            foreach (var item in result.Data)
+            {
+                stok.CariNo = item.CariNo;
+            }
+
+           var result1= stokManager.Add(stok);
+
+            if (result1.Succes)
+            {
+                MessageBox.Show(result1.Message);
+            }
+            else {
+                MessageBox.Show(result1.Message);
+            }
+            
+
+        }
+
+        private void getCariAdd()
+        {
+          var resul= cariManager.GetAll();
+            foreach(var a in resul.Data)
+            {
+                comboBox1.Items.Add(a.CariAdı);
+            }
+        }
+
+
+
+    
+
+        private void txtBox_ürünAdı_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

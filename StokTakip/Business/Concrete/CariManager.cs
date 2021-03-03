@@ -20,6 +20,8 @@ namespace Business.Concrete
         }
         public IResult Add(Cari cari)
         {
+
+            cari.CariNo = GenerateGUID().Message;
             _cariDal.Add(cari);            
             return new Result(true, Messages.CariAdded);
         }
@@ -50,8 +52,13 @@ namespace Business.Concrete
         {
             _cariDal.Update(cari);
             return new Result(true, Messages.CariUpdated);
-
            
+        }
+        private IDataResult<string> GenerateGUID()
+        {
+            string NewGUID = System.Guid.NewGuid().ToString().Replace("-", "").ToUpper();
+
+            return new SuccesDataResult<string>(NewGUID);
         }
     }
 }

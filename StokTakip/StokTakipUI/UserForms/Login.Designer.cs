@@ -31,19 +31,19 @@ namespace StokTakipUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_login_exit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbox_kullanıcıAdı = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBox_sifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_login_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -52,7 +52,7 @@ namespace StokTakipUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox_login_exit);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,17 +61,17 @@ namespace StokTakipUI
             this.panel1.Size = new System.Drawing.Size(1200, 56);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox4
+            // pictureBox_login_exit
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1127, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(73, 56);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox_login_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox_login_exit.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_login_exit.Image")));
+            this.pictureBox_login_exit.Location = new System.Drawing.Point(1127, 0);
+            this.pictureBox_login_exit.Name = "pictureBox_login_exit";
+            this.pictureBox_login_exit.Size = new System.Drawing.Size(73, 56);
+            this.pictureBox_login_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_login_exit.TabIndex = 5;
+            this.pictureBox_login_exit.TabStop = false;
+            this.pictureBox_login_exit.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox1
             // 
@@ -118,14 +118,14 @@ namespace StokTakipUI
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // textBox1
+            // txtbox_kullanıcıAdı
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox1.Location = new System.Drawing.Point(428, 391);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 36);
-            this.textBox1.TabIndex = 2;
+            this.txtbox_kullanıcıAdı.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbox_kullanıcıAdı.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.txtbox_kullanıcıAdı.Location = new System.Drawing.Point(428, 391);
+            this.txtbox_kullanıcıAdı.Name = "txtbox_kullanıcıAdı";
+            this.txtbox_kullanıcıAdı.Size = new System.Drawing.Size(345, 36);
+            this.txtbox_kullanıcıAdı.TabIndex = 2;
             // 
             // label4
             // 
@@ -138,14 +138,14 @@ namespace StokTakipUI
             this.label4.TabIndex = 0;
             this.label4.Text = "Şifre";
             // 
-            // textBox2
+            // txtBox_sifre
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox2.Location = new System.Drawing.Point(428, 468);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(345, 36);
-            this.textBox2.TabIndex = 2;
+            this.txtBox_sifre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBox_sifre.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.txtBox_sifre.Location = new System.Drawing.Point(428, 468);
+            this.txtBox_sifre.Name = "txtBox_sifre";
+            this.txtBox_sifre.Size = new System.Drawing.Size(345, 36);
+            this.txtBox_sifre.TabIndex = 2;
             // 
             // label3
             // 
@@ -170,29 +170,30 @@ namespace StokTakipUI
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.DoubleClick += new System.EventHandler(this.pictureBox5_DoubleClick);
             // 
-            // button1
+            // btn_login
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(169)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(428, 522);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(345, 49);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(169)))));
+            this.btn_login.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_login.ForeColor = System.Drawing.Color.White;
+            this.btn_login.Location = new System.Drawing.Point(428, 522);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(345, 49);
+            this.btn_login.TabIndex = 6;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1200, 720);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox_sifre);
+            this.Controls.Add(this.txtbox_kullanıcıAdı);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -206,7 +207,7 @@ namespace StokTakipUI
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_login_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -222,13 +223,13 @@ namespace StokTakipUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_kullanıcıAdı;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox txtBox_sifre;
+        private System.Windows.Forms.PictureBox pictureBox_login_exit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_login;
     }
 }
 

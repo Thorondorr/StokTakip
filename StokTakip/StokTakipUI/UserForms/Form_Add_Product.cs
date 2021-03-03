@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business.Concrete;
+using DataAcces.Concrete.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace StokTakipUI.UserForms
 {
     public partial class Form_Add_Product : Form
     {
+        
         public Form_Add_Product()
         {
             InitializeComponent();
@@ -20,6 +23,12 @@ namespace StokTakipUI.UserForms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btn_satınAl_Click(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }
