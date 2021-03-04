@@ -11,6 +11,7 @@ namespace Business.Abstract
         IResult Add(CariHareket cariHareket);
         IResult Update(CariHareket cariHareket);
         IResult Delete(CariHareket cariHareket);
+        IResult CreateCariHareket(Fatura fatura);
         IDataResult<List<CariHareket>> GetAll();
     }
 }

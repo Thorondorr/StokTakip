@@ -11,6 +11,7 @@ namespace Business.Abstract
         IResult Add(Fatura fatura);
         IResult Update(Fatura fatura);
         IResult Delete(Fatura fatura);
+        IResult CreateFatura(Sepet sepet);
         IDataResult<List<Fatura>> GetAll();
     }
 }

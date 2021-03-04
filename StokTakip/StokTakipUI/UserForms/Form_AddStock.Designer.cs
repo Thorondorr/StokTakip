@@ -49,6 +49,8 @@ namespace StokTakipUI.UserForms
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtbox_ürünTürü = new System.Windows.Forms.TextBox();
             panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -222,6 +224,23 @@ namespace StokTakipUI.UserForms
             this.comboBox1.Size = new System.Drawing.Size(171, 31);
             this.comboBox1.TabIndex = 50;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(74, 353);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 23);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Ürün Türü";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtbox_ürünTürü
+            // 
+            this.txtbox_ürünTürü.Location = new System.Drawing.Point(78, 379);
+            this.txtbox_ürünTürü.Name = "txtbox_ürünTürü";
+            this.txtbox_ürünTürü.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_ürünTürü.TabIndex = 48;
+            // 
             // Form_AddStock
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -229,10 +248,12 @@ namespace StokTakipUI.UserForms
             this.ClientSize = new System.Drawing.Size(662, 672);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtbox_ürünTürü);
             this.Controls.Add(this.txtBox_kdv);
             this.Controls.Add(this.txtBox_miktar);
             this.Controls.Add(this.txtBox_ürünKodu);
             this.Controls.Add(this.txtBox_netfiyat);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBox_ürünAdı);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label10);
@@ -278,5 +299,7 @@ namespace StokTakipUI.UserForms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtbox_ürünTürü;
     }
 }

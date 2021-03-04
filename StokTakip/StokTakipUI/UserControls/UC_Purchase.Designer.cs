@@ -149,7 +149,7 @@ namespace StokTakipUI.UserControls
             this.button_urunEkle.Name = "button_urunEkle";
             this.button_urunEkle.Size = new System.Drawing.Size(154, 75);
             this.button_urunEkle.TabIndex = 0;
-            this.button_urunEkle.Text = "Stok Ekle";
+            this.button_urunEkle.Text = "Stok Güncelle";
             this.button_urunEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_urunEkle.UseVisualStyleBackColor = true;
             this.button_urunEkle.Click += new System.EventHandler(this.button_urunEkle_Click);

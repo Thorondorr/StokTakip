@@ -21,6 +21,19 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
+        public IResult CreateTahsilat(Fatura fatura)
+        {
+            _tahsilatDal.Add(new Tahsilat
+            {
+                BelgeNo = fatura.FaturaNo,
+                CariNo = fatura.FaturaNo,
+                Tarih = fatura.Tarih,
+                Tip = fatura.Tip,
+                Tutar = fatura.GenelToplam
+            });
+            return new SuccesResutl();
+        }
+
         public IResult Delete(Tahsilat tahsilat)
         {
             _tahsilatDal.Delete(tahsilat);

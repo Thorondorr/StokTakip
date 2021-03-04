@@ -17,6 +17,8 @@ namespace StokTakipUI.UserForms
     {
         StokManager stokManager = new StokManager(new EfStokDal());
         CariManager cariManager = new CariManager(new EfCariDal());
+        UrunManager UrunManager = new UrunManager(new EfUrunDal());
+        Random random = new Random();
         public Form_AddStock()
         {
             InitializeComponent();
@@ -48,12 +50,30 @@ namespace StokTakipUI.UserForms
                 StokNetFiyatı=Convert.ToInt32(txtBox_netfiyat.Text),
                 Tarih=DateTime.Now
             };
+
+           
+
             foreach (var item in result.Data)
             {
                 stok.CariNo = item.CariNo;
             }
 
            var result1= stokManager.Add(stok);
+
+            var result2 = stokManager.GetByUrunAdı(stok.UrunAdı).Data;
+
+            Urun urun = new Urun
+            {
+                Barkot = random.Next(0,100).ToString(),
+                Fiyat = stok.StokNetFiyatı,
+                KDV = stok.KDV,
+                Miktar = stok.Miktar,
+                UrunAdı = stok.UrunAdı,
+                UrunTipi = txtbox_ürünTürü.Text,
+                UrunKodu = result2.UrunKodu,
+            };
+
+            UrunManager.Add(urun);
 
             if (result1.Succes)
             {
@@ -62,7 +82,8 @@ namespace StokTakipUI.UserForms
             else {
                 MessageBox.Show(result1.Message);
             }
-            
+
+           
 
         }
 

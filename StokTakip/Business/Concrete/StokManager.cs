@@ -35,6 +35,11 @@ namespace Business.Concrete
             return new DataResult<List<Stok>>(_stokDal.GetAll(), true);
         }
 
+        public IDataResult<Stok> GetByUrunAdı(string ürünAdı)
+        {
+            return new SuccesDataResult<Stok>(_stokDal.Get(s => s.UrunAdı == ürünAdı));
+        }
+
         public IResult Update(Stok stok)
         {
             _stokDal.Update(stok);

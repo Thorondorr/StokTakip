@@ -11,6 +11,7 @@ namespace Business.Abstract
         IResult Add(Tahsilat tahsilat);
         IResult Update(Tahsilat tahsilat);
         IResult Delete(Tahsilat tahsilat);
+        IResult CreateTahsilat(Fatura fatura);
         IDataResult<List<Tahsilat>> GetAll();
     }
 }

@@ -22,6 +22,21 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
+        public IResult CreateCariHareket(Fatura fatura)
+        {
+            CariHareket cariHareket = new CariHareket
+            {
+                FaturaNo = fatura.FaturaNo,
+                CariNo = fatura.CariNo,
+                Tarih = DateTime.Now,
+                Tutar = fatura.GenelToplam,
+                Aciklama = fatura.BorcAlacak,
+                BorcAlacak = fatura.Aciklama
+            };
+
+            return new SuccesResutl();
+        }
+
         public IResult Delete(CariHareket cariHareket)
         {
             _cariHareketDal.Delete(cariHareket);

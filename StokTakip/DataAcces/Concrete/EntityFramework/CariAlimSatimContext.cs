@@ -1,4 +1,5 @@
 ﻿using Entity.Concrete;
+using Entity.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,5 +22,6 @@ namespace DataAcces.Concrete.EntityFramework
         public DbSet<Stok> Stok { get; set; }
         public DbSet<Tahsilat> Tahsilat { get; set; }
         public DbSet<Urun> Urun { get; set; }
+        public DbSet<UrunDetailsDto> UrunDetails { get; set; }
     }
 }
