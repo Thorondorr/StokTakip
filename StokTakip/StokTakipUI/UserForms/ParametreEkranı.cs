@@ -15,7 +15,7 @@ namespace StokTakipUI.UserForms
 {
     public partial class ParametreEkranı : Form
     {
-        List<string> UserData;
+        //List<string> UserData;
         KullanıcılarManager kullanıcıManager = new KullanıcılarManager(new EfKullanıcıDal());
         public ParametreEkranı()
         {

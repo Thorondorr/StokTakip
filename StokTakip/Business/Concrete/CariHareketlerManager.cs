@@ -11,10 +11,12 @@ namespace Business.Concrete
     public class CariHareketlerManager : ICariHareketService
     {
         ICariHareketDal _cariHareketDal;
+        IFaturaService _faturaService;
 
         public CariHareketlerManager(ICariHareketDal cariHareketDal)
         {
             _cariHareketDal = cariHareketDal;
+           // _faturaService = faturaService;
         }
         public IResult Add(CariHareket cariHareket)
         {
@@ -22,17 +24,19 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
-        public IResult CreateCariHareket(Fatura fatura)
+        public IResult CreateCariHareket(string faturaNo,Sepet sepet)
         {
-            CariHareket cariHareket = new CariHareket
-            {
-                FaturaNo = fatura.FaturaNo,
-                CariNo = fatura.CariNo,
-                Tarih = DateTime.Now,
-                Tutar = fatura.GenelToplam,
-                Aciklama = fatura.BorcAlacak,
-                BorcAlacak = fatura.Aciklama
-            };
+           // var result = _faturaService.getByFaturaNo(faturaNo);
+            //CariHareket cariHareket = new CariHareket
+            //{
+            //    FaturaNo = result.Data.FaturaNo,
+            //    CariNo = result.Data.CariNo,
+            //    Tarih = DateTime.Now,
+            //    Tutar = result.Data.GenelToplam,
+            //    Aciklama=sepet.Aciklama,
+            //    BorcAlacak=sepet.BorcAlacak,
+               
+            //};
 
             return new SuccesResutl();
         }

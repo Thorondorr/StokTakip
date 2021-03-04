@@ -13,5 +13,6 @@ namespace Business.Abstract
         IResult Delete(Fatura fatura);
         IResult CreateFatura(Sepet sepet);
         IDataResult<List<Fatura>> GetAll();
+      
     }
 }

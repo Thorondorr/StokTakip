@@ -63,11 +63,11 @@ namespace StokTakipUI.UserControls
             this.label10 = new System.Windows.Forms.Label();
             this.txtbox_cariNo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtbox_ödemeYöntemi = new System.Windows.Forms.TextBox();
             this.cmbox_cariAd = new System.Windows.Forms.ComboBox();
             this.cmbox_ürünAdı = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtbox_acıklama = new System.Windows.Forms.TextBox();
+            this.cmbox_ödeneYöntemi = new System.Windows.Forms.ComboBox();
             this.pnl_right.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -187,6 +187,7 @@ namespace StokTakipUI.UserControls
             this.btn_temizle.TabIndex = 4;
             this.btn_temizle.Text = "Temizle";
             this.btn_temizle.UseVisualStyleBackColor = false;
+            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // panel5
             // 
@@ -247,6 +248,7 @@ namespace StokTakipUI.UserControls
             this.button6.TabIndex = 4;
             this.button6.Text = "+";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -260,6 +262,7 @@ namespace StokTakipUI.UserControls
             this.button5.TabIndex = 4;
             this.button5.Text = "-";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel3
             // 
@@ -291,7 +294,7 @@ namespace StokTakipUI.UserControls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(103, 187);
+            this.label1.Location = new System.Drawing.Point(117, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 6;
@@ -310,7 +313,7 @@ namespace StokTakipUI.UserControls
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(399, 187);
+            this.label3.Location = new System.Drawing.Point(413, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 23);
             this.label3.TabIndex = 6;
@@ -319,7 +322,7 @@ namespace StokTakipUI.UserControls
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(399, 339);
+            this.label5.Location = new System.Drawing.Point(413, 317);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 23);
             this.label5.TabIndex = 6;
@@ -327,7 +330,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtBox_fiyat
             // 
-            this.txtBox_fiyat.Location = new System.Drawing.Point(403, 365);
+            this.txtBox_fiyat.Location = new System.Drawing.Point(417, 343);
             this.txtBox_fiyat.Name = "txtBox_fiyat";
             this.txtBox_fiyat.Size = new System.Drawing.Size(171, 32);
             this.txtBox_fiyat.TabIndex = 7;
@@ -335,7 +338,7 @@ namespace StokTakipUI.UserControls
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(399, 265);
+            this.label6.Location = new System.Drawing.Point(413, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 23);
             this.label6.TabIndex = 6;
@@ -343,14 +346,14 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_ürünkod
             // 
-            this.txtbox_ürünkod.Location = new System.Drawing.Point(403, 213);
+            this.txtbox_ürünkod.Location = new System.Drawing.Point(417, 191);
             this.txtbox_ürünkod.Name = "txtbox_ürünkod";
             this.txtbox_ürünkod.Size = new System.Drawing.Size(171, 32);
             this.txtbox_ürünkod.TabIndex = 7;
             // 
             // txtbox_ürünkdv
             // 
-            this.txtbox_ürünkdv.Location = new System.Drawing.Point(403, 291);
+            this.txtbox_ürünkdv.Location = new System.Drawing.Point(417, 269);
             this.txtbox_ürünkdv.Name = "txtbox_ürünkdv";
             this.txtbox_ürünkdv.Size = new System.Drawing.Size(171, 32);
             this.txtbox_ürünkdv.TabIndex = 7;
@@ -358,7 +361,7 @@ namespace StokTakipUI.UserControls
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(103, 265);
+            this.label9.Location = new System.Drawing.Point(117, 243);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 23);
             this.label9.TabIndex = 6;
@@ -366,7 +369,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_ürünbarkod
             // 
-            this.txtbox_ürünbarkod.Location = new System.Drawing.Point(107, 291);
+            this.txtbox_ürünbarkod.Location = new System.Drawing.Point(121, 269);
             this.txtbox_ürünbarkod.Name = "txtbox_ürünbarkod";
             this.txtbox_ürünbarkod.Size = new System.Drawing.Size(171, 32);
             this.txtbox_ürünbarkod.TabIndex = 7;
@@ -374,7 +377,7 @@ namespace StokTakipUI.UserControls
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(103, 107);
+            this.label4.Location = new System.Drawing.Point(117, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 23);
             this.label4.TabIndex = 6;
@@ -383,7 +386,7 @@ namespace StokTakipUI.UserControls
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(399, 107);
+            this.label10.Location = new System.Drawing.Point(413, 85);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 23);
             this.label10.TabIndex = 6;
@@ -391,7 +394,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_cariNo
             // 
-            this.txtbox_cariNo.Location = new System.Drawing.Point(403, 133);
+            this.txtbox_cariNo.Location = new System.Drawing.Point(417, 111);
             this.txtbox_cariNo.Name = "txtbox_cariNo";
             this.txtbox_cariNo.Size = new System.Drawing.Size(171, 32);
             this.txtbox_cariNo.TabIndex = 7;
@@ -399,24 +402,17 @@ namespace StokTakipUI.UserControls
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(103, 339);
+            this.label11.Location = new System.Drawing.Point(117, 317);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(172, 23);
             this.label11.TabIndex = 6;
             this.label11.Text = "Ödeme Yöntemi";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // txtbox_ödemeYöntemi
-            // 
-            this.txtbox_ödemeYöntemi.Location = new System.Drawing.Point(107, 365);
-            this.txtbox_ödemeYöntemi.Name = "txtbox_ödemeYöntemi";
-            this.txtbox_ödemeYöntemi.Size = new System.Drawing.Size(171, 32);
-            this.txtbox_ödemeYöntemi.TabIndex = 7;
-            // 
             // cmbox_cariAd
             // 
             this.cmbox_cariAd.FormattingEnabled = true;
-            this.cmbox_cariAd.Location = new System.Drawing.Point(107, 133);
+            this.cmbox_cariAd.Location = new System.Drawing.Point(121, 111);
             this.cmbox_cariAd.Name = "cmbox_cariAd";
             this.cmbox_cariAd.Size = new System.Drawing.Size(171, 31);
             this.cmbox_cariAd.TabIndex = 8;
@@ -425,7 +421,7 @@ namespace StokTakipUI.UserControls
             // cmbox_ürünAdı
             // 
             this.cmbox_ürünAdı.FormattingEnabled = true;
-            this.cmbox_ürünAdı.Location = new System.Drawing.Point(104, 214);
+            this.cmbox_ürünAdı.Location = new System.Drawing.Point(118, 192);
             this.cmbox_ürünAdı.Name = "cmbox_ürünAdı";
             this.cmbox_ürünAdı.Size = new System.Drawing.Size(171, 31);
             this.cmbox_ürünAdı.TabIndex = 8;
@@ -434,7 +430,7 @@ namespace StokTakipUI.UserControls
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(103, 422);
+            this.label8.Location = new System.Drawing.Point(114, 400);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 23);
             this.label8.TabIndex = 6;
@@ -442,16 +438,32 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_acıklama
             // 
-            this.txtbox_acıklama.Location = new System.Drawing.Point(107, 448);
+            this.txtbox_acıklama.Location = new System.Drawing.Point(118, 426);
             this.txtbox_acıklama.Multiline = true;
             this.txtbox_acıklama.Name = "txtbox_acıklama";
             this.txtbox_acıklama.Size = new System.Drawing.Size(456, 51);
             this.txtbox_acıklama.TabIndex = 7;
             // 
+            // cmbox_ödeneYöntemi
+            // 
+            this.cmbox_ödeneYöntemi.FormattingEnabled = true;
+            this.cmbox_ödeneYöntemi.Items.AddRange(new object[] {
+            "Nakit",
+            "Kredi Kartı",
+            "Çek",
+            "Senet",
+            "Borc "});
+            this.cmbox_ödeneYöntemi.Location = new System.Drawing.Point(118, 344);
+            this.cmbox_ödeneYöntemi.Name = "cmbox_ödeneYöntemi";
+            this.cmbox_ödeneYöntemi.Size = new System.Drawing.Size(171, 31);
+            this.cmbox_ödeneYöntemi.TabIndex = 8;
+            this.cmbox_ödeneYöntemi.SelectedIndexChanged += new System.EventHandler(this.cmbox_ürünAdı_SelectedIndexChanged);
+            // 
             // UC_Sales
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cmbox_ödeneYöntemi);
             this.Controls.Add(this.cmbox_ürünAdı);
             this.Controls.Add(this.cmbox_cariAd);
             this.Controls.Add(this.txtbox_acıklama);
@@ -459,7 +471,6 @@ namespace StokTakipUI.UserControls
             this.Controls.Add(this.txtbox_ürünkdv);
             this.Controls.Add(this.txtbox_cariNo);
             this.Controls.Add(this.txtbox_ürünkod);
-            this.Controls.Add(this.txtbox_ödemeYöntemi);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtbox_ürünbarkod);
             this.Controls.Add(this.label5);
@@ -522,10 +533,10 @@ namespace StokTakipUI.UserControls
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtbox_cariNo;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtbox_ödemeYöntemi;
         private System.Windows.Forms.ComboBox cmbox_cariAd;
         private System.Windows.Forms.ComboBox cmbox_ürünAdı;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbox_acıklama;
+        private System.Windows.Forms.ComboBox cmbox_ödeneYöntemi;
     }
 }

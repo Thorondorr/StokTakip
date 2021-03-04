@@ -18,13 +18,13 @@ namespace StokTakipUI.UserControls
     {
         CariManager cariManager = new CariManager(new EfCariDal());
         UrunManager urunManager = new UrunManager(new EfUrunDal());
-        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(),new TahsilatManager(new EfTahsilatDal()),new CariHareketlerManager(new EfCariHareketDal()));
+        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(), new TahsilatManager(new EfTahsilatDal()));
         StokManager stokManager = new StokManager(new EfStokDal());
         TahsilatManager tahsilatManager = new TahsilatManager(new EfTahsilatDal());
         CariHareketlerManager cariHareketManager = new CariHareketlerManager(new EfCariHareketDal());
 
         //List<Urun> uruns = new List<Urun>();
-       public List<Sepet> sepets = new List<Sepet>();
+        public List<Sepet> sepets = new List<Sepet>();
 
         ListView ListView = new ListView();
         public UC_Sales()
@@ -38,6 +38,7 @@ namespace StokTakipUI.UserControls
         {
             listView1.View = View.Details;
             listView1.FullRowSelect = true;
+            txtbox_miktar.Text = "0";
 
             //listView1.Columns.Add("Ürün Adı",159);
             //listView1.Columns.Add("Miktar",89);
@@ -62,7 +63,7 @@ namespace StokTakipUI.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void addComboxToCariAd()
@@ -124,23 +125,25 @@ namespace StokTakipUI.UserControls
                 Barkot = rsltUrunGetDetails.Data.Barkot.ToString(),
                 CariNo = rsltUrunGetDetails.Data.CariNo,
                 Miktar = Convert.ToInt32(txtbox_miktar.Text),
-                Fiyat = Convert.ToDecimal( txtBox_fiyat.Text) * Convert.ToDecimal(txtbox_miktar.Text),
+                Fiyat = Convert.ToDecimal(txtBox_fiyat.Text) * Convert.ToDecimal(txtbox_miktar.Text),
                 KDV = rsltUrunGetDetails.Data.KDV,
                 UrunAdı = cmbox_ürünAdı.Text,
                 UrunId = rsltUrunGetDetails.Data.UrunId,
-                UrunKodu = rsltUrunGetDetails.Data.UrunKodu,              
+                UrunKodu = rsltUrunGetDetails.Data.UrunKodu,
                 UrunTipi = rsltUrunGetDetails.Data.UrunTipi,
-                SatısTipi = txtbox_ödemeYöntemi.Text,
-                BürütTutar= Convert.ToInt32(txtbox_miktar.Text)* rsltUrunGetDetails.Data.Fiyat,
-                Aciklama=txtbox_acıklama.Text,
-                BorcAlacak=""
+                SatısTipi = cmbox_ödeneYöntemi.Text,
+                BürütTutar = Convert.ToInt32(txtbox_miktar.Text) * rsltUrunGetDetails.Data.Fiyat,
+                Aciklama = txtbox_acıklama.Text,
+
+                BorcAlacak = ""
             };
-         
+            if (cmbox_ödeneYöntemi.Text == "Çek" || cmbox_ödeneYöntemi.Text == "Senet" || cmbox_ödeneYöntemi.Text == "Borc") { sepet.BorcAlacak = "borç"; }
+
             addToListView(sepet.UrunAdı, sepet.Miktar.ToString(), sepet.Fiyat.ToString());
 
             sepets.Add(sepet);
 
-            decimal toplamTutar=0;
+            decimal toplamTutar = 0;
 
             for (int i = 0; i < sepets.Count; i++)
             {
@@ -149,7 +152,7 @@ namespace StokTakipUI.UserControls
             lbl_toplamTutar.Text = toplamTutar.ToString();
 
 
-            
+
 
         }
 
@@ -159,8 +162,52 @@ namespace StokTakipUI.UserControls
             for (int i = 0; i < sepets.Count; i++)
             {
                 faturaManager.CreateFatura(sepets[i]);
+                
             }
-            
+
+          
+
+            txtbox_acıklama.Clear();
+            txtbox_cariNo.Clear();
+            txtBox_fiyat.Clear();
+            txtbox_miktar.Clear();
+            txtbox_ürünbarkod.Clear();
+            txtbox_ürünkdv.Clear();
+            txtbox_ürünkod.Clear();
+            lbl_toplamTutar.Text = "0";
+            cmbox_cariAd.Text = "";
+            cmbox_ödeneYöntemi.Text = "";
+            cmbox_ürünAdı.Text = "";
+            listView1.Clear();
+
+            MessageBox.Show("Satış gerçekleşti.");
+
+        }
+
+        private void btn_temizle_Click(object sender, EventArgs e)
+        {
+            txtbox_acıklama.Clear();
+            txtbox_cariNo.Clear();
+            txtBox_fiyat.Clear();
+            txtbox_miktar.Clear();
+            txtbox_ürünbarkod.Clear();
+            txtbox_ürünkdv.Clear();
+            txtbox_ürünkod.Clear();
+            lbl_toplamTutar.Text = "0";
+            cmbox_cariAd.Text = "";
+            cmbox_ödeneYöntemi.Text = "";
+            cmbox_ürünAdı.Text = "";
+            listView1.Clear();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          txtbox_miktar.Text  = (Convert.ToInt32(txtbox_miktar.Text) - 1).ToString();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            txtbox_miktar.Text = (Convert.ToInt32(txtbox_miktar.Text) + 1).ToString();
         }
     }
 }

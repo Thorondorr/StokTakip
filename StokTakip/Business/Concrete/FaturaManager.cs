@@ -14,12 +14,12 @@ namespace Business.Concrete
         IFaturaDal _faturaDal;
         ITahsilatService _tahsilatService;
         ICariHareketService _cariHareketService;
-        public FaturaManager(IFaturaDal faturaDal,ITahsilatService tahsilatService,ICariHareketService cariHareketService)
+        public FaturaManager(IFaturaDal faturaDal,ITahsilatService tahsilatService)
         {
            // _cariHareketDal = cariHareket;
             _faturaDal = faturaDal;
             _tahsilatService = tahsilatService;
-            _cariHareketService = cariHareketService;
+           // _cariHareketService = cariHareketService;
         }
           
         public IResult Add(Fatura fatura)
@@ -47,7 +47,7 @@ namespace Business.Concrete
             _faturaDal.Add(fatura);
             _tahsilatService.CreateTahsilat(fatura);
 
-            var result = getByFaturaNo(fatura.FaturaNo);
+            //var result = getByFaturaNo(fatura.FaturaNo);
             //_cariHareketService.CreateCariHareket();
 
             return new SuccesResutl();
@@ -60,10 +60,10 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
-        IDataResult<Fatura> getByFaturaNo(string faturaNo)
+        IDataResult<Fatura> getByFaturaNo(string FaturaNo)
         {
 
-            return new SuccesDataResult<Fatura>(_faturaDal.Get(f => f.FaturaNo == faturaNo));
+            return new SuccesDataResult<Fatura>(_faturaDal.Get(f => f.FaturaNo == FaturaNo));
         }
 
         public IDataResult<List<Fatura>> GetAll()
@@ -85,5 +85,7 @@ namespace Business.Concrete
                 return new SuccesDataResult<string>(NewGUID);
             
         }
+
+        
     }
 }
