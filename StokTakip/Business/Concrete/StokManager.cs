@@ -18,7 +18,7 @@ namespace Business.Concrete
 
         public IResult Add(Stok stok)
         {
-          
+
             stok.UrunKodu = GenerateGUID().Message;
             _stokDal.Add(stok);
             return new SuccesResutl();
@@ -51,6 +51,29 @@ namespace Business.Concrete
             string NewGUID = System.Guid.NewGuid().ToString().Replace("-", "").ToUpper();
 
             return new SuccesDataResult<string>(NewGUID);
+        }
+
+        public IDataResult<Stok> UrunGetByUrunKodu(string urunKodu)
+        {                    
+            return new SuccesDataResult<Stok>(_stokDal.Get(u => u.UrunKodu == urunKodu));   
+        }
+
+        public IResult UpdateStokQuantity(Sepet sepet,int eksilenStok)
+        {
+           var result= UrunGetByUrunKodu(sepet.UrunKodu);
+            _stokDal.Update(new Stok
+            {
+                UrunAdı=result.Data.UrunAdı,
+                CariNo = result.Data.CariNo,
+                UrunKodu = result.Data.UrunKodu,
+                GirisCikis = result.Data.GirisCikis,
+                KDV = result.Data.KDV,
+                Miktar = result.Data.Miktar - eksilenStok,
+                StokId = result.Data.StokId,
+                StokNetFiyatı = result.Data.StokNetFiyatı,
+                Tarih = result.Data.Tarih
+            });
+            return new SuccesResutl();
         }
     }
 }

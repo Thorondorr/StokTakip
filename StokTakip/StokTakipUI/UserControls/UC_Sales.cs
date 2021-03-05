@@ -18,7 +18,7 @@ namespace StokTakipUI.UserControls
     {
         CariManager cariManager = new CariManager(new EfCariDal());
         UrunManager urunManager = new UrunManager(new EfUrunDal());
-        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(), new TahsilatManager(new EfTahsilatDal()));
+        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(), new TahsilatManager(new EfTahsilatDal()), new CariHareketlerManager(new EfCariHareketDal()));
         StokManager stokManager = new StokManager(new EfStokDal());
         TahsilatManager tahsilatManager = new TahsilatManager(new EfTahsilatDal());
         CariHareketlerManager cariHareketManager = new CariHareketlerManager(new EfCariHareketDal());
@@ -78,6 +78,7 @@ namespace StokTakipUI.UserControls
 
         private void addCmboxToUrunAdi()
         {
+           
             var resul = urunManager.GetAll();
 
             foreach (var item in resul.Data)
@@ -137,7 +138,28 @@ namespace StokTakipUI.UserControls
 
                 BorcAlacak = ""
             };
-            if (cmbox_ödeneYöntemi.Text == "Çek" || cmbox_ödeneYöntemi.Text == "Senet" || cmbox_ödeneYöntemi.Text == "Borc") { sepet.BorcAlacak = "borç"; }
+            switch (cmbox_ödeneYöntemi.Text)
+            {
+                case "Nakit":
+                    sepet.BorcAlacak = "Borcu yoktur.";
+                    break;
+                case "Kredi Kartı":
+                    sepet.BorcAlacak = "Borcu yoktur.";
+                    break;
+                case "Borc":
+                    sepet.BorcAlacak = "İçeri";
+                    break;
+                case "Senet":
+                    sepet.BorcAlacak = "Senet";
+                    break;
+                case "Çek":
+                    sepet.BorcAlacak = "Çek";
+                    break;
+
+
+                default:
+                    break;
+            }
 
             addToListView(sepet.UrunAdı, sepet.Miktar.ToString(), sepet.Fiyat.ToString());
 
@@ -151,9 +173,6 @@ namespace StokTakipUI.UserControls
             }
             lbl_toplamTutar.Text = toplamTutar.ToString();
 
-
-
-
         }
 
         private void btn_satış_Click(object sender, EventArgs e)
@@ -162,6 +181,13 @@ namespace StokTakipUI.UserControls
             for (int i = 0; i < sepets.Count; i++)
             {
                 faturaManager.CreateFatura(sepets[i]);
+                //her fatura kestiğinde stokğu güncelle
+
+                stokManager.UpdateStokQuantity(sepets[i], sepets[i].Miktar);
+               
+               //result.Data.StokId  
+
+                         
                 
             }
 
@@ -170,7 +196,7 @@ namespace StokTakipUI.UserControls
             txtbox_acıklama.Clear();
             txtbox_cariNo.Clear();
             txtBox_fiyat.Clear();
-            txtbox_miktar.Clear();
+            txtbox_miktar.Text="0";
             txtbox_ürünbarkod.Clear();
             txtbox_ürünkdv.Clear();
             txtbox_ürünkod.Clear();
@@ -178,7 +204,8 @@ namespace StokTakipUI.UserControls
             cmbox_cariAd.Text = "";
             cmbox_ödeneYöntemi.Text = "";
             cmbox_ürünAdı.Text = "";
-            listView1.Clear();
+            listView1.Items.Clear();
+            sepets.Clear();
 
             MessageBox.Show("Satış gerçekleşti.");
 
@@ -197,7 +224,8 @@ namespace StokTakipUI.UserControls
             cmbox_cariAd.Text = "";
             cmbox_ödeneYöntemi.Text = "";
             cmbox_ürünAdı.Text = "";
-            listView1.Clear();
+            listView1.Items.Clear();
+            sepets.Clear();
         }
 
         private void button5_Click(object sender, EventArgs e)

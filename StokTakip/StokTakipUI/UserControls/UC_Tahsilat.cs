@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concrete;
+using DataAcces.Concrete;
+using Entity.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,22 @@ namespace StokTakipUI.UserControls
 {
     public partial class UC_Tahsilat : UserControl
     {
+        TahsilatManager tahsilatManager = new TahsilatManager(new EfTahsilatDal());
         public UC_Tahsilat()
         {
             InitializeComponent();
+            RefleshDataGridView();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void RefleshDataGridView()
+        {
+            var result = tahsilatManager.GetAll();
+            dataGridView1.DataSource = result.Data;
         }
     }
 }

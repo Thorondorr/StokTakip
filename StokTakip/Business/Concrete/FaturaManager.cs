@@ -14,12 +14,12 @@ namespace Business.Concrete
         IFaturaDal _faturaDal;
         ITahsilatService _tahsilatService;
         ICariHareketService _cariHareketService;
-        public FaturaManager(IFaturaDal faturaDal,ITahsilatService tahsilatService)
+        public FaturaManager(IFaturaDal faturaDal,ITahsilatService tahsilatService,ICariHareketService cariHareketService)
         {
            // _cariHareketDal = cariHareket;
             _faturaDal = faturaDal;
             _tahsilatService = tahsilatService;
-           // _cariHareketService = cariHareketService;
+            _cariHareketService = cariHareketService;
         }
           
         public IResult Add(Fatura fatura)
@@ -46,7 +46,7 @@ namespace Business.Concrete
 
             _faturaDal.Add(fatura);
             _tahsilatService.CreateTahsilat(fatura);
-
+            _cariHareketService.CreateCariHareket(fatura.FaturaNo, sepet);
             //var result = getByFaturaNo(fatura.FaturaNo);
             //_cariHareketService.CreateCariHareket();
 
@@ -59,16 +59,20 @@ namespace Business.Concrete
             _faturaDal.Add(fatura);
             return new SuccesResutl();
         }
-
-        IDataResult<Fatura> getByFaturaNo(string FaturaNo)
-        {
-
-            return new SuccesDataResult<Fatura>(_faturaDal.Get(f => f.FaturaNo == FaturaNo));
-        }
-
+     
         public IDataResult<List<Fatura>> GetAll()
         {
             return new SuccesDataResult<List<Fatura>>(_faturaDal.GetAll());
+        }
+
+        public IDataResult<Fatura> getbyCariNo(string cariNo)
+        {
+            return new SuccesDataResult<Fatura>(_faturaDal.Get(c=>c.CariNo == cariNo));
+        }
+
+        public IDataResult<Fatura> getByFaturaNo(string FaturaNo)
+        {
+            return new SuccesDataResult<Fatura>(_faturaDal.Get(f => f.FaturaNo == FaturaNo));
         }
 
         public IResult Update(Fatura fatura)
@@ -86,6 +90,6 @@ namespace Business.Concrete
             
         }
 
-        
+       
     }
 }

@@ -1770,6 +1770,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Autofac": "6.1.0",
           "Microsoft.EntityFrameworkCore": "3.1.12"
         },
         "compile": {

@@ -40,7 +40,7 @@ namespace Business.Concrete
 
             foreach (var urun in _urunDal.GetUrunDetails())
             {
-                if (urun.UrunKodu == urun.UrunKodu) 
+                if (urun.UrunKodu == urunKodu) 
                 {
                     return new SuccesDataResult<UrunDetailsDto>(urun);
                 }

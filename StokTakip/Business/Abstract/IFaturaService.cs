@@ -13,6 +13,9 @@ namespace Business.Abstract
         IResult Delete(Fatura fatura);
         IResult CreateFatura(Sepet sepet);
         IDataResult<List<Fatura>> GetAll();
-      
+        IDataResult<Fatura> getByFaturaNo(string FaturaNo);
+         IDataResult<Fatura> getbyCariNo(string cariNo);
+
+
     }
 }

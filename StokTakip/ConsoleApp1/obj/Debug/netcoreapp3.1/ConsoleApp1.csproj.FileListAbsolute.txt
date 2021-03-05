@@ -60,3 +60,6 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\ConsoleApp1\bin\Debug\netcore
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\ConsoleApp1\bin\Debug\netcoreapp3.1\DataAcces.pdb
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\ConsoleApp1\bin\Debug\netcoreapp3.1\Entity.pdb
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CopyComplete
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\ConsoleApp1\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\ConsoleApp1\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\ConsoleApp1\bin\Debug\netcoreapp3.1\Castle.Core.dll

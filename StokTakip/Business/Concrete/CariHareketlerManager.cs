@@ -26,17 +26,18 @@ namespace Business.Concrete
 
         public IResult CreateCariHareket(string faturaNo,Sepet sepet)
         {
-           // var result = _faturaService.getByFaturaNo(faturaNo);
-            //CariHareket cariHareket = new CariHareket
-            //{
-            //    FaturaNo = result.Data.FaturaNo,
-            //    CariNo = result.Data.CariNo,
-            //    Tarih = DateTime.Now,
-            //    Tutar = result.Data.GenelToplam,
-            //    Aciklama=sepet.Aciklama,
-            //    BorcAlacak=sepet.BorcAlacak,
-               
-            //};
+            
+            CariHareket cariHareket = new CariHareket
+            {
+                FaturaNo = faturaNo,
+                CariNo = sepet.CariNo,
+                Tarih = DateTime.Now,
+                Tutar = sepet.Fiyat,
+                Aciklama = sepet.Aciklama,
+                BorcAlacak = sepet.BorcAlacak,
+            };
+
+            _cariHareketDal.Add(cariHareket);
 
             return new SuccesResutl();
         }

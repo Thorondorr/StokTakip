@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ymTV4nAVkWMZw3NodTcdkc384LvUJ4Ma1/kMgwTKOsnppOhZlvXXuZuSez99a49OZEjZZirlMCSIJlv/sEP3jg==",
+  "dgSpecHash": "ACn8fJktBzBqoHedCNHwh87X+0CQa6UF2UplgBb0huDdnuOhSELpODudH0Z8U80TCJLg2xVSfmCcBqBQAsEp1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fahrican\\source\\repos\\StokTakip\\StokTakip\\Core\\Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Fahrican\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\Fahrican\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Fahrican\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Fahrican\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.12\\microsoft.entityframeworkcore.3.1.12.nupkg.sha512",

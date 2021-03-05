@@ -11,6 +11,8 @@ namespace Business.Abstract
         IResult Add(Stok stok);
         IResult Update(Stok stok);
         IResult Delete(Stok stok);
+        IResult UpdateStokQuantity(Sepet sepet,int eksilenStok);
         IDataResult<List<Stok>> GetAll();
+        IDataResult<Stok> UrunGetByUrunKodu(string urunKodu);
     }
 }

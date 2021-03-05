@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ekH2q4ytfSB1EkTc1tBA8bkLWrGKN/HlyT5QCX0IGpX8dBZUAdSgbE0FTNT30gUV8bJ7Zbt60HXyeCAp2aXY5A==",
+  "dgSpecHash": "Iavy1b2rj8WyRIgl2lvzvymMGU+Qotuzl2H0HDw2nnwqpiKgog4JnHnMJKhWT8M8TWnZED05rqvjtwLQMa82rQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fahrican\\source\\repos\\StokTakip\\StokTakip\\DataAcces\\DataAcces.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Fahrican\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\Fahrican\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Fahrican\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Fahrican\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -26,7 +26,7 @@ namespace Business.Concrete
             _tahsilatDal.Add(new Tahsilat
             {
                 BelgeNo = fatura.FaturaNo,
-                CariNo = fatura.FaturaNo,
+                CariNo = fatura.CariNo,
                 Tarih = fatura.Tarih,
                 Tip = fatura.Tip,
                 Tutar = fatura.GenelToplam

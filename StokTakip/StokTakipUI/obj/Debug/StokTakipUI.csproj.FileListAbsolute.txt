@@ -105,3 +105,6 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\pt-BR\M
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\Autofac.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\Autofac.pdb
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\Autofac.xml
