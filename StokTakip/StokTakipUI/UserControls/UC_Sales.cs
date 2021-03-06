@@ -45,6 +45,7 @@ namespace StokTakipUI.UserControls
             //listView1.Columns.Add("Fiyat",66);
 
 
+
         }
 
         private void addToListView(string urunAdı, string miktar, string fiyat)
@@ -78,7 +79,7 @@ namespace StokTakipUI.UserControls
 
         private void addCmboxToUrunAdi()
         {
-           
+
             var resul = urunManager.GetAll();
 
             foreach (var item in resul.Data)
@@ -124,7 +125,7 @@ namespace StokTakipUI.UserControls
             Sepet sepet = new Sepet
             {
                 Barkot = rsltUrunGetDetails.Data.Barkot.ToString(),
-                CariNo = rsltUrunGetDetails.Data.CariNo,
+                CariNo = txtbox_cariNo.Text,//buradaki cariNo satın alacak kişinin cari nosu olmalı , stoktaki cari no ürünü aldığımız/eklediğimiz kişinin cari nosu
                 Miktar = Convert.ToInt32(txtbox_miktar.Text),
                 Fiyat = Convert.ToDecimal(txtBox_fiyat.Text) * Convert.ToDecimal(txtbox_miktar.Text),
                 KDV = rsltUrunGetDetails.Data.KDV,
@@ -138,6 +139,12 @@ namespace StokTakipUI.UserControls
 
                 BorcAlacak = ""
             };
+            /*Nakit
+Kredi Kartı
+Çek
+Senet
+Borc */
+             
             switch (cmbox_ödeneYöntemi.Text)
             {
                 case "Nakit":
@@ -147,7 +154,7 @@ namespace StokTakipUI.UserControls
                     sepet.BorcAlacak = "Borcu yoktur.";
                     break;
                 case "Borc":
-                    sepet.BorcAlacak = "İçeri";
+                    sepet.BorcAlacak = "Borç";
                     break;
                 case "Senet":
                     sepet.BorcAlacak = "Senet";

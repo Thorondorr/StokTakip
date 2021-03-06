@@ -29,6 +29,7 @@ namespace StokTakipUI.UserForms
         {
           var result= cari.Add(new Entity.Concrete.Cari
             {
+                CariNo=txtbox_cariNo.Text.ToString(),
                 CariAdı = txtbox_cariAdı.Text,
                 CariAdres = txtbox_cariAdres.Text,
                 CariIl = txtbox_cariiL.Text,
@@ -37,7 +38,7 @@ namespace StokTakipUI.UserForms
                 TcKimlikNo = txtbox_tcKimlikNo.Text,
                 Telefon = txtbox_telefon.Text,
                 VergiDairesi = txtbox_vergiDairesi.Text,
-                VergiNo = txtbox_VergiNo.Text
+                VergiNo = txtbox_VergiNo.Text.ToString()
             });
 
             MessageBox.Show(result.Message);

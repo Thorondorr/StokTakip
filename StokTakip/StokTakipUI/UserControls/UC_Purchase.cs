@@ -27,7 +27,9 @@ namespace StokTakipUI.UserControls
             using (Form_Add_Product form_Add_Product = new Form_Add_Product() )
             {
                 form_Add_Product.ShowDialog();
+                
             }
+            RefleshDatagridView();
         }
 
         private void button_stokEkle_Click(object sender, EventArgs e)

@@ -55,6 +55,8 @@ namespace StokTakipUI.UserForms
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbox_cariNo = new System.Windows.Forms.TextBox();
             panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -82,35 +84,35 @@ namespace StokTakipUI.UserForms
             // 
             // txtbox_telefon
             // 
-            this.txtbox_telefon.Location = new System.Drawing.Point(320, 289);
+            this.txtbox_telefon.Location = new System.Drawing.Point(320, 369);
             this.txtbox_telefon.Name = "txtbox_telefon";
             this.txtbox_telefon.Size = new System.Drawing.Size(171, 32);
             this.txtbox_telefon.TabIndex = 67;
             // 
             // txtbox_VergiNo
             // 
-            this.txtbox_VergiNo.Location = new System.Drawing.Point(320, 215);
+            this.txtbox_VergiNo.Location = new System.Drawing.Point(320, 295);
             this.txtbox_VergiNo.Name = "txtbox_VergiNo";
             this.txtbox_VergiNo.Size = new System.Drawing.Size(171, 32);
             this.txtbox_VergiNo.TabIndex = 66;
             // 
             // txtbox_cariAdres
             // 
-            this.txtbox_cariAdres.Location = new System.Drawing.Point(24, 438);
+            this.txtbox_cariAdres.Location = new System.Drawing.Point(24, 495);
             this.txtbox_cariAdres.Name = "txtbox_cariAdres";
             this.txtbox_cariAdres.Size = new System.Drawing.Size(467, 32);
             this.txtbox_cariAdres.TabIndex = 65;
             // 
             // txtbox_cariilçe
             // 
-            this.txtbox_cariilçe.Location = new System.Drawing.Point(320, 364);
+            this.txtbox_cariilçe.Location = new System.Drawing.Point(320, 444);
             this.txtbox_cariilçe.Name = "txtbox_cariilçe";
             this.txtbox_cariilçe.Size = new System.Drawing.Size(171, 32);
             this.txtbox_cariilçe.TabIndex = 64;
             // 
             // txtbox_tcKimlikNo
             // 
-            this.txtbox_tcKimlikNo.Location = new System.Drawing.Point(320, 146);
+            this.txtbox_tcKimlikNo.Location = new System.Drawing.Point(320, 226);
             this.txtbox_tcKimlikNo.Name = "txtbox_tcKimlikNo";
             this.txtbox_tcKimlikNo.Size = new System.Drawing.Size(171, 32);
             this.txtbox_tcKimlikNo.TabIndex = 63;
@@ -139,7 +141,7 @@ namespace StokTakipUI.UserForms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(316, 263);
+            this.label5.Location = new System.Drawing.Point(316, 343);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 23);
             this.label5.TabIndex = 58;
@@ -148,7 +150,7 @@ namespace StokTakipUI.UserForms
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 412);
+            this.label10.Location = new System.Drawing.Point(20, 469);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(114, 23);
             this.label10.TabIndex = 57;
@@ -157,7 +159,7 @@ namespace StokTakipUI.UserForms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(316, 189);
+            this.label6.Location = new System.Drawing.Point(316, 269);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 23);
             this.label6.TabIndex = 56;
@@ -166,7 +168,7 @@ namespace StokTakipUI.UserForms
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(316, 120);
+            this.label11.Location = new System.Drawing.Point(316, 200);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 23);
             this.label11.TabIndex = 55;
@@ -175,7 +177,7 @@ namespace StokTakipUI.UserForms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(316, 338);
+            this.label3.Location = new System.Drawing.Point(316, 418);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 54;
@@ -223,7 +225,7 @@ namespace StokTakipUI.UserForms
             this.btn_cariEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.btn_cariEkle.FlatAppearance.BorderSize = 0;
             this.btn_cariEkle.ForeColor = System.Drawing.Color.White;
-            this.btn_cariEkle.Location = new System.Drawing.Point(314, 505);
+            this.btn_cariEkle.Location = new System.Drawing.Point(314, 562);
             this.btn_cariEkle.Name = "btn_cariEkle";
             this.btn_cariEkle.Size = new System.Drawing.Size(177, 46);
             this.btn_cariEkle.TabIndex = 50;
@@ -274,6 +276,22 @@ namespace StokTakipUI.UserForms
             this.panel3.Size = new System.Drawing.Size(545, 10);
             this.panel3.TabIndex = 69;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(316, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 23);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Cari No";
+            // 
+            // txtbox_cariNo
+            // 
+            this.txtbox_cariNo.Location = new System.Drawing.Point(320, 146);
+            this.txtbox_cariNo.Name = "txtbox_cariNo";
+            this.txtbox_cariNo.Size = new System.Drawing.Size(171, 32);
+            this.txtbox_cariNo.TabIndex = 63;
+            // 
             // Form_Customer_Add
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -289,6 +307,7 @@ namespace StokTakipUI.UserForms
             this.Controls.Add(this.txtbox_VergiNo);
             this.Controls.Add(this.txtbox_cariAdres);
             this.Controls.Add(this.txtbox_cariilçe);
+            this.Controls.Add(this.txtbox_cariNo);
             this.Controls.Add(this.txtbox_tcKimlikNo);
             this.Controls.Add(this.txtbox_vergiDairesi);
             this.Controls.Add(this.txtbox_cariAdı);
@@ -296,6 +315,7 @@ namespace StokTakipUI.UserForms
             this.Controls.Add(this.txtbox_cariiL);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label3);
@@ -342,5 +362,7 @@ namespace StokTakipUI.UserForms
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtbox_cariNo;
     }
 }

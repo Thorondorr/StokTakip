@@ -18,7 +18,8 @@ namespace Entity.Concrete
         public int KDV { get; set; }
         public decimal GenelToplam { get; set; }
         public string Tip { get; set; }
-      //  public string Aciklama { get; set; }
-      //  public string BorcAlacak { get; set; }
+        public int Miktar { get; set; }
+        //  public string Aciklama { get; set; }
+        //  public string BorcAlacak { get; set; }
     }
 }

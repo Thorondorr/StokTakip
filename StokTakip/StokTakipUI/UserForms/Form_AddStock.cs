@@ -42,7 +42,7 @@ namespace StokTakipUI.UserForms
             Stok stok = new Stok
             {
                 UrunAdı = txtBox_ürünAdı.Text,
-                UrunKodu ="",
+                UrunKodu =txtBox_ürünKodu.Text.ToString(),
                 CariNo="",
                 KDV = Convert.ToInt32(txtBox_kdv.Text),
                 Miktar = Convert.ToInt32(txtBox_miktar.Text),

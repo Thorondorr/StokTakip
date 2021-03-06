@@ -19,7 +19,7 @@ namespace Business.Concrete
         public IResult Add(Stok stok)
         {
 
-            stok.UrunKodu = GenerateGUID().Message;
+          //  stok.UrunKodu = GenerateGUID().Message;
             _stokDal.Add(stok);
             return new SuccesResutl();
         }

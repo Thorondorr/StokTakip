@@ -41,6 +41,7 @@ namespace Business.Concrete
                 Tip = sepet.SatısTipi,
                 UrunAdı = sepet.UrunAdı,
                 UrunKodu = sepet.UrunKodu,
+                Miktar=sepet.Miktar,
               
             };
 

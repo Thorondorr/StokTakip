@@ -21,7 +21,7 @@ namespace Business.Concrete
         public IResult Add(Cari cari)
         {
 
-            cari.CariNo = GenerateGUID().Message;
+           // cari.CariNo = GenerateGUID().Message;
             _cariDal.Add(cari);            
             return new Result(true, Messages.CariAdded);
         }
