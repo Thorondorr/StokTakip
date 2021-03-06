@@ -37,11 +37,11 @@ namespace StokTakipUI.UserControls
             this.lbl_satıs = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbl_alıs = new System.Windows.Forms.Label();
+            this.lbl_toplamSatısTutar = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_cariSayısı = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -114,7 +114,7 @@ namespace StokTakipUI.UserControls
             // 
             this.panel2.BackColor = System.Drawing.Color.ForestGreen;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lbl_alıs);
+            this.panel2.Controls.Add(this.lbl_toplamSatısTutar);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(316, 104);
             this.panel2.Name = "panel2";
@@ -131,18 +131,18 @@ namespace StokTakipUI.UserControls
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // lbl_alıs
+            // lbl_toplamSatısTutar
             // 
-            this.lbl_alıs.AutoSize = true;
-            this.lbl_alıs.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_alıs.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_alıs.ForeColor = System.Drawing.Color.White;
-            this.lbl_alıs.Location = new System.Drawing.Point(33, 40);
-            this.lbl_alıs.Name = "lbl_alıs";
-            this.lbl_alıs.Size = new System.Drawing.Size(43, 23);
-            this.lbl_alıs.TabIndex = 0;
-            this.lbl_alıs.Text = "100";
-            this.lbl_alıs.Click += new System.EventHandler(this.label3_Click);
+            this.lbl_toplamSatısTutar.AutoSize = true;
+            this.lbl_toplamSatısTutar.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_toplamSatısTutar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_toplamSatısTutar.ForeColor = System.Drawing.Color.White;
+            this.lbl_toplamSatısTutar.Location = new System.Drawing.Point(33, 40);
+            this.lbl_toplamSatısTutar.Name = "lbl_toplamSatısTutar";
+            this.lbl_toplamSatısTutar.Size = new System.Drawing.Size(43, 23);
+            this.lbl_toplamSatısTutar.TabIndex = 0;
+            this.lbl_toplamSatısTutar.Text = "100";
+            this.lbl_toplamSatısTutar.Click += new System.EventHandler(this.label3_Click);
             // 
             // label5
             // 
@@ -152,15 +152,15 @@ namespace StokTakipUI.UserControls
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 23);
+            this.label5.Size = new System.Drawing.Size(186, 23);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Satın Alma ";
+            this.label5.Text = "Toplam Satış Tutarı";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.ForestGreen;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lbl_cariSayısı);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Location = new System.Drawing.Point(561, 104);
             this.panel3.Name = "panel3";
@@ -177,18 +177,18 @@ namespace StokTakipUI.UserControls
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // label6
+            // lbl_cariSayısı
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 23);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "100";
-            this.label6.Click += new System.EventHandler(this.label3_Click);
+            this.lbl_cariSayısı.AutoSize = true;
+            this.lbl_cariSayısı.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_cariSayısı.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_cariSayısı.ForeColor = System.Drawing.Color.White;
+            this.lbl_cariSayısı.Location = new System.Drawing.Point(33, 40);
+            this.lbl_cariSayısı.Name = "lbl_cariSayısı";
+            this.lbl_cariSayısı.Size = new System.Drawing.Size(43, 23);
+            this.lbl_cariSayısı.TabIndex = 0;
+            this.lbl_cariSayısı.Text = "100";
+            this.lbl_cariSayısı.Click += new System.EventHandler(this.label3_Click);
             // 
             // label7
             // 
@@ -225,6 +225,7 @@ namespace StokTakipUI.UserControls
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_Home";
             this.Size = new System.Drawing.Size(985, 570);
+            this.Load += new System.EventHandler(this.UC_Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -248,11 +249,11 @@ namespace StokTakipUI.UserControls
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lbl_alıs;
+        private System.Windows.Forms.Label lbl_toplamSatısTutar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_cariSayısı;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
     }

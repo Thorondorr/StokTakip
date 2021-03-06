@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concrete;
+using DataAcces.Concrete;
+using DataAcces.Concrete.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,12 @@ namespace StokTakipUI.UserControls
 {
     public partial class UC_Home : UserControl
     {
+        CariManager cariManager = new CariManager(new EfCariDal());
+        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(), new TahsilatManager(new EfTahsilatDal()), new CariHareketlerManager(new EfCariHareketDal()));
         public UC_Home()
         {
             InitializeComponent();
+            reflashDashBoards();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -24,15 +30,29 @@ namespace StokTakipUI.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
-            lbl_alıs.Text = random.Next(0, 100).ToString();
-            lbl_satıs.Text=random.Next(0, 100).ToString();
-            label6.Text = random.Next(0, 100).ToString();
+            //Random random = new Random();
+            //lbl_toplamSatısTutar.Text = random.Next(0, 100).ToString();
+            //lbl_satıs.Text=random.Next(0, 100).ToString();
+            //lbl_cariSayısı.Text = random.Next(0, 100).ToString();
+            reflashDashBoards();
         }
         private void AddControlsToPanel(Control c)
         {
            
             
+        }
+
+        private void UC_Home_Load(object sender, EventArgs e)
+        {
+            reflashDashBoards();
+        }
+        private void reflashDashBoards()
+        {
+            
+            lbl_satıs.Text = faturaManager.getTotalSellCount().Data.ToString();
+            lbl_toplamSatısTutar.Text = faturaManager.getFaturaGenelToplam().Data.ToString();
+            lbl_cariSayısı.Text = cariManager.totalCariCount().Data.ToString();
+
         }
     }
 }

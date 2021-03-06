@@ -29,8 +29,19 @@ namespace StokTakipUI.UserControls
 
         private void RefleshDataGridView()
         {
-            var result = tahsilatManager.GetAll();
+            var result = tahsilatManager.GetTahsilatDetails();
             dataGridView1.DataSource = result.Data;
+        }
+
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(comboBox1.Text == "Cari Ad")
+            {
+                var result = tahsilatManager.GetTahsilatDetailsByCariAd(textBox1.Text.ToString());
+                dataGridView1.DataSource = result.Data;
+            }
+            
         }
     }
 }

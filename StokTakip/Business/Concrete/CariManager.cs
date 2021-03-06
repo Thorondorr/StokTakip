@@ -60,5 +60,12 @@ namespace Business.Concrete
 
             return new SuccesDataResult<string>(NewGUID);
         }
+
+        public IDataResult<int> totalCariCount()
+        {
+            var result = _cariDal.GetAll();
+            int totalCariCount = (from x in result select x.CariAdı).Count();
+            return new SuccesDataResult<int>(totalCariCount);
+        }
     }
 }

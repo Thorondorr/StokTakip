@@ -2,9 +2,11 @@
 using Core.Utilities.Results;
 using DataAcces.Abstract;
 using Entity.Concrete;
+using Entity.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Business.Concrete
 {
@@ -51,6 +53,18 @@ namespace Business.Concrete
         {
             _tahsilatDal.Update(tahsilat);
             return new SuccesResutl();
+        }
+        public DataResult<List<TahsilatDetailsDto>> GetTahsilatDetails()
+        {
+            return new SuccesDataResult<List<TahsilatDetailsDto>>((List<TahsilatDetailsDto>)_tahsilatDal.GetTahsilatDetails());
+        }
+        public DataResult<List<TahsilatDetailsDto>> GetTahsilatDetailsByCariNo(string cariNo)
+        {
+            return new SuccesDataResult<List<TahsilatDetailsDto>>((List<TahsilatDetailsDto>)_tahsilatDal.GetTahsilatDetails().Where(n => n.CariNumarası == cariNo));
+        }
+        public DataResult<List<TahsilatDetailsDto>> GetTahsilatDetailsByCariAd(string cariAdı)
+        {
+            return new SuccesDataResult<List<TahsilatDetailsDto>>((List<TahsilatDetailsDto>)_tahsilatDal.GetTahsilatDetails().Where(n => n.CariAdı.Contains(cariAdı)));
         }
     }
 }

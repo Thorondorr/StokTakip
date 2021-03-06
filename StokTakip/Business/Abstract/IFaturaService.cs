@@ -15,7 +15,8 @@ namespace Business.Abstract
         IDataResult<List<Fatura>> GetAll();
         IDataResult<Fatura> getByFaturaNo(string FaturaNo);
          IDataResult<Fatura> getbyCariNo(string cariNo);
-
+        IDataResult<decimal> getFaturaGenelToplam();
+        IDataResult<int> getTotalSellCount();
 
     }
 }

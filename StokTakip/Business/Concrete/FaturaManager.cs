@@ -5,6 +5,7 @@ using Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 
 namespace Business.Concrete
@@ -91,6 +92,24 @@ namespace Business.Concrete
             
         }
 
-       
+        public IDataResult<decimal> getFaturaGenelToplam()
+        {
+            var result = _faturaDal.GetAll();
+            decimal genelToplam = (from x in result select x.GenelToplam).Sum();
+
+            return new SuccesDataResult<decimal>(genelToplam);
+            
+        }
+
+       public IDataResult<int> getTotalSellCount()
+        {
+
+            var result = _faturaDal.GetAll();
+            int totalSellCount = (from x in result select x.Miktar).Sum();
+
+            return new SuccesDataResult<int>(totalSellCount);
+        }
+
+
     }
 }

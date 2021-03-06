@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results;
 using Entity.Concrete;
+using Entity.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,5 +14,8 @@ namespace Business.Abstract
         IResult Delete(Tahsilat tahsilat);
         IResult CreateTahsilat(Fatura fatura);
         IDataResult<List<Tahsilat>> GetAll();
+        DataResult<List<TahsilatDetailsDto>> GetTahsilatDetailsByCariNo(string cariNo);
+        DataResult<List<TahsilatDetailsDto>> GetTahsilatDetailsByCariAd(string cariAdı);
+        DataResult<List<TahsilatDetailsDto>> GetTahsilatDetails();
     }
 }

@@ -7,12 +7,12 @@ using System.Text;
 
 namespace DataAcces.Concrete.EntityFramework
 {
-    public class CariAlimSatimContext: DbContext
+    public class CariAlimSatimContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=CariAlimSatim;Trusted_Connection=true");
-                       
+
         }
 
         public DbSet<Cari> Cari { get; set; }
@@ -23,5 +23,6 @@ namespace DataAcces.Concrete.EntityFramework
         public DbSet<Tahsilat> Tahsilat { get; set; }
         public DbSet<Urun> Urun { get; set; }
         public DbSet<UrunDetailsDto> UrunDetails { get; set; }
+        public DbSet<TahsilatDetailsDto> TahsilatDetails { get; set; }
     }
 }
