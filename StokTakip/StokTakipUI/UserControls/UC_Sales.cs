@@ -19,7 +19,7 @@ namespace StokTakipUI.UserControls
     {
         CariManager cariManager = new CariManager(new EfCariDal());
         UrunManager urunManager = new UrunManager(new EfUrunDal());
-        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(), new TahsilatManager(new EfTahsilatDal()), new CariHareketlerManager(new EfCariHareketDal()));
+        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(), new CariHareketlerManager(new EfCariHareketDal()));
         StokManager stokManager = new StokManager(new EfStokDal());
         TahsilatManager tahsilatManager = new TahsilatManager(new EfTahsilatDal());
         CariHareketlerManager cariHareketManager = new CariHareketlerManager(new EfCariHareketDal());
@@ -105,7 +105,7 @@ namespace StokTakipUI.UserControls
                 }
             }
         }
-
+            
         private void cmbox_cariAd_SelectedIndexChanged(object sender, EventArgs e)
         {
             var result = cariManager.GetAll();
@@ -138,14 +138,9 @@ namespace StokTakipUI.UserControls
                 SatısTipi = cmbox_ödeneYöntemi.Text,
                 BürütTutar = Convert.ToInt32(txtbox_miktar.Text) * rsltUrunGetDetails.Data.Fiyat,
                 Aciklama = txtbox_acıklama.Text,
-
                 BorcAlacak = ""
             };
-            /*Nakit
-Kredi Kartı
-Çek
-Senet
-Borc */
+ 
 
             switch (cmbox_ödeneYöntemi.Text)
             {
@@ -178,17 +173,20 @@ Borc */
 
         private void btn_satış_Click(object sender, EventArgs e)
         {
+            
+            string faturaNo = faturaManager.CreateFaturaNoWithGUID().Message;//bir sepet için 1 adet fatura no üretir
 
             for (int i = 0; i < sepets.Count; i++)
             {
-                faturaManager.CreateFatura(sepets[i]);
+
+                var result = faturaManager.CreateSatısFatura(sepets[i],faturaNo);
                 //her fatura kestiğinde stokğu güncelle
 
                 stokManager.UpdateStokQuantity(sepets[i], sepets[i].Miktar);
                 stokHareket.Cikis(sepets[i]);
+                cariHareketManager.BorcCreateCariHareket(result.Data.FaturaNo, sepets[i]);
+                
 
-
-                //result.Data.StokId  
 
             }
             txtbox_acıklama.Clear();

@@ -15,5 +15,7 @@ namespace Business.Abstract
         IDataResult<List<Urun>> GetAll();
         IDataResult<UrunDetailsDto> GetUrunDetails(string urunKodu);
 
+        IDataResult<string> CreateBarkot();
+
     }
 }

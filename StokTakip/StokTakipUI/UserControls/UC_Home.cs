@@ -16,7 +16,7 @@ namespace StokTakipUI.UserControls
     public partial class UC_Home : UserControl
     {
         CariManager cariManager = new CariManager(new EfCariDal());
-        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(), new TahsilatManager(new EfTahsilatDal()), new CariHareketlerManager(new EfCariHareketDal()));
+        FaturaManager faturaManager = new FaturaManager(new EfFaturaDal(),  new CariHareketlerManager(new EfCariHareketDal()));
         public UC_Home()
         {
             InitializeComponent();

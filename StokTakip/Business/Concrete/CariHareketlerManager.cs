@@ -24,7 +24,7 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
-        public IResult CreateCariHareket(string faturaNo,Sepet sepet)
+        public IResult BorcCreateCariHareket(string faturaNo,Sepet sepet)
         {
             
             CariHareket cariHareket = new CariHareket
@@ -34,7 +34,7 @@ namespace Business.Concrete
                 Tarih = DateTime.Now,
                 Tutar = sepet.Fiyat,
                 Aciklama = sepet.Aciklama,
-                BorcAlacak = sepet.BorcAlacak,
+                BorcAlacak = "B",
             };
 
             _cariHareketDal.Add(cariHareket);

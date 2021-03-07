@@ -79,5 +79,20 @@ namespace Business.Concrete
             
             return new SuccesResutl();
         }
+
+        public IResult AddPurchasedNewStok(Sepet sepet)
+        {
+            _stokDal.Add(new Stok
+            {
+                CariNo = sepet.CariNo,
+                KDV = sepet.KDV,
+                Miktar = sepet.Miktar,
+                StokNetFiyatı = sepet.Fiyat,
+                Tarih = DateTime.Now,
+                UrunAdı = sepet.UrunAdı,
+                UrunKodu = sepet.UrunKodu
+            });
+            return new SuccesResutl();
+        }
     }
 }

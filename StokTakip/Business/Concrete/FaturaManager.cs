@@ -15,11 +15,9 @@ namespace Business.Concrete
         IFaturaDal _faturaDal;
         ITahsilatService _tahsilatService;
         ICariHareketService _cariHareketService;
-        public FaturaManager(IFaturaDal faturaDal,ITahsilatService tahsilatService,ICariHareketService cariHareketService)
-        {
-           // _cariHareketDal = cariHareket;
-            _faturaDal = faturaDal;
-            _tahsilatService = tahsilatService;
+        public FaturaManager(IFaturaDal faturaDal,ICariHareketService cariHareketService)
+        {          
+            _faturaDal = faturaDal;            
             _cariHareketService = cariHareketService;
         }
           
@@ -29,17 +27,17 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
-        public IResult CreateFatura(Sepet sepet)
+        public DataResult<Fatura> CreateSatısFatura(Sepet sepet,string faturaNo)
         {
             Fatura fatura = new Fatura
             {
                 BürütTutar = sepet.BürütTutar,
                 CariNo = sepet.CariNo,
-                FaturaNo = CreateFaturaNoWithGUID().Message,
+                FaturaNo =faturaNo,
                 GenelToplam = sepet.Fiyat,
                 KDV = sepet.KDV,
                 Tarih = DateTime.Now,
-                Tip = sepet.SatısTipi,
+                Tip = "Satış",
                 UrunAdı = sepet.UrunAdı,
                 UrunKodu = sepet.UrunKodu,
                 Miktar=sepet.Miktar,
@@ -47,13 +45,37 @@ namespace Business.Concrete
             };
 
             _faturaDal.Add(fatura);
-            _tahsilatService.CreateTahsilat(fatura);
-            _cariHareketService.CreateCariHareket(fatura.FaturaNo, sepet);
-            //var result = getByFaturaNo(fatura.FaturaNo);
-            //_cariHareketService.CreateCariHareket();
+            //_cariHareketService.BorcCreateCariHareket(fatura.FaturaNo, sepet);
+            
 
-            return new SuccesResutl();
+            return new SuccesDataResult<Fatura>(fatura);
         }
+
+        public DataResult<Fatura> CreateAlisFatura(Sepet sepet, string faturaNo)
+        {
+            Fatura fatura = new Fatura
+            {
+                BürütTutar = sepet.BürütTutar,
+                CariNo = sepet.CariNo,
+                FaturaNo = faturaNo,
+                GenelToplam = sepet.Fiyat,
+                KDV = sepet.KDV,
+                Tarih = DateTime.Now,
+                Tip = "Alış",
+                UrunAdı = sepet.UrunAdı,
+                UrunKodu = sepet.UrunKodu,
+                Miktar = sepet.Miktar,
+
+            };
+
+            _faturaDal.Add(fatura);
+            //_cariHareketService.BorcCreateCariHareket(fatura.FaturaNo, sepet);
+
+
+            return new SuccesDataResult<Fatura>(fatura);
+        }
+
+
 
         public IResult Delete(Fatura fatura)
         {
@@ -83,7 +105,7 @@ namespace Business.Concrete
             return new SuccesResutl();
         }
 
-        private IDataResult<string> CreateFaturaNoWithGUID()
+        public IDataResult<string> CreateFaturaNoWithGUID()
         {
             
             

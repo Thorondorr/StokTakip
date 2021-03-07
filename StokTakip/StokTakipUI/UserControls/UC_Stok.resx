@@ -117,4 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="panel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_stokEkle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAALlJREFUSEvt
+        ljEOAiEQRSn3HHYeyCto1Pus2dLWq+gVTLT2EPi/jCGybAKGCQW85DXzAz+EZkzbWGsHeIRneCkk7zrA
+        QWp+YQBvUIsrnJdjuP/EuuykzoPh6DJVRqnzYDi5TJVJ6jwcuiyZh5hDkeKtmEMv7sVJqBbf4WbBlRjL
+        KM+GJBc/4fdloWsxllGeDel/3IuTaK/4JeZQpPgfosXVVp9qy16d9ZYwgFzoT5B/XkLetbzQN4Ixby3A
+        KG2WSx5EAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button_urunEkle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAALlJREFUSEvt
+        ljEOAiEQRSn3HHYeyCto1Pus2dLWq+gVTLT2EPi/jCGybAKGCQW85DXzAz+EZkzbWGsHeIRneCkk7zrA
+        QWp+YQBvUIsrnJdjuP/EuuykzoPh6DJVRqnzYDi5TJVJ6jwcuiyZh5hDkeKtmEMv7sVJqBbf4WbBlRjL
+        KM+GJBc/4fdloWsxllGeDel/3IuTaK/4JeZQpPgfosXVVp9qy16d9ZYwgFzoT5B/XkLetbzQN4Ixby3A
+        KG2WSx5EAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

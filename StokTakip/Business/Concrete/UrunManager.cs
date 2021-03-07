@@ -23,6 +23,28 @@ namespace Business.Concrete
             _urunDal.Add(urun);
             return new SuccesResutl();
         }
+        public IResult AddUrunFromSepet(Sepet sepet)
+        {
+            _urunDal.Add(new Urun
+            {
+                Barkot = sepet.Barkot,
+                Fiyat = sepet.Fiyat,
+                KDV = sepet.KDV,
+                Miktar = sepet.Miktar,
+                UrunKodu = sepet.UrunKodu,
+                UrunAdı = sepet.UrunAdı,
+                UrunTipi = sepet.UrunTipi
+            });
+
+            return new SuccesResutl();
+        }
+
+        public IDataResult<string> CreateBarkot()
+        {
+            Random random = new Random();
+
+            return new SuccesDataResult<string>(random.Next(1, 10000).ToString());
+        }
 
         public IResult Delete(Urun urun)
         {

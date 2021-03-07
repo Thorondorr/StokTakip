@@ -84,7 +84,7 @@ namespace StokTakipUI
         private void btn_ürünekle_Click(object sender, EventArgs e)
         {
             moveSidePanel(btn_ürünekle);
-            UC_Purchase uC_Purchase = new UC_Purchase();
+            UC_Stok uC_Purchase = new UC_Stok();
             AddControlsToPanel(uC_Purchase);
 
         }
@@ -119,6 +119,13 @@ namespace StokTakipUI
             c.Dock = DockStyle.Fill;
             panelControls.Controls.Clear();
             panelControls.Controls.Add(c);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            moveSidePanel(btn_alıs);
+            UC_Purchase uC_Purchase = new UC_Purchase();
+            AddControlsToPanel(uC_Purchase);
         }
     }
 }

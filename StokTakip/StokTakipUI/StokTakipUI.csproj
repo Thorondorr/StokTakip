@@ -180,6 +180,12 @@
     <Compile Include="UserControls\UC_Purchase.Designer.cs">
       <DependentUpon>UC_Purchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Stok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Stok.Designer.cs">
+      <DependentUpon>UC_Stok.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Sales.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Purchase.resx">
       <DependentUpon>UC_Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Stok.resx">
+      <DependentUpon>UC_Stok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Sales.resx">
       <DependentUpon>UC_Sales.cs</DependentUpon>
