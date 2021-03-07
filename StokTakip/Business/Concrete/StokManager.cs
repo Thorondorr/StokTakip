@@ -11,9 +11,11 @@ namespace Business.Concrete
     public class StokManager : IStokService
     {
         IStokDal _stokDal;
+        
         public StokManager(IStokDal stokDal)
         {
             _stokDal = stokDal;
+            
         }
 
         public IResult Add(Stok stok)
@@ -21,6 +23,7 @@ namespace Business.Concrete
 
           //  stok.UrunKodu = GenerateGUID().Message;
             _stokDal.Add(stok);
+            
             return new SuccesResutl();
         }
 
@@ -66,13 +69,14 @@ namespace Business.Concrete
                 UrunAdı=result.Data.UrunAdı,
                 CariNo = result.Data.CariNo,
                 UrunKodu = result.Data.UrunKodu,
-                GirisCikis = result.Data.GirisCikis,
+               // GirisCikis = result.Data.GirisCikis,
                 KDV = result.Data.KDV,
                 Miktar = result.Data.Miktar - eksilenStok,
                 StokId = result.Data.StokId,
                 StokNetFiyatı = result.Data.StokNetFiyatı,
                 Tarih = result.Data.Tarih
             });
+            
             return new SuccesResutl();
         }
     }

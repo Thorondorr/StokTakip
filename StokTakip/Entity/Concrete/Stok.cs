@@ -14,7 +14,7 @@ namespace Entity.Concrete
         //public string FaturaNo { get; set; }
         public DateTime Tarih { get; set; }
         public string CariNo { get; set; }
-        public string GirisCikis { get; set; }
+      //  public string GirisCikis { get; set; }
         public decimal StokNetFiyatı { get; set; }
         public int KDV { get; set; }
         public int Miktar { get; set; }

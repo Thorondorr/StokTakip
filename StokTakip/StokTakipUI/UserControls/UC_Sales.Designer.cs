@@ -450,9 +450,7 @@ namespace StokTakipUI.UserControls
             this.cmbox_ödeneYöntemi.Items.AddRange(new object[] {
             "Nakit",
             "Kredi Kartı",
-            "Çek",
-            "Senet",
-            "Borc "});
+            "Borc"});
             this.cmbox_ödeneYöntemi.Location = new System.Drawing.Point(118, 344);
             this.cmbox_ödeneYöntemi.Name = "cmbox_ödeneYöntemi";
             this.cmbox_ödeneYöntemi.Size = new System.Drawing.Size(171, 31);

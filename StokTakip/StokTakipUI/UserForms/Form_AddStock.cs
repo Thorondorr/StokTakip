@@ -46,7 +46,6 @@ namespace StokTakipUI.UserForms
                 CariNo="",
                 KDV = Convert.ToInt32(txtBox_kdv.Text),
                 Miktar = Convert.ToInt32(txtBox_miktar.Text),
-                GirisCikis ="giriş",
                 StokNetFiyatı=Convert.ToInt32(txtBox_netfiyat.Text),
                 Tarih=DateTime.Now
             };

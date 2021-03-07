@@ -22,7 +22,9 @@ namespace DataAcces.Concrete.EntityFramework
         public DbSet<Stok> Stok { get; set; }
         public DbSet<Tahsilat> Tahsilat { get; set; }
         public DbSet<Urun> Urun { get; set; }
+        public DbSet<StokHareket> StokHareket { get; set; }
         public DbSet<UrunDetailsDto> UrunDetails { get; set; }
         public DbSet<TahsilatDetailsDto> TahsilatDetails { get; set; }
+       
     }
 }

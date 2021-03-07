@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using DataAcces.Abstract;
 using DataAcces.Concrete;
 using DataAcces.Concrete.EntityFramework;
 using Entity.Concrete;
@@ -22,6 +23,7 @@ namespace StokTakipUI.UserControls
         StokManager stokManager = new StokManager(new EfStokDal());
         TahsilatManager tahsilatManager = new TahsilatManager(new EfTahsilatDal());
         CariHareketlerManager cariHareketManager = new CariHareketlerManager(new EfCariHareketDal());
+        StokHareketManager stokHareket = new StokHareketManager(new EfStokHareketDal());
 
         //List<Urun> uruns = new List<Urun>();
         public List<Sepet> sepets = new List<Sepet>();
@@ -144,26 +146,18 @@ Kredi Kartı
 Çek
 Senet
 Borc */
-             
+
             switch (cmbox_ödeneYöntemi.Text)
             {
                 case "Nakit":
-                    sepet.BorcAlacak = "Borcu yoktur.";
+                    sepet.BorcAlacak = "Yok.";
                     break;
                 case "Kredi Kartı":
-                    sepet.BorcAlacak = "Borcu yoktur.";
+                    sepet.BorcAlacak = "Yok.";
                     break;
                 case "Borc":
                     sepet.BorcAlacak = "Borç";
                     break;
-                case "Senet":
-                    sepet.BorcAlacak = "Senet";
-                    break;
-                case "Çek":
-                    sepet.BorcAlacak = "Çek";
-                    break;
-
-
                 default:
                     break;
             }
@@ -191,19 +185,16 @@ Borc */
                 //her fatura kestiğinde stokğu güncelle
 
                 stokManager.UpdateStokQuantity(sepets[i], sepets[i].Miktar);
-               
-               //result.Data.StokId  
+                stokHareket.Cikis(sepets[i]);
 
-                         
-                
+
+                //result.Data.StokId  
+
             }
-
-          
-
             txtbox_acıklama.Clear();
             txtbox_cariNo.Clear();
             txtBox_fiyat.Clear();
-            txtbox_miktar.Text="0";
+            txtbox_miktar.Text = "0";
             txtbox_ürünbarkod.Clear();
             txtbox_ürünkdv.Clear();
             txtbox_ürünkod.Clear();
@@ -237,7 +228,7 @@ Borc */
 
         private void button5_Click(object sender, EventArgs e)
         {
-          txtbox_miktar.Text  = (Convert.ToInt32(txtbox_miktar.Text) - 1).ToString();
+            txtbox_miktar.Text = (Convert.ToInt32(txtbox_miktar.Text) - 1).ToString();
         }
 
         private void button6_Click(object sender, EventArgs e)

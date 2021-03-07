@@ -35,7 +35,7 @@ namespace StokTakipUI.UserForms
             stokManager.Update(new Entity.Concrete.Stok
             {
                 CariNo=result.Data.CariNo,
-                GirisCikis="giriş",
+               
                 KDV=Convert.ToInt32(txtbox_kdv.Text),
                 Miktar=Convert.ToInt32(txtbox_ürünSayısı.Text),
                 StokId=result.Data.StokId,
