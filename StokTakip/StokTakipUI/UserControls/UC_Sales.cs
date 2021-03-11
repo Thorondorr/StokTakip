@@ -180,14 +180,13 @@ namespace StokTakipUI.UserControls
             {
 
                 var result = faturaManager.CreateSatısFatura(sepets[i],faturaNo);
+                sepets[i].FaturaNo = result.Data.FaturaNo;
                 //her fatura kestiğinde stokğu güncelle
 
                 stokManager.UpdateStokQuantity(sepets[i], sepets[i].Miktar);
                 stokHareket.Cikis(sepets[i]);
                 cariHareketManager.BorcCreateCariHareket(result.Data.FaturaNo, sepets[i]);
-                
-
-
+               
             }
             txtbox_acıklama.Clear();
             txtbox_cariNo.Clear();

@@ -30,6 +30,7 @@ namespace StokTakipUI.UserControls
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel panel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Tahsilat));
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -40,10 +41,15 @@ namespace StokTakipUI.UserControls
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button_urunEkle = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +92,9 @@ namespace StokTakipUI.UserControls
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.dataGridView1);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(10, 85);
             this.panel5.Name = "panel5";
@@ -105,13 +113,14 @@ namespace StokTakipUI.UserControls
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(965, 475);
+            this.dataGridView1.Size = new System.Drawing.Size(965, 215);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel4.Controls.Add(this.button_urunEkle);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.textBox1);
@@ -157,6 +166,49 @@ namespace StokTakipUI.UserControls
             this.panel3.Size = new System.Drawing.Size(985, 10);
             this.panel3.TabIndex = 5;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(763, 70);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 31);
+            this.comboBox2.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 260);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(965, 215);
+            this.panel6.TabIndex = 2;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(965, 260);
+            this.panel7.TabIndex = 1;
+            // 
+            // button_urunEkle
+            // 
+            this.button_urunEkle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button_urunEkle.FlatAppearance.BorderSize = 0;
+            this.button_urunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_urunEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button_urunEkle.ForeColor = System.Drawing.Color.White;
+            this.button_urunEkle.Image = ((System.Drawing.Image)(resources.GetObject("button_urunEkle.Image")));
+            this.button_urunEkle.Location = new System.Drawing.Point(0, 0);
+            this.button_urunEkle.Name = "button_urunEkle";
+            this.button_urunEkle.Size = new System.Drawing.Size(154, 75);
+            this.button_urunEkle.TabIndex = 6;
+            this.button_urunEkle.Text = "Tahsilat Yap";
+            this.button_urunEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_urunEkle.UseVisualStyleBackColor = true;
+            this.button_urunEkle.Click += new System.EventHandler(this.button_urunEkle_Click);
+            // 
             // UC_Tahsilat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -174,6 +226,7 @@ namespace StokTakipUI.UserControls
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -189,5 +242,9 @@ namespace StokTakipUI.UserControls
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button_urunEkle;
     }
 }

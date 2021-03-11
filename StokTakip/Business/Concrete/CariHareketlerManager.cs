@@ -5,6 +5,7 @@ using Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Business.Concrete
 {
@@ -57,6 +58,16 @@ namespace Business.Concrete
         {
             _cariHareketDal.Update(cariHareket);
             return new SuccesResutl();
+        }
+
+        public IDataResult<int> GetAllBorcWithCariNo(string cariNo)
+        {
+           var result = _cariHareketDal.GetAll(ch => ch.CariNo == cariNo );
+            var borc = result.Where(r => r.BorcAlacak.Contains("B"));
+            
+            
+
+            return new SuccesDataResult<int>();
         }
     }
 }

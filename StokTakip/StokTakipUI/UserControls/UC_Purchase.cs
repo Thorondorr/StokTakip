@@ -43,7 +43,7 @@ namespace StokTakipUI.UserControls
                 //her fatura kestiğinde stokğu güncelle
 
                 //stokManager.UpdateStokQuantity(sepets[i], sepets[i].Miktar); // eğer stok 
-
+                sepets[i].FaturaNo = result.Data.FaturaNo;
                 stokManager.AddPurchasedNewStok(sepets[i]);
                 stokHareket.Giris(sepets[i]);
                 cariHareketManager.BorcCreateCariHareket(result.Data.FaturaNo, sepets[i]);

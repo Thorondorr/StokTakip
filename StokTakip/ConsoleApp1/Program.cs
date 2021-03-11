@@ -10,6 +10,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
+
+            CariHareketlerManager cariHareketlerManager = new CariHareketlerManager(new EfCariHareketDal());
+
+            cariHareketlerManager.GetAllBorcWithCariNo("f-0001");
+
+
            // KullanıcılarManager kullanıcıManager = new KullanıcılarManager(new EfKullanıcıDal());
            // StokManager stokManager = new StokManager(new EfStokDal());
            // UrunManager urunManager = new UrunManager(new EfUrunDal());

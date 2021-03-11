@@ -34,7 +34,7 @@ namespace StokTakipUI.UserControls
 
         private void button_stokEkle_Click(object sender, EventArgs e)
         {
-            using(Form_AddStock form_AddStock = new Form_AddStock())
+            using(Form_AddStokk form_AddStock = new Form_AddStokk())
             {
                 form_AddStock.ShowDialog();
             }

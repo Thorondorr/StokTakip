@@ -26,7 +26,7 @@ namespace Business.Concrete
             _stokHareketDal.Add(new StokHareket
             {
                 CariNo = sepet.CariNo,
-                FaturaNo = sepet.CariNo,
+                FaturaNo = sepet.FaturaNo,
                 GirisCikis = "Giris",
                 KDV = sepet.KDV,
                 Tarih = DateTime.Now,
@@ -43,7 +43,7 @@ namespace Business.Concrete
             _stokHareketDal.Add(new StokHareket
             {
                 CariNo = sepet.CariNo,
-                FaturaNo = sepet.CariNo,
+                FaturaNo = sepet.FaturaNo,
                 GirisCikis = "Cikis",
                 KDV = sepet.KDV,
                 Tarih = DateTime.Now,

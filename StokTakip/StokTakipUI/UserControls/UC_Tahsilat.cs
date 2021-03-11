@@ -1,6 +1,7 @@
 ﻿using Business.Concrete;
 using DataAcces.Concrete;
 using Entity.Concrete;
+using StokTakipUI.UserForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,14 @@ namespace StokTakipUI.UserControls
                 dataGridView1.DataSource = result.Data;
             }
             
+        }
+
+        private void button_urunEkle_Click(object sender, EventArgs e)
+        {
+            using (Form_Tahsilat form_Tahsilat = new Form_Tahsilat())
+            {
+                form_Tahsilat.ShowDialog();
+            }
         }
     }
 }

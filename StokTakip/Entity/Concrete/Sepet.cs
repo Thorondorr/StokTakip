@@ -21,5 +21,6 @@ namespace Entity.Concrete
         public decimal BürütTutar { get; set; }
         public string Aciklama { get; set; }
         public string BorcAlacak { get; set; }
+        public string FaturaNo { get; set; }
     }
 }

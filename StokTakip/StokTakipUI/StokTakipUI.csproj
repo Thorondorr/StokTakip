@@ -198,11 +198,11 @@
     <Compile Include="UserControls\UC_Tahsilat.Designer.cs">
       <DependentUpon>UC_Tahsilat.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\Form_AddStock.cs">
+    <Compile Include="UserForms\Form_AddStokk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForms\Form_AddStock.Designer.cs">
-      <DependentUpon>Form_AddStock.cs</DependentUpon>
+    <Compile Include="UserForms\Form_AddStokk.Designer.cs">
+      <DependentUpon>Form_AddStokk.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\Form_Add_Product.cs">
       <SubType>Form</SubType>
@@ -221,6 +221,12 @@
     </Compile>
     <Compile Include="UserForms\Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\Form_Tahsilat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\Form_Tahsilat.Designer.cs">
+      <DependentUpon>Form_Tahsilat.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\Login.cs">
       <SubType>Form</SubType>
@@ -254,8 +260,8 @@
     <EmbeddedResource Include="UserControls\UC_Tahsilat.resx">
       <DependentUpon>UC_Tahsilat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\Form_AddStock.resx">
-      <DependentUpon>Form_AddStock.cs</DependentUpon>
+    <EmbeddedResource Include="UserForms\Form_AddStokk.resx">
+      <DependentUpon>Form_AddStokk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Form_Add_Product.resx">
       <DependentUpon>Form_Add_Product.cs</DependentUpon>
@@ -265,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Form_Dashboard.resx">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\Form_Tahsilat.resx">
+      <DependentUpon>Form_Tahsilat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
