@@ -88,6 +88,7 @@ namespace StokTakipUI.UserForms
             this.txtbox_telefon.Name = "txtbox_telefon";
             this.txtbox_telefon.Size = new System.Drawing.Size(171, 32);
             this.txtbox_telefon.TabIndex = 67;
+            this.txtbox_telefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbox_telefon_KeyPress);
             // 
             // txtbox_VergiNo
             // 
@@ -116,6 +117,7 @@ namespace StokTakipUI.UserForms
             this.txtbox_tcKimlikNo.Name = "txtbox_tcKimlikNo";
             this.txtbox_tcKimlikNo.Size = new System.Drawing.Size(171, 32);
             this.txtbox_tcKimlikNo.TabIndex = 63;
+            this.txtbox_tcKimlikNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbox_tcKimlikNo_KeyPress);
             // 
             // txtbox_vergiDairesi
             // 

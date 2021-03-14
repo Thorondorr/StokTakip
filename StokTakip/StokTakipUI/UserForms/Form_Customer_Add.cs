@@ -43,5 +43,24 @@ namespace StokTakipUI.UserForms
 
             MessageBox.Show(result.Message);
         }
+
+        private void txtbox_tcKimlikNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // allows 0-9, backspace, and decimal
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtbox_telefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

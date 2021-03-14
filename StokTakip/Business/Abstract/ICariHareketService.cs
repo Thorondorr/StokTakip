@@ -12,6 +12,9 @@ namespace Business.Abstract
         IResult Update(CariHareket cariHareket);
         IResult Delete(CariHareket cariHareket);
         IResult BorcCreateCariHareket(string faturaNo, Sepet sepet);
+        IDataResult<decimal> GetAllBorcWithCariNo(string cariNo);
+        IDataResult<decimal> GetAllOdenenBorcWithCariNo(string cariNo);
+        IDataResult<decimal> GetAllKalanBorcWithCariNo(string cariNo);
         IDataResult<List<CariHareket>> GetAll();
     }
 }

@@ -330,6 +330,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtBox_fiyat
             // 
+            this.txtBox_fiyat.Enabled = false;
             this.txtBox_fiyat.Location = new System.Drawing.Point(417, 343);
             this.txtBox_fiyat.Name = "txtBox_fiyat";
             this.txtBox_fiyat.Size = new System.Drawing.Size(171, 32);
@@ -346,6 +347,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_ürünkod
             // 
+            this.txtbox_ürünkod.Enabled = false;
             this.txtbox_ürünkod.Location = new System.Drawing.Point(417, 191);
             this.txtbox_ürünkod.Name = "txtbox_ürünkod";
             this.txtbox_ürünkod.Size = new System.Drawing.Size(171, 32);
@@ -353,6 +355,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_ürünkdv
             // 
+            this.txtbox_ürünkdv.Enabled = false;
             this.txtbox_ürünkdv.Location = new System.Drawing.Point(417, 269);
             this.txtbox_ürünkdv.Name = "txtbox_ürünkdv";
             this.txtbox_ürünkdv.Size = new System.Drawing.Size(171, 32);
@@ -369,6 +372,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_ürünbarkod
             // 
+            this.txtbox_ürünbarkod.Enabled = false;
             this.txtbox_ürünbarkod.Location = new System.Drawing.Point(121, 269);
             this.txtbox_ürünbarkod.Name = "txtbox_ürünbarkod";
             this.txtbox_ürünbarkod.Size = new System.Drawing.Size(171, 32);
@@ -394,6 +398,7 @@ namespace StokTakipUI.UserControls
             // 
             // txtbox_cariNo
             // 
+            this.txtbox_cariNo.Enabled = false;
             this.txtbox_cariNo.Location = new System.Drawing.Point(417, 111);
             this.txtbox_cariNo.Name = "txtbox_cariNo";
             this.txtbox_cariNo.Size = new System.Drawing.Size(171, 32);
@@ -411,6 +416,7 @@ namespace StokTakipUI.UserControls
             // 
             // cmbox_cariAd
             // 
+            this.cmbox_cariAd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_cariAd.FormattingEnabled = true;
             this.cmbox_cariAd.Location = new System.Drawing.Point(121, 111);
             this.cmbox_cariAd.Name = "cmbox_cariAd";
@@ -420,6 +426,7 @@ namespace StokTakipUI.UserControls
             // 
             // cmbox_ürünAdı
             // 
+            this.cmbox_ürünAdı.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_ürünAdı.FormattingEnabled = true;
             this.cmbox_ürünAdı.Location = new System.Drawing.Point(118, 192);
             this.cmbox_ürünAdı.Name = "cmbox_ürünAdı";
@@ -446,6 +453,7 @@ namespace StokTakipUI.UserControls
             // 
             // cmbox_ödeneYöntemi
             // 
+            this.cmbox_ödeneYöntemi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_ödeneYöntemi.FormattingEnabled = true;
             this.cmbox_ödeneYöntemi.Items.AddRange(new object[] {
             "Nakit",

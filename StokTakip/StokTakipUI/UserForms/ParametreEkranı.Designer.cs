@@ -53,6 +53,8 @@ namespace StokTakipUI.UserForms
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -250,7 +252,9 @@ namespace StokTakipUI.UserForms
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.txtbox_svKullanıcıAdı);
+            this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.txtBox_serveradı);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label1);
@@ -324,6 +328,26 @@ namespace StokTakipUI.UserForms
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label7.Location = new System.Drawing.Point(8, 161);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 23);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Server Şifre";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.textBox1.Location = new System.Drawing.Point(12, 187);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(345, 36);
+            this.textBox1.TabIndex = 9;
+            // 
             // ParametreEkranı
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -378,5 +402,7 @@ namespace StokTakipUI.UserForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_sil;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

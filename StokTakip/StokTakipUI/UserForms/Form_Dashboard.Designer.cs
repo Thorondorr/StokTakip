@@ -32,10 +32,12 @@ namespace StokTakipUI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btn_alıs = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
             this.btn_satıs = new System.Windows.Forms.Button();
             this.btn_tahsilat = new System.Windows.Forms.Button();
             this.btn_ürünekle = new System.Windows.Forms.Button();
+            this.btn_cariEkle = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,8 +54,7 @@ namespace StokTakipUI
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panelControls = new System.Windows.Forms.Panel();
-            this.btn_cariEkle = new System.Windows.Forms.Button();
-            this.btn_alıs = new System.Windows.Forms.Button();
+            this.btn_fatura = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,6 +67,7 @@ namespace StokTakipUI
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(150)))));
+            this.panelLeft.Controls.Add(this.btn_fatura);
             this.panelLeft.Controls.Add(this.btn_alıs);
             this.panelLeft.Controls.Add(this.panelSide);
             this.panelLeft.Controls.Add(this.btn_satıs);
@@ -79,6 +81,23 @@ namespace StokTakipUI
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(215, 720);
             this.panelLeft.TabIndex = 0;
+            // 
+            // btn_alıs
+            // 
+            this.btn_alıs.FlatAppearance.BorderSize = 0;
+            this.btn_alıs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_alıs.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_alıs.ForeColor = System.Drawing.Color.White;
+            this.btn_alıs.Image = ((System.Drawing.Image)(resources.GetObject("btn_alıs.Image")));
+            this.btn_alıs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_alıs.Location = new System.Drawing.Point(12, 276);
+            this.btn_alıs.Name = "btn_alıs";
+            this.btn_alıs.Size = new System.Drawing.Size(203, 59);
+            this.btn_alıs.TabIndex = 5;
+            this.btn_alıs.Text = "   Alış";
+            this.btn_alıs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_alıs.UseVisualStyleBackColor = true;
+            this.btn_alıs.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panelSide
             // 
@@ -138,6 +157,23 @@ namespace StokTakipUI
             this.btn_ürünekle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ürünekle.UseVisualStyleBackColor = true;
             this.btn_ürünekle.Click += new System.EventHandler(this.btn_ürünekle_Click);
+            // 
+            // btn_cariEkle
+            // 
+            this.btn_cariEkle.FlatAppearance.BorderSize = 0;
+            this.btn_cariEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cariEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_cariEkle.ForeColor = System.Drawing.Color.White;
+            this.btn_cariEkle.Image = ((System.Drawing.Image)(resources.GetObject("btn_cariEkle.Image")));
+            this.btn_cariEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cariEkle.Location = new System.Drawing.Point(12, 211);
+            this.btn_cariEkle.Name = "btn_cariEkle";
+            this.btn_cariEkle.Size = new System.Drawing.Size(203, 59);
+            this.btn_cariEkle.TabIndex = 1;
+            this.btn_cariEkle.Text = "   Satış";
+            this.btn_cariEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cariEkle.UseVisualStyleBackColor = true;
+            this.btn_cariEkle.Click += new System.EventHandler(this.btn_cariEkle_Click);
             // 
             // btn_home
             // 
@@ -308,39 +344,22 @@ namespace StokTakipUI
             this.panelControls.TabIndex = 1;
             this.panelControls.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControls_Paint);
             // 
-            // btn_cariEkle
+            // btn_fatura
             // 
-            this.btn_cariEkle.FlatAppearance.BorderSize = 0;
-            this.btn_cariEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cariEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_cariEkle.ForeColor = System.Drawing.Color.White;
-            this.btn_cariEkle.Image = ((System.Drawing.Image)(resources.GetObject("btn_cariEkle.Image")));
-            this.btn_cariEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cariEkle.Location = new System.Drawing.Point(12, 211);
-            this.btn_cariEkle.Name = "btn_cariEkle";
-            this.btn_cariEkle.Size = new System.Drawing.Size(203, 59);
-            this.btn_cariEkle.TabIndex = 1;
-            this.btn_cariEkle.Text = "   Satış";
-            this.btn_cariEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_cariEkle.UseVisualStyleBackColor = true;
-            this.btn_cariEkle.Click += new System.EventHandler(this.btn_cariEkle_Click);
-            // 
-            // btn_alıs
-            // 
-            this.btn_alıs.FlatAppearance.BorderSize = 0;
-            this.btn_alıs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_alıs.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_alıs.ForeColor = System.Drawing.Color.White;
-            this.btn_alıs.Image = ((System.Drawing.Image)(resources.GetObject("btn_alıs.Image")));
-            this.btn_alıs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_alıs.Location = new System.Drawing.Point(12, 276);
-            this.btn_alıs.Name = "btn_alıs";
-            this.btn_alıs.Size = new System.Drawing.Size(203, 59);
-            this.btn_alıs.TabIndex = 5;
-            this.btn_alıs.Text = "   Alış";
-            this.btn_alıs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_alıs.UseVisualStyleBackColor = true;
-            this.btn_alıs.Click += new System.EventHandler(this.button1_Click_1);
+            this.btn_fatura.FlatAppearance.BorderSize = 0;
+            this.btn_fatura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_fatura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_fatura.ForeColor = System.Drawing.Color.White;
+            this.btn_fatura.Image = ((System.Drawing.Image)(resources.GetObject("btn_fatura.Image")));
+            this.btn_fatura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_fatura.Location = new System.Drawing.Point(12, 536);
+            this.btn_fatura.Name = "btn_fatura";
+            this.btn_fatura.Size = new System.Drawing.Size(203, 59);
+            this.btn_fatura.TabIndex = 6;
+            this.btn_fatura.Text = "   Fatura";
+            this.btn_fatura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_fatura.UseVisualStyleBackColor = true;
+            this.btn_fatura.Click += new System.EventHandler(this.btn_fatura_Click);
             // 
             // Form_Dashboard
             // 
@@ -394,5 +413,6 @@ namespace StokTakipUI
         private System.Windows.Forms.Panel panelControls;
         private System.Windows.Forms.Button btn_cariEkle;
         private System.Windows.Forms.Button btn_alıs;
+        private System.Windows.Forms.Button btn_fatura;
     }
 }

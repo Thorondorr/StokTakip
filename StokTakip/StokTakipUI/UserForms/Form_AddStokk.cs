@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Core.Helper;
 using DataAcces.Concrete.EntityFramework;
 using Entity.Concrete;
 using System;
@@ -20,6 +21,8 @@ namespace StokTakipUI.UserForms
         CariManager cariManager = new CariManager(new EfCariDal());
         UrunManager UrunManager = new UrunManager(new EfUrunDal());
         Random random = new Random();
+
+        TextBoxCFG textBoxCFG = new TextBoxCFG();
         public Form_AddStokk()
         {
             InitializeComponent();
@@ -32,14 +35,6 @@ namespace StokTakipUI.UserForms
             this.Dispose();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-         
-
-           
-
-        }
-
         private void getCariAdd()
         {
           var resul= cariManager.GetAll();
@@ -47,15 +42,6 @@ namespace StokTakipUI.UserForms
             {
                 comboBox1.Items.Add(a.CariAdı);
             }
-        }
-
-
-
-    
-
-        private void txtBox_ürünAdı_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -76,8 +62,6 @@ namespace StokTakipUI.UserForms
                 StokNetFiyatı = Convert.ToInt32(txtBox_netfiyat.Text),
                 Tarih = DateTime.Now
             };
-
-
 
             foreach (var item in result.Data)
             {
@@ -111,6 +95,32 @@ namespace StokTakipUI.UserForms
                 MessageBox.Show(result1.Message);
             }
 
+        }
+
+        private void txtBox_miktar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // allows 0-9, backspace, and decimal
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtBox_netfiyat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!textBoxCFG.isNumber(e.KeyChar, txtBox_netfiyat.Text))
+                e.Handled = true;
+        }
+
+        private void txtBox_kdv_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // allows 0-9, backspace, and decimal
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 ))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

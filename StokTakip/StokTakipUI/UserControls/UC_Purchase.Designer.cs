@@ -35,13 +35,11 @@ namespace StokTakipUI.UserControls
             this.txtbox_cariNo = new System.Windows.Forms.TextBox();
             this.txtbox_ürünkod = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtbox_ürünbarkod = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_urunTipi = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader_ürün = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,6 +73,7 @@ namespace StokTakipUI.UserControls
             // 
             // cmbox_cariAd
             // 
+            this.cmbox_cariAd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_cariAd.FormattingEnabled = true;
             this.cmbox_cariAd.Location = new System.Drawing.Point(64, 111);
             this.cmbox_cariAd.Name = "cmbox_cariAd";
@@ -84,20 +83,23 @@ namespace StokTakipUI.UserControls
             // 
             // txtBox_fiyat
             // 
-            this.txtBox_fiyat.Location = new System.Drawing.Point(360, 343);
+            this.txtBox_fiyat.Location = new System.Drawing.Point(360, 261);
             this.txtBox_fiyat.Name = "txtBox_fiyat";
             this.txtBox_fiyat.Size = new System.Drawing.Size(171, 32);
             this.txtBox_fiyat.TabIndex = 24;
+            this.txtBox_fiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_fiyat_KeyPress);
             // 
             // txtbox_ürünkdv
             // 
-            this.txtbox_ürünkdv.Location = new System.Drawing.Point(360, 269);
+            this.txtbox_ürünkdv.Location = new System.Drawing.Point(64, 261);
             this.txtbox_ürünkdv.Name = "txtbox_ürünkdv";
             this.txtbox_ürünkdv.Size = new System.Drawing.Size(171, 32);
             this.txtbox_ürünkdv.TabIndex = 23;
+            this.txtbox_ürünkdv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbox_ürünkdv_KeyPress);
             // 
             // txtbox_cariNo
             // 
+            this.txtbox_cariNo.Enabled = false;
             this.txtbox_cariNo.Location = new System.Drawing.Point(360, 111);
             this.txtbox_cariNo.Name = "txtbox_cariNo";
             this.txtbox_cariNo.Size = new System.Drawing.Size(171, 32);
@@ -119,17 +121,10 @@ namespace StokTakipUI.UserControls
             this.label8.TabIndex = 19;
             this.label8.Text = "Açıklama";
             // 
-            // txtbox_ürünbarkod
-            // 
-            this.txtbox_ürünbarkod.Location = new System.Drawing.Point(64, 269);
-            this.txtbox_ürünbarkod.Name = "txtbox_ürünbarkod";
-            this.txtbox_ürünbarkod.Size = new System.Drawing.Size(171, 32);
-            this.txtbox_ürünbarkod.TabIndex = 20;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(356, 317);
+            this.label5.Location = new System.Drawing.Point(356, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 23);
             this.label5.TabIndex = 10;
@@ -147,7 +142,7 @@ namespace StokTakipUI.UserControls
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(356, 243);
+            this.label6.Location = new System.Drawing.Point(60, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 23);
             this.label6.TabIndex = 16;
@@ -158,9 +153,9 @@ namespace StokTakipUI.UserControls
             this.lbl_urunTipi.AutoSize = true;
             this.lbl_urunTipi.Location = new System.Drawing.Point(60, 317);
             this.lbl_urunTipi.Name = "lbl_urunTipi";
-            this.lbl_urunTipi.Size = new System.Drawing.Size(172, 23);
+            this.lbl_urunTipi.Size = new System.Drawing.Size(87, 23);
             this.lbl_urunTipi.TabIndex = 15;
-            this.lbl_urunTipi.Text = "Ödeme Yöntemi";
+            this.lbl_urunTipi.Text = "Ürün Tipi";
             // 
             // label3
             // 
@@ -170,15 +165,6 @@ namespace StokTakipUI.UserControls
             this.label3.Size = new System.Drawing.Size(110, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "Ürün Kodu";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(60, 243);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 23);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Ürün Barkodu";
             // 
             // label4
             // 
@@ -324,6 +310,7 @@ namespace StokTakipUI.UserControls
             this.txtbox_miktar.Name = "txtbox_miktar";
             this.txtbox_miktar.Size = new System.Drawing.Size(64, 32);
             this.txtbox_miktar.TabIndex = 7;
+            this.txtbox_miktar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbox_miktar_KeyPress);
             // 
             // btn_sil
             // 
@@ -458,13 +445,11 @@ namespace StokTakipUI.UserControls
             this.Controls.Add(this.txtbox_cariNo);
             this.Controls.Add(this.txtbox_ürünkod);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtbox_ürünbarkod);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lbl_urunTipi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnl_right);
@@ -492,13 +477,11 @@ namespace StokTakipUI.UserControls
         private System.Windows.Forms.TextBox txtbox_cariNo;
         private System.Windows.Forms.TextBox txtbox_ürünkod;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtbox_ürünbarkod;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_urunTipi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader_ürün;

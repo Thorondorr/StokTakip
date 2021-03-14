@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAcces.Concrete;
+using DataAcces.Concrete.EntityFramework;
 using Entity.Concrete;
 using StokTakipUI.UserForms;
 using System;
@@ -17,10 +18,14 @@ namespace StokTakipUI.UserControls
     public partial class UC_Tahsilat : UserControl
     {
         TahsilatManager tahsilatManager = new TahsilatManager(new EfTahsilatDal());
+        CariHareketlerManager CariHareketlerManager = new CariHareketlerManager(new EfCariHareketDal());
+        CariManager CariManager = new CariManager(new EfCariDal());
         public UC_Tahsilat()
         {
             InitializeComponent();
-            RefleshDataGridView();
+            //RefleshDataGridView();
+            //createDataGridViewColumn();
+            getTahsilats();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -28,18 +33,11 @@ namespace StokTakipUI.UserControls
 
         }
 
-        private void RefleshDataGridView()
-        {
-            var result = tahsilatManager.GetTahsilatDetails();
-            dataGridView1.DataSource = result.Data;
-        }
-
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(comboBox1.Text == "Cari Ad")
+            if(comboBox1.Text == "Cari No")
             {
-                var result = tahsilatManager.GetTahsilatDetailsByCariAd(textBox1.Text.ToString());
+                var result = tahsilatManager.GetByCariNo(textBox1.Text);
                 dataGridView1.DataSource = result.Data;
             }
             
@@ -51,6 +49,25 @@ namespace StokTakipUI.UserControls
             {
                 form_Tahsilat.ShowDialog();
             }
+        }
+
+        //datagrid view
+        private void createDataGridViewColumn()
+        {
+          
+            
+
+
+        }
+        private void RefleshDataGridView()
+        {
+            var result = tahsilatManager.GetTahsilatDetails();
+            dataGridView1.DataSource = result.Data;
+        }
+        private void getTahsilats()
+        {
+            var result = tahsilatManager.GetAll();
+            dataGridView1.DataSource = result.Data;
         }
     }
 }

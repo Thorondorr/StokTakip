@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Core.Helper;
 using DataAcces.Concrete;
 using DataAcces.Concrete.EntityFramework;
 using Entity.Concrete;
@@ -26,6 +27,8 @@ namespace StokTakipUI.UserControls
         TediyeManager tediyeManager = new TediyeManager(new EfTediyeDal());
 
         List<Sepet> sepets = new List<Sepet>();
+
+        TextBoxCFG txtBoxCFG = new TextBoxCFG();
         public UC_Purchase()
         {
             InitializeComponent();
@@ -54,7 +57,7 @@ namespace StokTakipUI.UserControls
             txtbox_cariNo.Clear();
             txtBox_fiyat.Clear();
             txtbox_miktar.Text = "0";
-            txtbox_ürünbarkod.Clear();
+            // txtbox_ürünbarkod.Clear();
             txtbox_ürünkdv.Clear();
             txtbox_ürünkod.Clear();
             lbl_toplamTutar.Text = "0";
@@ -104,7 +107,7 @@ namespace StokTakipUI.UserControls
                 KDV = Convert.ToInt32(txtbox_ürünkdv.Text),
                 Miktar = Convert.ToInt32(txtbox_miktar.Text),
                 Fiyat = (Convert.ToDecimal(txtBox_fiyat.Text) + ((Convert.ToDecimal(txtbox_ürünkdv.Text) * Convert.ToInt32(txtBox_fiyat.Text)) / 100)) * Convert.ToInt32(txtbox_miktar.Text),
-                BürütTutar= Convert.ToDecimal(txtbox_miktar.Text) * Convert.ToDecimal(txtBox_fiyat.Text),
+                BürütTutar = Convert.ToDecimal(txtbox_miktar.Text) * Convert.ToDecimal(txtBox_fiyat.Text),
                 UrunTipi = txtbox_urunTipi.Text
 
             };
@@ -137,7 +140,7 @@ namespace StokTakipUI.UserControls
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if(Convert.ToInt32(txtbox_miktar.Text) < 0)
+            if (Convert.ToInt32(txtbox_miktar.Text) < 0)
             {
                 txtbox_miktar.Text = "1";
             }
@@ -145,13 +148,13 @@ namespace StokTakipUI.UserControls
             {
                 txtbox_miktar.Text = (Convert.ToInt32(txtbox_miktar.Text) + 1).ToString();
             }
-           
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 
-            if (Convert.ToInt32(txtbox_miktar.Text) <=0)
+            if (Convert.ToInt32(txtbox_miktar.Text) <= 0)
             {
                 txtbox_miktar.Text = "0";
             }
@@ -159,7 +162,31 @@ namespace StokTakipUI.UserControls
             {
                 txtbox_miktar.Text = (Convert.ToInt32(txtbox_miktar.Text) - 1).ToString();
             }
-            
+
+        }
+
+        private void txtbox_ürünkdv_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtBox_fiyat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!txtBoxCFG.isNumber(e.KeyChar, txtBox_fiyat.Text))
+                e.Handled = true;
+        }
+
+        private void txtbox_miktar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

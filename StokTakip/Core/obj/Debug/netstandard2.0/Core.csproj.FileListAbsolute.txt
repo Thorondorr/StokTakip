@@ -7,3 +7,16 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\obj\Debug\netstandard2.0
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\obj\Debug\netstandard2.0\Core.dll
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\obj\Debug\netstandard2.0\Core.pdb
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\Accessibility.xml
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Deployment.xml
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\Core\obj\Debug\netstandard2.0\Core.csproj.CopyComplete

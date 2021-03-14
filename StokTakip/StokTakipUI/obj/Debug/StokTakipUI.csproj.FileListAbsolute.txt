@@ -11,7 +11,6 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTak
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.Form_Dashboard.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Home.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Sales.resources
-C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_Add_Product.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Customer_Add.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_Customer_Add.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Tahsilat.resources
@@ -110,3 +109,6 @@ C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTak
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Purchase.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_Tahsilat.resources
 C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_AddStokk.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\bin\Debug\Control.Draggable.dll
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserForms.Form_Update_Stok.resources
+C:\Users\Fahrican\source\repos\StokTakip\StokTakip\StokTakipUI\obj\Debug\StokTakipUI.UserControls.UC_Fatura.resources

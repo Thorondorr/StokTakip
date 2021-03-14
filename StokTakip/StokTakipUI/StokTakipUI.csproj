@@ -38,6 +38,9 @@
     <Reference Include="Autofac, Version=6.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.6.1.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Control.Draggable, Version=1.0.5049.269, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -168,6 +171,12 @@
     <Compile Include="UserControls\UC_Customer_Add.Designer.cs">
       <DependentUpon>UC_Customer_Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Fatura.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Fatura.Designer.cs">
+      <DependentUpon>UC_Fatura.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,11 +213,11 @@
     <Compile Include="UserForms\Form_AddStokk.Designer.cs">
       <DependentUpon>Form_AddStokk.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\Form_Add_Product.cs">
+    <Compile Include="UserForms\Form_Update_Stok.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForms\Form_Add_Product.Designer.cs">
-      <DependentUpon>Form_Add_Product.cs</DependentUpon>
+    <Compile Include="UserForms\Form_Update_Stok.Designer.cs">
+      <DependentUpon>Form_Update_Stok.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\Form_Customer_Add.cs">
       <SubType>Form</SubType>
@@ -245,6 +254,9 @@
     <EmbeddedResource Include="UserControls\UC_Customer_Add.resx">
       <DependentUpon>UC_Customer_Add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Fatura.resx">
+      <DependentUpon>UC_Fatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,8 +275,8 @@
     <EmbeddedResource Include="UserForms\Form_AddStokk.resx">
       <DependentUpon>Form_AddStokk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\Form_Add_Product.resx">
-      <DependentUpon>Form_Add_Product.cs</DependentUpon>
+    <EmbeddedResource Include="UserForms\Form_Update_Stok.resx">
+      <DependentUpon>Form_Update_Stok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Form_Customer_Add.resx">
       <DependentUpon>Form_Customer_Add.cs</DependentUpon>

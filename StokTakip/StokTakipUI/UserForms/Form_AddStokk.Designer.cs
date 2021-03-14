@@ -115,6 +115,7 @@ namespace StokTakipUI.UserForms
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(75, 217);
             this.comboBox1.Name = "comboBox1";
@@ -134,6 +135,7 @@ namespace StokTakipUI.UserForms
             this.txtBox_kdv.Name = "txtBox_kdv";
             this.txtBox_kdv.Size = new System.Drawing.Size(171, 32);
             this.txtBox_kdv.TabIndex = 84;
+            this.txtBox_kdv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_kdv_KeyPress);
             // 
             // txtBox_miktar
             // 
@@ -141,6 +143,7 @@ namespace StokTakipUI.UserForms
             this.txtBox_miktar.Name = "txtBox_miktar";
             this.txtBox_miktar.Size = new System.Drawing.Size(171, 32);
             this.txtBox_miktar.TabIndex = 83;
+            this.txtBox_miktar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_miktar_KeyPress);
             // 
             // txtBox_ürünKodu
             // 
@@ -155,6 +158,7 @@ namespace StokTakipUI.UserForms
             this.txtBox_netfiyat.Name = "txtBox_netfiyat";
             this.txtBox_netfiyat.Size = new System.Drawing.Size(171, 32);
             this.txtBox_netfiyat.TabIndex = 81;
+            this.txtBox_netfiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_netfiyat_KeyPress);
             // 
             // label3
             // 

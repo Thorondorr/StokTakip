@@ -19,12 +19,20 @@ namespace Business.Concrete
         }
         public IResult Add(Tahsilat tahsilat)
         {
-            _tahsilatDal.Add(tahsilat);
-            return new SuccesResutl();
+            if(tahsilat != null)
+            {
+                _tahsilatDal.Add(tahsilat);
+                return new SuccesResutl("Başarı ile eklendi.");
+            }
+            else
+            {
+                return new ErrorResult("Boş alanları doldurun");
+            }          
         }
 
         public IResult CreateTahsilat(Fatura fatura)
         {
+            
             _tahsilatDal.Add(new Tahsilat
             {
                 BelgeNo = fatura.FaturaNo,
@@ -33,26 +41,28 @@ namespace Business.Concrete
                 Tip = fatura.Tip,
                 Tutar = fatura.GenelToplam
             });
-            return new SuccesResutl();
+            return new SuccesResutl("Başarı ile eklendi.");
         }
 
         public IResult Delete(Tahsilat tahsilat)
         {
             _tahsilatDal.Delete(tahsilat);
             return new SuccesResutl();
-
         }
-
         public IDataResult<List<Tahsilat>> GetAll()
         {
             return new SuccesDataResult<List<Tahsilat>>(_tahsilatDal.GetAll());
-
         }
 
         public IResult Update(Tahsilat tahsilat)
         {
             _tahsilatDal.Update(tahsilat);
             return new SuccesResutl();
+        }
+
+        public DataResult<List<Tahsilat>> GetByCariNo(string cariNo)
+        {
+            return new SuccesDataResult<List<Tahsilat>>(_tahsilatDal.GetAll(t => t.CariNo.Contains(cariNo)));
         }
         public DataResult<List<TahsilatDetailsDto>> GetTahsilatDetails()
         {
@@ -64,6 +74,7 @@ namespace Business.Concrete
         }
         public DataResult<List<TahsilatDetailsDto>> GetTahsilatDetailsByCariAd(string cariAdı)
         {
+            //bozuk
             return new SuccesDataResult<List<TahsilatDetailsDto>>((List<TahsilatDetailsDto>)_tahsilatDal.GetTahsilatDetails().Where(n => n.CariAdı.Contains(cariAdı)));
         }
     }

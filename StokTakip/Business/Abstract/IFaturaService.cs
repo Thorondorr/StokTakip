@@ -19,6 +19,13 @@ namespace Business.Abstract
          IDataResult<Fatura> getbyCariNo(string cariNo);
         IDataResult<decimal> getFaturaGenelToplam();
         IDataResult<int> getTotalSellCount();
+        IDataResult<decimal> getFaturaAlışGenelToplam();
+        IDataResult<int> getTotalBuyCount();
+        //search 
+        IDataResult<List<Fatura>> SearchByTarih(DateTime date);
+        IDataResult<List<Fatura>> SearchGetByFaturaTipi(string faturaTipi);
+        IDataResult<List<Fatura>> SearchGetByCariNo(string cariNo);
+        IDataResult<List<Fatura>> SearchGetByStokAd(string stokAdı);
 
     }
 }

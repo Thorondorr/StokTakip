@@ -111,10 +111,13 @@ namespace StokTakipUI.UserControls
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(178, 32);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Stok Adı"});
             this.comboBox1.Location = new System.Drawing.Point(566, 23);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(146, 31);
@@ -179,7 +182,7 @@ namespace StokTakipUI.UserControls
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // UC_Purchase
+            // UC_Stok
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -190,7 +193,7 @@ namespace StokTakipUI.UserControls
             this.Controls.Add(this.panel3);
             this.Controls.Add(panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "UC_Purchase";
+            this.Name = "UC_Stok";
             this.Size = new System.Drawing.Size(985, 570);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

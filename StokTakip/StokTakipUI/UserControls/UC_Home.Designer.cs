@@ -44,12 +44,24 @@ namespace StokTakipUI.UserControls
             this.lbl_cariSayısı = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbl_toplamAlışMiktarı = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lbl_toplamAlışTutarı = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -213,10 +225,102 @@ namespace StokTakipUI.UserControls
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.Controls.Add(this.lbl_toplamAlışMiktarı);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(71, 251);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 100);
+            this.panel4.TabIndex = 4;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(122, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lbl_toplamAlışMiktarı
+            // 
+            this.lbl_toplamAlışMiktarı.AutoSize = true;
+            this.lbl_toplamAlışMiktarı.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_toplamAlışMiktarı.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_toplamAlışMiktarı.ForeColor = System.Drawing.Color.White;
+            this.lbl_toplamAlışMiktarı.Location = new System.Drawing.Point(33, 40);
+            this.lbl_toplamAlışMiktarı.Name = "lbl_toplamAlışMiktarı";
+            this.lbl_toplamAlışMiktarı.Size = new System.Drawing.Size(43, 23);
+            this.lbl_toplamAlışMiktarı.TabIndex = 0;
+            this.lbl_toplamAlışMiktarı.Text = "100";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Alış Miktarı";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel5.Controls.Add(this.pictureBox5);
+            this.panel5.Controls.Add(this.lbl_toplamAlışTutarı);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Location = new System.Drawing.Point(323, 251);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 100);
+            this.panel5.TabIndex = 5;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(122, 26);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(58, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // lbl_toplamAlışTutarı
+            // 
+            this.lbl_toplamAlışTutarı.AutoSize = true;
+            this.lbl_toplamAlışTutarı.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_toplamAlışTutarı.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_toplamAlışTutarı.ForeColor = System.Drawing.Color.White;
+            this.lbl_toplamAlışTutarı.Location = new System.Drawing.Point(33, 40);
+            this.lbl_toplamAlışTutarı.Name = "lbl_toplamAlışTutarı";
+            this.lbl_toplamAlışTutarı.Size = new System.Drawing.Size(43, 23);
+            this.lbl_toplamAlışTutarı.TabIndex = 0;
+            this.lbl_toplamAlışTutarı.Text = "100";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(177, 23);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Toplam Alış Tutarı";
+            // 
             // UC_Home
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -235,6 +339,12 @@ namespace StokTakipUI.UserControls
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +366,13 @@ namespace StokTakipUI.UserControls
         private System.Windows.Forms.Label lbl_cariSayısı;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lbl_toplamAlışMiktarı;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lbl_toplamAlışTutarı;
+        private System.Windows.Forms.Label label8;
     }
 }

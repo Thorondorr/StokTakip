@@ -117,7 +117,7 @@ namespace Business.Concrete
         public IDataResult<decimal> getFaturaGenelToplam()
         {
             var result = _faturaDal.GetAll();
-            decimal genelToplam = (from x in result select x.GenelToplam).Sum();
+            decimal genelToplam = (from x in result where x.Tip=="Satış" select x.GenelToplam ).Sum();
 
             return new SuccesDataResult<decimal>(genelToplam);
             
@@ -127,11 +127,59 @@ namespace Business.Concrete
         {
 
             var result = _faturaDal.GetAll();
-            int totalSellCount = (from x in result select x.Miktar).Sum();
+            int totalSellCount = (from x in result where x.Tip == "Satış" select x.Miktar).Sum();
 
             return new SuccesDataResult<int>(totalSellCount);
         }
 
+
+        public IDataResult<decimal> getFaturaAlışGenelToplam()
+        {
+            var result = _faturaDal.GetAll();
+            decimal genelToplam = (from x in result where x.Tip == "Alış" select x.GenelToplam).Sum();
+
+            return new SuccesDataResult<decimal>(genelToplam);
+
+        }
+
+        public IDataResult<int> getTotalBuyCount()
+        {
+
+            var result = _faturaDal.GetAll();
+            int totalSellCount = (from x in result where x.Tip == "Alış" select x.Miktar).Sum();
+
+            return new SuccesDataResult<int>(totalSellCount);
+        }
+
+        public IDataResult<List<Fatura>> SearchGetByStokAd(string stokAdı)
+        {
+            return new SuccesDataResult<List<Fatura>>(_faturaDal.GetAll(f => f.UrunAdı.Contains(stokAdı)));
+        }
+        public IDataResult<List<Fatura>> SearchGetByCariNo(string cariNo)
+        {
+            return new SuccesDataResult<List<Fatura>>(_faturaDal.GetAll(f => f.CariNo.Contains(cariNo)));
+        }
+        public IDataResult<List<Fatura>> SearchGetByFaturaTipi(string faturaTipi)
+        {
+            return new SuccesDataResult<List<Fatura>>(_faturaDal.GetAll(f => f.Tip.Contains(faturaTipi)));
+        }
+
+        public IDataResult<List<Fatura>> SearchByTarih(DateTime date)
+        {
+            var result = _faturaDal.GetAll();
+
+            List<Fatura> list2 = new List<Fatura>();
+
+            foreach (var fatura in result)
+            {
+                if (fatura.Tarih == date)
+                {
+                    list2.Add(fatura);
+                }
+            }
+
+            return new SuccesDataResult<List<Fatura>>(list2);
+        }
 
     }
 }

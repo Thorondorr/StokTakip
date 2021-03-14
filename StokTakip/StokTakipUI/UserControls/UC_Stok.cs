@@ -24,7 +24,7 @@ namespace StokTakipUI.UserControls
 
         private void button_urunEkle_Click(object sender, EventArgs e)
         {
-            using (Form_Add_Product form_Add_Product = new Form_Add_Product() )
+            using (Form_Update_Stok form_Add_Product = new Form_Update_Stok() )
             {
                 form_Add_Product.ShowDialog();
                 
@@ -50,6 +50,15 @@ namespace StokTakipUI.UserControls
         {
             var result = stokManager.GetAll();
             dataGridView1.DataSource = result.Data;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (comboBox1.Text == "Stok Adı")
+            {
+                var result = stokManager.GetByStokName(textBox1.Text);
+                dataGridView1.DataSource = result.Data;
+            }
         }
     }
 }

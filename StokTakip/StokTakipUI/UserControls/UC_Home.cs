@@ -48,11 +48,14 @@ namespace StokTakipUI.UserControls
         }
         private void reflashDashBoards()
         {
-            
+            //satıs
             lbl_satıs.Text = faturaManager.getTotalSellCount().Data.ToString();
             lbl_toplamSatısTutar.Text = faturaManager.getFaturaGenelToplam().Data.ToString();
             lbl_cariSayısı.Text = cariManager.totalCariCount().Data.ToString();
 
+            //alış
+            lbl_toplamAlışTutarı.Text = faturaManager.getFaturaAlışGenelToplam().Data.ToString();
+            lbl_toplamAlışMiktarı.Text = faturaManager.getTotalBuyCount().Data.ToString();
         }
     }
 }

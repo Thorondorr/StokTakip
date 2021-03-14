@@ -127,5 +127,12 @@ namespace StokTakipUI
             UC_Purchase uC_Purchase = new UC_Purchase();
             AddControlsToPanel(uC_Purchase);
         }
+
+        private void btn_fatura_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btn_fatura);
+            UC_Fatura uC_Fatura = new UC_Fatura();
+            AddControlsToPanel(uC_Fatura);
+        }
     }
 }

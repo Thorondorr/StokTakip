@@ -61,6 +61,11 @@ namespace Business.Concrete
             return new SuccesDataResult<Stok>(_stokDal.Get(u => u.UrunKodu == urunKodu));   
         }
 
+        public IDataResult<List<Stok>> GetByStokName(string stokAdı)
+        {
+            return new SuccesDataResult<List<Stok>>(_stokDal.GetAll(s => s.UrunAdı.Contains(stokAdı)));
+        }
+
         public IResult UpdateStokQuantity(Sepet sepet,int eksilenStok)
         {
            var result= UrunGetByUrunKodu(sepet.UrunKodu);

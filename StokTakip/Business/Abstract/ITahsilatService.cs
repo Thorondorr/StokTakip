@@ -13,6 +13,7 @@ namespace Business.Abstract
         IResult Update(Tahsilat tahsilat);
         IResult Delete(Tahsilat tahsilat);
         IResult CreateTahsilat(Fatura fatura);
+        DataResult<List<Tahsilat>> GetByCariNo(string cariNo);
         IDataResult<List<Tahsilat>> GetAll();
         DataResult<List<TahsilatDetailsDto>> GetTahsilatDetailsByCariNo(string cariNo);
         DataResult<List<TahsilatDetailsDto>> GetTahsilatDetailsByCariAd(string cariAdı);

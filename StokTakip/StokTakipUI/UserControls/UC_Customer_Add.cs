@@ -53,8 +53,7 @@ namespace StokTakipUI.UserControls
                 });
                 
                 dataGridView1.DataSource = result.Data;
-            }
-          
+            }          
         }
     }
 }

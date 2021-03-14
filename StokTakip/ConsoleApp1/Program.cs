@@ -14,8 +14,9 @@ namespace ConsoleApp1
 
             CariHareketlerManager cariHareketlerManager = new CariHareketlerManager(new EfCariHareketDal());
 
-            cariHareketlerManager.GetAllBorcWithCariNo("f-0001");
+            var result =cariHareketlerManager.GetAllBorcWithCariNo("m-001");
 
+            Console.WriteLine(result.Data.ToString());
 
            // KullanıcılarManager kullanıcıManager = new KullanıcılarManager(new EfKullanıcıDal());
            // StokManager stokManager = new StokManager(new EfStokDal());
