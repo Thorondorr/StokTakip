@@ -9,10 +9,23 @@ namespace DataAcces.Concrete.EntityFramework
 {
     public class CariAlimSatimContext : DbContext
     {
+        private readonly string _sqlKullanıcıAdı = "root";
+
+        public string SqlKullanıcıAdı { get { return _sqlKullanıcıAdı; } }
+
+        private readonly string _sqlSifre = "qweewq123321";
+        public string SqlSifre { get { return _sqlSifre; } }
+
+        private readonly string _dataBaseName = "CariAlimSatim";
+        public string DataBaseName { get { return _dataBaseName; } }
+
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=CariAlimSatim;Trusted_Connection=true");
+            string connStr = $"Data Source=(localdb)\\MSSQLLocalDB;Database={_dataBaseName};User Id={_sqlKullanıcıAdı};Password={_sqlSifre}";
 
+            optionsBuilder.UseSqlServer(connStr);
+            //Data Source=(localdb)\MSSQLLocalDB;Database=CariAlimSatim;Trusted_Connection=true
         }
 
         public DbSet<Cari> Cari { get; set; }

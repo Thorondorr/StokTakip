@@ -69,20 +69,31 @@ namespace Business.Concrete
         public IResult UpdateStokQuantity(Sepet sepet,int eksilenStok)
         {
            var result= UrunGetByUrunKodu(sepet.UrunKodu);
-            _stokDal.Update(new Stok
+
+          var checkResult = CheckIsStokEmty(sepet.UrunKodu, eksilenStok);
+            if (checkResult.Succes)
             {
-                UrunAdı=result.Data.UrunAdı,
-                CariNo = result.Data.CariNo,
-                UrunKodu = result.Data.UrunKodu,
-               // GirisCikis = result.Data.GirisCikis,
-                KDV = result.Data.KDV,
-                Miktar = result.Data.Miktar - eksilenStok,
-                StokId = result.Data.StokId,
-                StokNetFiyatı = result.Data.StokNetFiyatı,
-                Tarih = result.Data.Tarih
-            });
-            
-            return new SuccesResutl();
+                _stokDal.Update(new Stok
+                {
+                    UrunAdı = result.Data.UrunAdı,
+                    CariNo = result.Data.CariNo,
+                    UrunKodu = result.Data.UrunKodu,
+                    // GirisCikis = result.Data.GirisCikis,
+                    KDV = result.Data.KDV,
+                    Miktar = result.Data.Miktar - eksilenStok,
+                    StokId = result.Data.StokId,
+                    StokNetFiyatı = result.Data.StokNetFiyatı,
+                    Tarih = result.Data.Tarih
+                });
+
+                return new SuccesResutl();
+            }
+            else
+            {
+                return new ErrorResult(checkResult.Message);
+            }
+
+           
         }
 
         public IResult AddPurchasedNewStok(Sepet sepet)
@@ -98,6 +109,26 @@ namespace Business.Concrete
                 UrunKodu = sepet.UrunKodu
             });
             return new SuccesResutl();
+        }
+        //iş kodu
+        private IDataResult<int> CheckIsStokEmty(string urunKodu,int eksilenStok)
+        {
+            var result = UrunGetByUrunKodu(urunKodu);
+            if (result.Data.Miktar < eksilenStok)
+            {
+                return new ErrorDataResult<int>(result.Data.Miktar, "Yeteri kadar stok yok.");
+            }
+            return new SuccesDataResult<int>();
+        }
+
+        public IResult CheckHaveStock(string urunKodu, int eksilenStok)
+        {
+            var result = UrunGetByUrunKodu(urunKodu);
+            if (result.Data.Miktar < eksilenStok)
+            {
+                return new ErrorDataResult<int>(result.Data.Miktar, "Yeteri kadar stok yok.");
+            }
+            return new SuccesDataResult<int>();
         }
     }
 }

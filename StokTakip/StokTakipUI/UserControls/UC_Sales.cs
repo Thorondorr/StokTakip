@@ -122,6 +122,22 @@ namespace StokTakipUI.UserControls
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
+            var result = stokManager.CheckHaveStock(txtbox_ürünkod.Text, Convert.ToInt32(txtbox_miktar.Text));
+
+            if (result.Succes)
+            {
+                addToSepet();
+
+            }
+            else
+            {
+                MessageBox.Show("Yeteri kadar stok yok.");
+            }
+
+        }
+
+        private void addToSepet()
+        {
             var rsltUrunGetDetails = urunManager.GetUrunDetails(txtbox_ürünkod.Text);
 
             Sepet sepet = new Sepet
@@ -140,7 +156,7 @@ namespace StokTakipUI.UserControls
                 Aciklama = txtbox_acıklama.Text,
                 BorcAlacak = ""
             };
- 
+
 
             switch (cmbox_ödeneYöntemi.Text)
             {
@@ -156,19 +172,58 @@ namespace StokTakipUI.UserControls
                 default:
                     break;
             }
-
-            addToListView(sepet.UrunAdı, sepet.Miktar.ToString(), sepet.Fiyat.ToString());
-
+            int toplamAynıUrun = 0;
+           
             sepets.Add(sepet);
 
-            decimal toplamTutar = 0;
-
-            for (int i = 0; i < sepets.Count; i++)
+            foreach (var spt in sepets)
             {
-                toplamTutar += toplamTutar = sepets[i].Fiyat;
+                toplamAynıUrun += sepet.Miktar;
             }
-            lbl_toplamTutar.Text = toplamTutar.ToString();
+            if (stokManager.CheckHaveStock(sepet.UrunKodu, toplamAynıUrun).Succes)
+            {
+                addToListView(sepet.UrunAdı, sepet.Miktar.ToString(), sepet.Fiyat.ToString());
+                decimal toplamTutar = 0;
 
+                for (int i = 0; i < sepets.Count; i++)
+                {
+                    toplamTutar += toplamTutar = sepets[i].Fiyat;
+                }
+                lbl_toplamTutar.Text = toplamTutar.ToString();
+            }
+            else
+            {
+                sepets.RemoveAt(sepets.Count - 1);
+                MessageBox.Show("Stokta Ürün Kalmadı.");
+
+            }
+
+            
+
+            //if (checkSepetHas(sepet)==false)
+            //{
+               
+            //}
+            //else
+            //{              
+            //    foreach (var item in sepets)
+            //    {
+            //        if (item.UrunKodu == sepet.UrunKodu)
+            //        {
+            //            item.Miktar +=  sepet.Miktar;
+            //            item.Fiyat +=  (sepet.Fiyat * Convert.ToInt32( txtbox_miktar.Text));
+            //            listView1.Items[listView1.Items.Count-1].Remove();
+            //            addToListView(sepet.UrunAdı, item.Miktar.ToString(), item.Fiyat.ToString());
+            //            break;
+            //        }
+                    
+            //    }
+                            
+            //}
+            
+           
+
+          
         }
 
         private void btn_satış_Click(object sender, EventArgs e)
@@ -231,6 +286,20 @@ namespace StokTakipUI.UserControls
         private void button6_Click(object sender, EventArgs e)
         {
             txtbox_miktar.Text = (Convert.ToInt32(txtbox_miktar.Text) + 1).ToString();
+        }
+
+        private bool checkSepetHas(Sepet sepet)
+        {
+            foreach (var spt in sepets)
+            {
+                if (spt.UrunKodu == sepet.UrunKodu)
+                {
+                    spt.Miktar = sepet.Miktar;
+                    return true;
+                }
+            }
+            return false;
+            
         }
     }
 }

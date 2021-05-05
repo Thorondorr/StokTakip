@@ -16,6 +16,8 @@ namespace Business.Abstract
         IDataResult<List<Stok>> GetByStokName(string stokAdı);
         IDataResult<List<Stok>> GetAll();
         IDataResult<Stok> UrunGetByUrunKodu(string urunKodu);
-        
+        IResult CheckHaveStock(string urunKodu, int eksilenStok);
+
+
     }
 }

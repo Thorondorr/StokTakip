@@ -47,14 +47,14 @@ namespace StokTakipUI.UserForms
             this.txtBox_kullanıcıAdı = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtbox_svSifre = new System.Windows.Forms.TextBox();
             this.txtbox_svKullanıcıAdı = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtBox_serveradı = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -252,7 +252,7 @@ namespace StokTakipUI.UserForms
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.txtbox_svSifre);
             this.panel5.Controls.Add(this.txtbox_svKullanıcıAdı);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.txtBox_serveradı);
@@ -264,18 +264,41 @@ namespace StokTakipUI.UserForms
             this.panel5.Size = new System.Drawing.Size(552, 404);
             this.panel5.TabIndex = 0;
             // 
+            // txtbox_svSifre
+            // 
+            this.txtbox_svSifre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbox_svSifre.Enabled = false;
+            this.txtbox_svSifre.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.txtbox_svSifre.Location = new System.Drawing.Point(12, 187);
+            this.txtbox_svSifre.Name = "txtbox_svSifre";
+            this.txtbox_svSifre.Size = new System.Drawing.Size(345, 36);
+            this.txtbox_svSifre.TabIndex = 9;
+            // 
             // txtbox_svKullanıcıAdı
             // 
             this.txtbox_svKullanıcıAdı.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtbox_svKullanıcıAdı.Enabled = false;
             this.txtbox_svKullanıcıAdı.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.txtbox_svKullanıcıAdı.Location = new System.Drawing.Point(12, 114);
             this.txtbox_svKullanıcıAdı.Name = "txtbox_svKullanıcıAdı";
             this.txtbox_svKullanıcıAdı.Size = new System.Drawing.Size(345, 36);
             this.txtbox_svKullanıcıAdı.TabIndex = 9;
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label7.Location = new System.Drawing.Point(8, 161);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 23);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Server Şifre";
+            // 
             // txtBox_serveradı
             // 
             this.txtBox_serveradı.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBox_serveradı.Enabled = false;
             this.txtBox_serveradı.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.txtBox_serveradı.Location = new System.Drawing.Point(12, 37);
             this.txtBox_serveradı.Name = "txtBox_serveradı";
@@ -327,26 +350,6 @@ namespace StokTakipUI.UserForms
             this.dataGridView1.Size = new System.Drawing.Size(1182, 213);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label7.Location = new System.Drawing.Point(8, 161);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 23);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Server Şifre";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox1.Location = new System.Drawing.Point(12, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 36);
-            this.textBox1.TabIndex = 9;
             // 
             // ParametreEkranı
             // 
@@ -402,7 +405,7 @@ namespace StokTakipUI.UserForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_sil;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_svSifre;
         private System.Windows.Forms.Label label7;
     }
 }

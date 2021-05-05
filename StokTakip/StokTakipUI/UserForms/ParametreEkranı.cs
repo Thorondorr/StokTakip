@@ -17,10 +17,12 @@ namespace StokTakipUI.UserForms
     {
         //List<string> UserData;
         KullanıcılarManager kullanıcıManager = new KullanıcılarManager(new EfKullanıcıDal());
+        CariAlimSatimContext CariAlimSatimContext = new CariAlimSatimContext();
         public ParametreEkranı()
         {
             InitializeComponent();
             RefleshDataGridView();
+            connBilgileri();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -74,11 +76,18 @@ namespace StokTakipUI.UserForms
             kullanıcıManager.Update(new Kullanıcı
             {
                 KullanıcıId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value),
-                KullanıcıAdı =txtBox_kullanıcıAdı.Text.ToString(),
+                KullanıcıAdı = txtBox_kullanıcıAdı.Text.ToString(),
                 Sifre = txtBox_şifre.Text.ToString(),
                 Eposta = txtBox_eposta.Text.ToString()
             });
             RefleshDataGridView();
+        }
+
+        private void connBilgileri()
+        {
+            txtBox_serveradı.Text = CariAlimSatimContext.DataBaseName;
+            txtbox_svKullanıcıAdı.Text = CariAlimSatimContext.SqlKullanıcıAdı;
+            txtbox_svSifre.Text = CariAlimSatimContext.SqlSifre;
         }
     }
 }
